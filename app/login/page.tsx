@@ -25,63 +25,86 @@ export default function LoginPage() {
   }
 
   return (
-    <main
-      className="min-h-screen flex items-center justify-center px-6"
-      style={{ backgroundColor: "#0B0B0F" }}
+    <main className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
+      style={{ backgroundColor: "#F8FAFC" }}
     >
+      {/* Background shapes */}
       <div
-        className="w-full max-w-sm"
-        style={{ animation: "fade-in-up 0.6s ease forwards" }}
+        className="absolute w-96 h-96 rounded-full top-20 -left-20 pointer-events-none"
+        style={{
+          backgroundColor: "#A7C7E7",
+          filter: "blur(80px)",
+          opacity: 0.4,
+          animation: "float 8s ease-in-out infinite",
+        }}
+      />
+      <div
+        className="absolute w-80 h-80 rounded-full bottom-20 right-10 pointer-events-none"
+        style={{
+          backgroundColor: "#D8C4F1",
+          filter: "blur(80px)",
+          opacity: 0.35,
+          animation: "float 8s ease-in-out infinite",
+          animationDelay: "2s",
+        }}
+      />
+
+      {/* Card */}
+      <div
+        className="relative w-full max-w-sm rounded-[28px] p-10"
+        style={{
+          backgroundColor: "#FFFFFF",
+          boxShadow: "0 24px 60px rgba(31, 35, 50, 0.12)",
+          animation: "fade-in-up 0.6s ease forwards",
+        }}
       >
-        {/* Nome */}
-        <p
-          className="text-xs uppercase tracking-[0.2em] mb-3"
-          style={{ color: "#7A7A8C" }}
+        {/* Badge */}
+        <div
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-6"
+          style={{ backgroundColor: "#D6C9FC" }}
         >
-          Portfólio Privado
-        </p>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5B4B8A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          <span className="text-xs font-semibold" style={{ color: "#5B4B8A" }}>Portfólio Privado</span>
+        </div>
+
         <h1
-          className="text-4xl font-normal mb-10 leading-tight"
+          className="font-bold text-3xl mb-2 leading-tight"
           style={{
-            fontFamily: "var(--font-playfair), Georgia, serif",
-            color: "#F0EFE8",
+            fontFamily: "var(--font-poppins, Poppins, sans-serif)",
+            color: "#334155",
           }}
         >
           Letícia Marinho
         </h1>
+        <p className="text-sm mb-8" style={{ color: "#64748B" }}>
+          Insere a palavra-passe para aceder ao portfólio.
+        </p>
 
-        {/* Formulário */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div className="relative">
-            <input
-              type="password"
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              placeholder="Palavra-passe"
-              autoComplete="current-password"
-              autoFocus
-              className="w-full rounded-lg px-4 py-3.5 text-sm outline-none transition-all duration-200"
-              style={{
-                backgroundColor: "#14141A",
-                border: "1px solid rgba(255,255,255,0.08)",
-                color: "#F0EFE8",
-              }}
-              onFocus={(e) => {
-                e.currentTarget.style.borderColor = "#8B7CF6";
-              }}
-              onBlur={(e) => {
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-              }}
-            />
-          </div>
+          <input
+            type="password"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="Palavra-passe"
+            autoComplete="current-password"
+            autoFocus
+            className="w-full rounded-2xl px-5 py-4 text-sm outline-none transition-all duration-200"
+            style={{
+              backgroundColor: "#F8FAFC",
+              border: "2px solid #E2E8F0",
+              color: "#334155",
+            }}
+            onFocus={(e) => { e.currentTarget.style.borderColor = "#A7C7E7"; e.currentTarget.style.boxShadow = "0 0 0 4px rgba(167,199,231,0.15)"; }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = "#E2E8F0"; e.currentTarget.style.boxShadow = "none"; }}
+          />
 
           {error && (
             <p
               className="text-sm pl-1"
-              style={{
-                color: "#F87171",
-                animation: "fade-in 0.2s ease forwards",
-              }}
+              style={{ color: "#EF4444", animation: "fade-in 0.2s ease forwards" }}
             >
               Palavra-passe incorreta.
             </p>
@@ -90,15 +113,16 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg py-3.5 text-sm font-medium tracking-wide transition-opacity duration-150"
+            className="w-full rounded-2xl py-4 text-sm font-semibold tracking-wide transition-all duration-200 hover:opacity-90"
             style={{
-              backgroundColor: "#8B7CF6",
+              background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
               color: "#ffffff",
+              boxShadow: "0 8px 25px rgba(167, 199, 231, 0.4)",
               opacity: loading ? 0.7 : 1,
               cursor: loading ? "wait" : "pointer",
             }}
           >
-            {loading ? "A entrar..." : "Entrar"}
+            {loading ? "A entrar..." : "Entrar →"}
           </button>
         </form>
       </div>

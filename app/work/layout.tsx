@@ -16,7 +16,7 @@ export default function WorkLayout({ children }: { children: React.ReactNode }) 
   }, [router]);
 
   if (!ready) {
-    return <div className="min-h-screen" style={{ backgroundColor: "#0B0B0F" }} />;
+    return <div className="min-h-screen" style={{ backgroundColor: "#F8FAFC" }} />;
   }
 
   return <>{children}</>;

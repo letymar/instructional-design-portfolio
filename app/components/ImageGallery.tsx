@@ -51,7 +51,7 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
             />
             <div
               className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-              style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
+              style={{ backgroundColor: "rgba(51,65,85,0.35)" }}
             >
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />

@@ -11,7 +11,17 @@ interface ProjectBlockProps {
   gradient?: string;
   reverse?: boolean;
   slug: string;
+  colorIndex?: number;
 }
+
+// Cycling pastel card header backgrounds
+const cardColors = [
+  { bg: "#D6C9FC", text: "#5B4B8A" },  // lavender
+  { bg: "#CFF8E8", text: "#2D6A4F" },  // mint
+  { bg: "#C9E7FC", text: "#1E5A7A" },  // sky
+  { bg: "#F9C8D7", text: "#8B4557" },  // blush
+  { bg: "#FFF6C9", text: "#8B7355" },  // butter
+];
 
 export default function ProjectBlock({
   number,
@@ -21,111 +31,100 @@ export default function ProjectBlock({
   description,
   image,
   gradient,
-  reverse = false,
   slug,
+  colorIndex = 0,
 }: ProjectBlockProps) {
+  const cardColor = cardColors[colorIndex % cardColors.length];
+
   return (
     <article
-      className={`group flex flex-col ${
-        reverse ? "md:flex-row-reverse" : "md:flex-row"
-      } gap-10 md:gap-16 items-center py-16 md:py-20 transition-all duration-300`}
-      style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+      className="card flex flex-col overflow-hidden"
+      style={{ backgroundColor: "#FFFFFF" }}
     >
-      {/* Lado do texto */}
-      <div className="flex-1 min-w-0">
-        <span
-          className="block leading-none mb-4 select-none transition-colors duration-300"
-          style={{
-            fontFamily: "var(--font-playfair), Georgia, serif",
-            fontSize: "clamp(4rem, 8vw, 7rem)",
-            fontWeight: 400,
-            color: "#14141A",
-          }}
+      {/* Image / Gradient top */}
+      <div
+        className="relative overflow-hidden"
+        style={{ aspectRatio: "16/9" }}
+      >
+        {image ? (
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        ) : (
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                gradient ??
+                `linear-gradient(135deg, ${cardColor.bg} 0%, #FFFFFF 100%)`,
+            }}
+          />
+        )}
+        {/* Number overlay */}
+        <div
+          className="absolute top-4 left-4 w-10 h-10 rounded-2xl flex items-center justify-center text-sm font-bold"
+          style={{ backgroundColor: "rgba(255,255,255,0.92)", color: "#334155" }}
         >
           {number}
-        </span>
+        </div>
+      </div>
 
+      {/* Content */}
+      <div className="flex flex-col flex-1 p-6">
+        {/* Category badge */}
         <span
-          className="block text-xs uppercase tracking-[0.2em] mb-3"
-          style={{ color: "#8B7CF6" }}
+          className="inline-flex self-start text-xs font-semibold px-3 py-1.5 rounded-full mb-3"
+          style={{ backgroundColor: cardColor.bg, color: cardColor.text }}
         >
           {category}
         </span>
 
         <h3
-          className="leading-snug mb-4 transition-colors duration-200"
+          className="font-bold text-lg leading-snug mb-2"
           style={{
-            fontFamily: "var(--font-playfair), Georgia, serif",
-            fontSize: "clamp(1.5rem, 3vw, 2rem)",
-            fontWeight: 400,
-            color: "#F0EFE8",
+            fontFamily: "var(--font-poppins, Poppins, sans-serif)",
+            color: "#334155",
           }}
         >
           {title}
         </h3>
 
-        <p
-          className="text-sm leading-relaxed mb-6 max-w-md"
-          style={{ color: "#7A7A8C" }}
-        >
+        <p className="text-sm leading-relaxed mb-4 flex-1" style={{ color: "#64748B" }}>
           {description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-6">
-          {tags.map((tag) => (
+        {/* Tags */}
+        <div className="flex flex-wrap gap-1.5 mb-5">
+          {tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="text-xs px-3 py-1 rounded-full"
-              style={{
-                border: "1px solid rgba(255,255,255,0.07)",
-                color: "#7A7A8C",
-              }}
+              className="text-xs px-2.5 py-1 rounded-full font-medium"
+              style={{ backgroundColor: "#F1F5F9", color: "#64748B" }}
             >
               {tag}
             </span>
           ))}
         </div>
 
+        {/* CTA */}
         <Link
           href={`/work/${slug}`}
-          className="inline-flex items-center gap-2 text-sm transition-all duration-150"
-          style={{ color: "#8B7CF6" }}
+          className="inline-flex items-center gap-2 text-sm font-semibold rounded-full px-5 py-2.5 transition-all duration-200 self-start hover:opacity-90"
+          style={{
+            background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
+            color: "#ffffff",
+            boxShadow: "0 4px 15px rgba(167,199,231,0.4)",
+          }}
         >
           Ver Caso de Estudo
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </Link>
-      </div>
-
-      {/* Lado visual */}
-      <div className="w-full md:w-[42%] flex-shrink-0">
-        <div
-          className="relative overflow-hidden rounded-xl transition-all duration-300 group-hover:shadow-[0_0_48px_rgba(139,124,246,0.12)]"
-          style={{
-            aspectRatio: "4/3",
-            border: "1px solid rgba(255,255,255,0.05)",
-          }}
-        >
-          {image ? (
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-              sizes="(max-width: 768px) 100vw, 42vw"
-            />
-          ) : (
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  gradient ??
-                  "linear-gradient(135deg, #14141A 0%, #1F1A3A 100%)",
-              }}
-            />
-          )}
-        </div>
       </div>
     </article>
   );
