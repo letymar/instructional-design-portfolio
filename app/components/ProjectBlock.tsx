@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectBlockProps {
   number: string;
@@ -9,6 +10,7 @@ interface ProjectBlockProps {
   image?: string;
   gradient?: string;
   reverse?: boolean;
+  slug: string;
 }
 
 export default function ProjectBlock({
@@ -20,6 +22,7 @@ export default function ProjectBlock({
   image,
   gradient,
   reverse = false,
+  slug,
 }: ProjectBlockProps) {
   return (
     <article
@@ -68,7 +71,7 @@ export default function ProjectBlock({
           {description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-6">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -82,6 +85,17 @@ export default function ProjectBlock({
             </span>
           ))}
         </div>
+
+        <Link
+          href={`/work/${slug}`}
+          className="inline-flex items-center gap-2 text-sm transition-all duration-150"
+          style={{ color: "#8B7CF6" }}
+        >
+          Ver Caso de Estudo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </Link>
       </div>
 
       {/* Lado visual */}

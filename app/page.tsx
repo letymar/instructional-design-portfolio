@@ -6,111 +6,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import SectionWrapper from "./components/SectionWrapper";
 import ProjectBlock from "./components/ProjectBlock";
-
-/* ─── Dados dos projetos ─────────────────────────────────────────────────── */
-
-const projects = [
-  {
-    number: "01",
-    title: "AECs Programação e Robótica",
-    category: "Currículo · K-4",
-    tags: ["Curriculum Design", "Escopo & Sequência", "Manual do Professor"],
-    description:
-      "Currículo completo de programação e robótica para o 1.º ao 4.º ano — 4 planificações anuais, manual do professor, guia Scratch e sub-projeto de robótica sustentável com artefactos reais dos alunos.",
-    image: "/projects/aecs-robotica-1.jpg",
-    reverse: false,
-  },
-  {
-    number: "02",
-    title: "Clube de Robótica",
-    category: "PBL · STEM",
-    tags: ["Project-Based Learning", "Competição", "STEM"],
-    description:
-      "Clube de robótica sumo para jovens dos 13 aos 18 anos — 17 sessões, arena personalizada em DXF, robots impressos em 3D e uma DemoDay final com júri externo.",
-    gradient: "linear-gradient(135deg, #0D0D20 0%, #161030 60%, #0D1828 100%)",
-    reverse: true,
-  },
-  {
-    number: "03",
-    title: "VibeCoding — Cria o teu Jogo",
-    category: "Workshop · IA",
-    tags: ["Inteligência Artificial", "Game-Based Learning", "Facilitação"],
-    description:
-      "Workshop de criação de jogos com IA — sessão de 2h30 usando Gemini e CodePen, com guião do facilitador e ficha do participante desenhados do zero para jovens dos 15 aos 18 anos.",
-    gradient: "linear-gradient(135deg, #0A1A18 0%, #0D2420 60%, #0A1A10 100%)",
-    reverse: false,
-  },
-  {
-    number: "04",
-    title: "Atividades Tecnológicas",
-    category: "Maker Education",
-    tags: ["Maker Education", "Computação Física", "Design de Eventos"],
-    description:
-      "Série de atividades maker entregues no CICF e CCDV — Rabbot de Páscoa, mBot com IA climática, robô de equilíbrio, pulseira de código binário e Makey Makey musical.",
-    image: "/projects/atividades-maker-1.jpg",
-    reverse: true,
-  },
-  {
-    number: "05",
-    title: "Rádio CCD",
-    category: "Workshop · Produção",
-    tags: ["Literacia Mediática", "Produção de Áudio", "Design de Workshop"],
-    description:
-      "Workshop de rádio usando Mixxx e RodeCaster Pro — os jovens aprendem a conceber, produzir e emitir o seu próprio programa ao vivo, do conceito ao ar.",
-    gradient: "linear-gradient(135deg, #0D0818 0%, #1A0A28 60%, #0A0818 100%)",
-    reverse: false,
-  },
-  {
-    number: "06",
-    title: "CoderDojo",
-    category: "Aprendizagem Não-Formal",
-    tags: ["Comunidade", "Programação", "micro:bit"],
-    description:
-      "Clube comunitário de programação com 17+ sessões documentadas. Liderado por voluntários, orientado por projetos, com evidência de progressão real dos participantes ao longo do tempo.",
-    image: "/projects/coderdojo-1.jpg",
-    reverse: true,
-  },
-  {
-    number: "07",
-    title: "Campo de Férias REN",
-    category: "L&D Corporativo",
-    tags: ["L&D", "Design de Proposta", "Projeto de Cliente"],
-    description:
-      "Campo de férias tecnológico e de IA para a REN — proposta completa e materiais de aprendizagem concebidos e entregues para um cliente corporativo com requisitos de impacto mensuráveis.",
-    gradient: "linear-gradient(135deg, #081018 0%, #0D1828 60%, #081018 100%)",
-    reverse: false,
-  },
-  {
-    number: "08",
-    title: "Literacia Digital Sénior",
-    category: "Aprendizagem de Adultos",
-    tags: ["Acessibilidade", "Literacia Digital", "Design Inclusivo"],
-    description:
-      "Programa de literacia digital para seniores em 6 sessões (2024–2025) — concebido para baixa fluência digital, com progressão desde o básico até à criação de vídeo com telemóvel.",
-    image: "/projects/seniores-1.jpg",
-    reverse: true,
-  },
-  {
-    number: "09",
-    title: "InGaming Vai às Escolas",
-    category: "EdTech · Publicação",
-    tags: ["Design de Conteúdo", "Publicação", "Estratégia EdTech"],
-    description:
-      "Programa nacional de educação pelo jogo com ebooks para professores e pais — estratégia instrucional e design de conteúdo para rollout em escolas de todo o país.",
-    gradient: "linear-gradient(135deg, #180A00 0%, #281500 60%, #180A00 100%)",
-    reverse: false,
-  },
-  {
-    number: "10",
-    title: "Apps for Good",
-    category: "Coding Education · Premiação",
-    tags: ["Apps for Good", "Coding", "Impacto Social", "Competição"],
-    description:
-      "Programa de programação com impacto social para jovens — a equipa venceu o Prémio de Mérito 'Melhor Trabalho' 2023/2024, com apresentação em palco e reconhecimento regional.",
-    image: "/projects/apps-for-good-stage.jpg",
-    reverse: true,
-  },
-];
+import { projects as allProjects } from "@/lib/projects";
 
 /* ─── Pilares da abordagem ────────────────────────────────────────────────── */
 
@@ -357,13 +253,24 @@ export default function HomePage() {
                 Trabalho Selecionado
               </p>
               <span className="text-xs" style={{ color: "#7A7A8C" }}>
-                {projects.length} projetos
+                {allProjects.length} projetos
               </span>
             </div>
 
             {/* Lista de projetos */}
-            {projects.map((project) => (
-              <ProjectBlock key={project.number} {...project} />
+            {allProjects.map((project) => (
+              <ProjectBlock
+                key={project.number}
+                number={project.number}
+                title={project.title}
+                category={project.category}
+                tags={project.tags}
+                description={project.shortDescription}
+                image={project.heroImage}
+                gradient={project.heroGradient}
+                reverse={project.reverse}
+                slug={project.slug}
+              />
             ))}
           </div>
         </section>
