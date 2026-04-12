@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Inter, Nunito } from "next/font/google";
 import CustomCursor from "./components/CustomCursor";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -42,7 +43,9 @@ export default function RootLayout({
         <div className="grain-overlay" aria-hidden="true" />
         {/* Custom cursor */}
         <CustomCursor />
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "title": "Letícia Marinho — Learning Designer",
+    "description": "Portfólio de Letícia Marinho — Learning Experience Designer com 10+ anos a criar experiências de aprendizagem humanas, inovadoras e com impacto real."
+  },
+  "nav": {
+    "projects": "Projetos",
+    "approach": "Abordagem",
+    "cv": "CV",
+    "contact": "Contactar"
+  },
+  "hero": {
+    "badge": "SISTEMA ATIVO",
+    "line1": "LABORATÓRIO",
+    "line2": "DIGITAL",
+    "subtitle": "Explora experiências de aprendizagem criativas",
+    "scroll": "Descer para explorar",
+    "scientist": "Cientista",
+    "name": "Letícia Marinho"
+  },
+  "about": {
+    "badge": "Sobre Mim",
+    "title": "Apaixonada por transformar",
+    "titleHighlight": "a educação",
+    "para1": "Trabalho no CDI Portugal, onde desenvolvo e coordeno projetos educativos de programação, robótica e literacia digital no Centro de Cidadania Digital de Valongo e no Centro de Inovação Carlos Fiolhais, na Maia.",
+    "para2": "Especializo-me no desenho pedagógico de atividades STEAM, clubes tecnológicos e projetos com forte componente prática — robótica educativa, inteligência artificial, gamificação e cidadania digital.",
+    "cta": "Ler bio completa"
+  },
+  "stats": {
+    "years": "Anos de experiência",
+    "students": "Alunos impactados",
+    "projects": "Projetos implementados",
+    "quote": "\"A educação deve ser prática, significativa e conectada com o mundo real.\""
+  },
+  "work": {
+    "badge": "Trabalho Selecionado",
+    "title": "projetos reais de",
+    "titleHighlight": "design instrucional",
+    "description": "Cada projeto é um caso de estudo com contexto, abordagem, ferramentas e resultados reais.",
+    "cta": "Ver Caso de Estudo"
+  },
+  "approach": {
+    "badge": "Abordagem",
+    "title": "O meu processo de design instrucional",
+    "curriculumNote": "Todas as atividades tecnológicas apresentadas neste portfólio são desenvolvidas com base no currículo nacional português e adaptadas ao nível etário dos participantes.",
+    "curriculumLabel": "Alinhamento Curricular",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Análise do Contexto Educativo",
+        "description": "Identifico o público-alvo, as necessidades de aprendizagem reais e o contexto institucional antes de desenhar qualquer atividade.",
+        "icon": "🔍"
+      },
+      {
+        "num": "02",
+        "title": "Alinhamento com o Currículo Nacional",
+        "description": "Todas as atividades são desenvolvidas com base no currículo nacional português e nas metas curriculares do respetivo ano de escolaridade.",
+        "icon": "📚"
+      },
+      {
+        "num": "03",
+        "title": "Definição de Objetivos de Aprendizagem",
+        "description": "Defino objetivos claros, mensuráveis e alinhados com competências digitais, pensamento computacional e cidadania digital.",
+        "icon": "🎯"
+      },
+      {
+        "num": "04",
+        "title": "Design de Experiências Práticas",
+        "description": "Utilizo metodologias ativas: Aprendizagem Baseada em Projetos, STEAM, Design Thinking e aprendizagem ativa com componente hands-on.",
+        "icon": "⚙️"
+      },
+      {
+        "num": "05",
+        "title": "Implementação com Tecnologia Educativa",
+        "description": "Integro ferramentas como Scratch, Arduino, Makey Makey, mBot e robótica educativa como amplificadores do processo de aprendizagem.",
+        "icon": "🤖"
+      },
+      {
+        "num": "06",
+        "title": "Avaliação e Melhoria Contínua",
+        "description": "Observo o desempenho dos alunos, recolho evidências e itero as atividades com base no feedback real do processo.",
+        "icon": "📊"
+      }
+    ],
+    "pillars": [
+      { "symbol": "①", "title": "Design Instrucional", "description": "Análise de necessidades, objetivos mensuráveis e avaliação de impacto real." },
+      { "symbol": "②", "title": "Aprendizagem Ativa", "description": "PBL, gamificação, hands-on e prática deliberada como metodologias centrais." },
+      { "symbol": "③", "title": "Tecnologia Educativa", "description": "Ferramentas que ampliam — e não substituem — a aprendizagem humana." },
+      { "symbol": "④", "title": "Experiência do Utilizador", "description": "Clareza, fluxo e redução de fricção em cada momento da experiência." },
+      { "symbol": "⑤", "title": "Impacto Real", "description": "Evidência, iteração contínua e mudança comportamental verificável." }
+    ]
+  },
+  "skills": {
+    "badge": "Competências",
+    "title": "Áreas de especialização",
+    "list": [
+      "Instructional Design",
+      "Learning Experience Design",
+      "Curriculum Development",
+      "Facilitação & Formação de Professores",
+      "Design Thinking",
+      "Tecnologia Educativa (Scratch · mBot · micro:bit · IA)",
+      "Gamificação & PBL",
+      "Gestão de Projetos EdTech",
+      "Produção de Materiais Didáticos"
+    ]
+  },
+  "footer": {
+    "badge": "Disponível para projetos",
+    "title": "Vamos criar algo",
+    "titleHighlight": "memorável",
+    "description": "Disponível para projetos de design instrucional, LXD, formação e consultoria em EdTech.",
+    "email": "letymarinho21@gmail.com",
+    "linkedin": "LinkedIn →",
+    "tagline": "10+ anos de experiência em design instrucional e tecnologia educativa",
+    "copyright": "© 2026 Letícia Marinho",
+    "role": "Learning Designer · Lisboa"
+  },
+  "login": {
+    "badge": "Portfólio Privado",
+    "title": "Letícia Marinho",
+    "subtitle": "Insere a palavra-passe para aceder ao portfólio.",
+    "placeholder": "Palavra-passe",
+    "submit": "Entrar →",
+    "loading": "A entrar...",
+    "error": "Palavra-passe incorreta."
+  },
+  "work_page": {
+    "back": "Todos os Projetos",
+    "project": "Projeto",
+    "sections": {
+      "contexto": { "label": "Contexto", "tagline": "O porquê do projeto" },
+      "objetivo": { "label": "Objetivo", "tagline": "O que se queria alcançar" },
+      "meuPapel": { "label": "O Meu Papel", "tagline": "O que fiz concretamente" },
+      "abordagem": { "label": "Abordagem Instrucional", "tagline": "Como desenhei a experiência" },
+      "resultados": { "label": "Resultados e Impacto", "tagline": "O que mudou de verdade" },
+      "materiais": { "label": "Materiais Produzidos", "tagline": "O que existe para mostrar" }
+    },
+    "methodology": "Metodologia aplicada",
+    "methodologyText": "Design Instrucional centrado no aprendente, com ciclos de análise → design → desenvolvimento → implementação → avaliação.",
+    "tools": "Ferramentas",
+    "toolsTagline": "O que usei para criar",
+    "gallery": "Galeria de Imagens",
+    "photos": "fotos",
+    "videos": "Vídeos do Projeto",
+    "videosUnit": "vídeos",
+    "downloads": "Materiais para Download",
+    "openPdf": "Clique para abrir PDF →",
+    "backPortfolio": "Voltar ao portfólio",
+    "talkProject": "Falar sobre este projeto",
+    "curriculumBadge": "Currículo Nacional",
+    "curriculumNote": "Desenvolvido com base no currículo nacional português"
+  }
+}

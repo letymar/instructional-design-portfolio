@@ -1,6 +1,11 @@
+'use client';
+
 import Link from "next/link";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Nav() {
+  const { lang, setLang, t } = useLanguage();
+
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl"
@@ -23,17 +28,46 @@ export default function Nav() {
         </Link>
 
         <div className="hidden md:flex items-center gap-2 text-sm">
-          <Link href="/#trabalho" className="nav-link">Projetos</Link>
-          <Link href="/#abordagem" className="nav-link">Abordagem</Link>
-          <Link href="/cv" className="nav-link">CV</Link>
-          <Link href="/#contacto" className="nav-link">Contacto</Link>
+          <Link href="/#trabalho" className="nav-link">{t.nav.projects}</Link>
+          <Link href="/#abordagem" className="nav-link">{t.nav.approach}</Link>
+          <Link href="/cv" className="nav-link">{t.nav.cv}</Link>
+          <Link href="/#contacto" className="nav-link">{t.nav.contact}</Link>
+
+          {/* Language toggle */}
+          <div
+            className="flex items-center gap-0.5 ml-2 rounded-full p-0.5"
+            style={{ backgroundColor: "rgba(91,75,138,0.08)" }}
+          >
+            <button
+              onClick={() => setLang('pt')}
+              className="text-xs font-bold px-2.5 py-1 rounded-full transition-all duration-200"
+              style={{
+                backgroundColor: lang === 'pt' ? '#5B4B8A' : 'transparent',
+                color: lang === 'pt' ? '#ffffff' : '#5B4B8A',
+                cursor: 'pointer',
+              }}
+            >
+              PT
+            </button>
+            <button
+              onClick={() => setLang('en')}
+              className="text-xs font-bold px-2.5 py-1 rounded-full transition-all duration-200"
+              style={{
+                backgroundColor: lang === 'en' ? '#5B4B8A' : 'transparent',
+                color: lang === 'en' ? '#ffffff' : '#5B4B8A',
+                cursor: 'pointer',
+              }}
+            >
+              EN
+            </button>
+          </div>
         </div>
 
         <a
           href="mailto:letymarinho21@gmail.com"
           className="btn-primary text-sm"
         >
-          Contactar
+          {t.nav.contact}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>

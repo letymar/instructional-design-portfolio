@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "title": "Letícia Marinho — Learning Designer",
+    "description": "Portfolio of Letícia Marinho — Learning Experience Designer with 10+ years creating human, innovative, and impactful learning experiences."
+  },
+  "nav": {
+    "projects": "Projects",
+    "approach": "Approach",
+    "cv": "CV",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "SYSTEM ACTIVE",
+    "line1": "LEARNING",
+    "line2": "DESIGNER",
+    "subtitle": "Transforming educational technology into meaningful learning experiences",
+    "scroll": "Scroll to explore",
+    "scientist": "Designer",
+    "name": "Letícia Marinho"
+  },
+  "about": {
+    "badge": "About Me",
+    "title": "Passionate about transforming",
+    "titleHighlight": "education",
+    "para1": "I work at CDI Portugal, where I develop and coordinate educational projects in programming, robotics and digital literacy at the Digital Citizenship Centre of Valongo and the Carlos Fiolhais Innovation Centre in Maia.",
+    "para2": "I specialise in the pedagogical design of STEAM activities, technology clubs and projects with a strong hands-on component — educational robotics, artificial intelligence, gamification and digital citizenship.",
+    "cta": "Read full bio"
+  },
+  "stats": {
+    "years": "Years of experience",
+    "students": "Students impacted",
+    "projects": "Projects implemented",
+    "quote": "\"Education should be practical, meaningful and connected to the real world.\""
+  },
+  "work": {
+    "badge": "Selected Work",
+    "title": "real instructional",
+    "titleHighlight": "design projects",
+    "description": "Each project is a case study with real context, approach, tools and outcomes.",
+    "cta": "View Case Study"
+  },
+  "approach": {
+    "badge": "Approach",
+    "title": "My instructional design process",
+    "curriculumNote": "All technology activities presented in this portfolio are developed based on the Portuguese national curriculum and adapted to the age level of participants.",
+    "curriculumLabel": "Curriculum Alignment",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Educational Context Analysis",
+        "description": "I identify the target audience, real learning needs and institutional context before designing any activity.",
+        "icon": "🔍"
+      },
+      {
+        "num": "02",
+        "title": "National Curriculum Alignment",
+        "description": "All activities are developed based on the Portuguese national curriculum and the curricular goals for the corresponding school year.",
+        "icon": "📚"
+      },
+      {
+        "num": "03",
+        "title": "Learning Objectives Definition",
+        "description": "I define clear, measurable objectives aligned with digital competencies, computational thinking and digital citizenship.",
+        "icon": "🎯"
+      },
+      {
+        "num": "04",
+        "title": "Hands-On Experience Design",
+        "description": "I use active methodologies: Project-Based Learning, STEAM, Design Thinking and active learning with a hands-on component.",
+        "icon": "⚙️"
+      },
+      {
+        "num": "05",
+        "title": "Implementation with Educational Technology",
+        "description": "I integrate tools like Scratch, Arduino, Makey Makey, mBot and educational robotics as amplifiers of the learning process.",
+        "icon": "🤖"
+      },
+      {
+        "num": "06",
+        "title": "Assessment and Continuous Improvement",
+        "description": "I observe student performance, collect evidence and iterate activities based on real process feedback.",
+        "icon": "📊"
+      }
+    ],
+    "pillars": [
+      { "symbol": "①", "title": "Instructional Design", "description": "Needs analysis, measurable objectives and real impact assessment." },
+      { "symbol": "②", "title": "Active Learning", "description": "PBL, gamification, hands-on and deliberate practice as core methodologies." },
+      { "symbol": "③", "title": "Educational Technology", "description": "Tools that amplify — not replace — human learning." },
+      { "symbol": "④", "title": "User Experience", "description": "Clarity, flow and friction reduction at every moment of the experience." },
+      { "symbol": "⑤", "title": "Real Impact", "description": "Evidence, continuous iteration and verifiable behavioural change." }
+    ]
+  },
+  "skills": {
+    "badge": "Skills",
+    "title": "Areas of expertise",
+    "list": [
+      "Instructional Design",
+      "Learning Experience Design",
+      "Curriculum Development",
+      "Facilitation & Teacher Training",
+      "Design Thinking",
+      "Educational Technology (Scratch · mBot · micro:bit · AI)",
+      "Gamification & PBL",
+      "EdTech Project Management",
+      "Instructional Materials Production"
+    ]
+  },
+  "footer": {
+    "badge": "Available for projects",
+    "title": "Let's create something",
+    "titleHighlight": "memorable",
+    "description": "Available for instructional design projects, LXD, training and EdTech consulting.",
+    "email": "letymarinho21@gmail.com",
+    "linkedin": "LinkedIn →",
+    "tagline": "10+ years of experience in instructional design and educational technology",
+    "copyright": "© 2026 Letícia Marinho",
+    "role": "Learning Designer · Lisbon"
+  },
+  "login": {
+    "badge": "Private Portfolio",
+    "title": "Letícia Marinho",
+    "subtitle": "Enter the password to access the portfolio.",
+    "placeholder": "Password",
+    "submit": "Enter →",
+    "loading": "Entering...",
+    "error": "Incorrect password."
+  },
+  "work_page": {
+    "back": "All Projects",
+    "project": "Project",
+    "sections": {
+      "contexto": { "label": "Context", "tagline": "The why behind the project" },
+      "objetivo": { "label": "Objective", "tagline": "What was to be achieved" },
+      "meuPapel": { "label": "My Role", "tagline": "What I did concretely" },
+      "abordagem": { "label": "Instructional Approach", "tagline": "How I designed the experience" },
+      "resultados": { "label": "Results and Impact", "tagline": "What truly changed" },
+      "materiais": { "label": "Produced Materials", "tagline": "What exists to show" }
+    },
+    "methodology": "Applied methodology",
+    "methodologyText": "Learner-centred Instructional Design, with analysis → design → development → implementation → evaluation cycles.",
+    "tools": "Tools",
+    "toolsTagline": "What I used to create",
+    "gallery": "Image Gallery",
+    "photos": "photos",
+    "videos": "Project Videos",
+    "videosUnit": "videos",
+    "downloads": "Downloadable Materials",
+    "openPdf": "Click to open PDF →",
+    "backPortfolio": "Back to portfolio",
+    "talkProject": "Talk about this project",
+    "curriculumBadge": "National Curriculum",
+    "curriculumNote": "Developed based on the Portuguese national curriculum"
+  }
+}
