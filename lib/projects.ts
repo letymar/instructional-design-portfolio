@@ -431,6 +431,9 @@ export const projects: Project[] = [
       materiais:
         "Protótipo funcional do BOB (chatbot), apresentação do projeto para júri, documentação do processo de Design Thinking.",
     },
+    videos: [
+      "https://www.youtube.com/watch?v=6OLf5ShBN10",
+    ],
     docs: [],
     reverse: true,
   },
@@ -453,14 +456,6 @@ export const projects: Project[] = [
       "/projects/led-7.jpg",
       "/projects/led-8.jpg",
     ],
-    videos: [
-      "/projects/led-video-1.mp4",
-      "/projects/led-video-2.mp4",
-      "/projects/led-video-3.mp4",
-      "/projects/led-video-4.mp4",
-      "/projects/led-video-5.mp4",
-      "/projects/led-video-6.mp4",
-    ],
     caseStudy: {
       contexto:
         "O Laboratório de Educação Digital (LED) é um projeto desenvolvido pelo CDI Portugal em parceria com a Direção-Geral de Educação (DGE), com o objetivo de criar recursos pedagógicos de qualidade para integração do STEM no currículo formal do 2.º e 3.º ciclo do Ensino Básico. Os cenários de aprendizagem foram concebidos para serem utilizados por professores em sala de aula, articulando programação, robótica e computação física com as metas curriculares existentes.",
@@ -476,6 +471,9 @@ export const projects: Project[] = [
       materiais:
         "Guião de Programação e Montagem de Circuito (CDI Portugal), Cenário STEM — Eco Caixote do Lixo (9.º/10.º ano), Cenário Robótica — Robô controlado por gestos (9.º ano), Cenário Casas Sustentáveis com Micro:bit (8.º ano), Guião de apoio — Casas Sustentáveis.",
     },
+    videos: [
+      "https://player.cloudinary.com/embed/?cloud_name=dggbm9lab&public_id=WhatsApp_Video_2026-04-12_at_10.37.34_f7bbig",
+    ],
     docs: [
       { label: "Guião: Programação e Montagem de Circuito", url: "/docs/led-guiao-circuito.pdf" },
       { label: "Cenário STEM: Eco Caixote do Lixo", url: "/docs/led-cenario-eco-caixote.pdf" },

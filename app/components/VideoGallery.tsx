@@ -1,36 +1,83 @@
 'use client';
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface VideoGalleryProps {
   videos: string[];
   title: string;
 }
 
+interface ParsedVideo {
+  src: string;           // direct mp4 or youtube embed URL
+  thumb: string | null;  // thumbnail image URL
+  isYoutube: boolean;
+}
+
+/* ─── URL helpers ─────────────────────────────────────────────────────────── */
+
+function youtubeId(url: string): string | null {
+  const m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?/]+)/);
+  return m ? m[1] : null;
+}
+
+function parseVideo(url: string): ParsedVideo {
+  /* YouTube */
+  const ytId = youtubeId(url);
+  if (ytId) {
+    return {
+      src: `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`,
+      thumb: `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`,
+      isYoutube: true,
+    };
+  }
+
+  /* Cloudinary embed URL */
+  if (url.includes("player.cloudinary.com/embed/")) {
+    const params = new URLSearchParams(url.split("?")[1] ?? "");
+    const cloud = params.get("cloud_name");
+    const id = params.get("public_id");
+    if (cloud && id) {
+      const base = `https://res.cloudinary.com/${cloud}/video/upload/${id}`;
+      return { src: `${base}.mp4`, thumb: `${base}.jpg`, isYoutube: false };
+    }
+  }
+
+  /* Direct Cloudinary mp4 URL */
+  if (url.includes("res.cloudinary.com") && url.match(/\.(mp4|webm|mov)$/i)) {
+    return { src: url, thumb: url.replace(/\.(mp4|webm|mov)$/i, ".jpg"), isYoutube: false };
+  }
+
+  /* Fallback (local mp4, etc.) */
+  return { src: url, thumb: null, isYoutube: false };
+}
+
+/* ─── Component ───────────────────────────────────────────────────────────── */
+
 export default function VideoGallery({ videos, title }: VideoGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const parsed = videos.map(parseVideo);
 
-  // Close on Escape key
   useEffect(() => {
     if (selectedIndex === null) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setSelectedIndex(null);
-      if (e.key === "ArrowRight") setSelectedIndex((i) => (i !== null ? (i + 1) % videos.length : null));
-      if (e.key === "ArrowLeft") setSelectedIndex((i) => (i !== null ? (i - 1 + videos.length) % videos.length : null));
+      if (e.key === "ArrowRight") setSelectedIndex((i) => i !== null ? (i + 1) % videos.length : null);
+      if (e.key === "ArrowLeft") setSelectedIndex((i) => i !== null ? (i - 1 + videos.length) % videos.length : null);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [selectedIndex, videos.length]);
 
-  const videoNumber = (i: number) => String(i + 1).padStart(2, "0");
+  const label = (i: number) => `${String(i + 1).padStart(2, "0")} / ${String(videos.length).padStart(2, "0")}`;
 
   return (
     <>
-      {/* Grid of thumbnails */}
+      {/* ── Thumbnail grid ──────────────────────────────────────────────── */}
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-        {videos.map((src, i) => (
+        {parsed.map((v, i) => (
           <button
-            key={src}
+            key={i}
             onClick={() => setSelectedIndex(i)}
             className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
             style={{
@@ -40,48 +87,50 @@ export default function VideoGallery({ videos, title }: VideoGalleryProps) {
               cursor: "pointer",
             }}
           >
-            {/* Play icon */}
+            {/* Thumbnail image */}
+            {v.thumb && (
+              <Image
+                src={v.thumb}
+                alt={`${title} — vídeo ${i + 1}`}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 640px) 50vw, 33vw"
+              />
+            )}
+
+            {/* Dark overlay + play button */}
             <div
-              className="absolute inset-0 flex flex-col items-center justify-center gap-2 transition-all duration-300 group-hover:bg-[#5B4B8A]/20"
+              className="absolute inset-0 flex flex-col items-center justify-center gap-2 transition-all duration-300"
+              style={{ backgroundColor: v.thumb ? "rgba(0,0,0,0.35)" : "transparent" }}
             >
               <div
                 className="w-12 h-12 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-                style={{ backgroundColor: "rgba(91,75,138,0.9)", boxShadow: "0 4px 20px rgba(91,75,138,0.4)" }}
+                style={{ backgroundColor: "rgba(91,75,138,0.92)", boxShadow: "0 4px 20px rgba(91,75,138,0.5)" }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </div>
-              <span
-                className="text-xs font-bold"
-                style={{ color: "rgba(255,255,255,0.6)", letterSpacing: "0.12em" }}
-              >
-                VID {videoNumber(i)}
+              <span className="text-xs font-bold" style={{ color: "rgba(255,255,255,0.8)", letterSpacing: "0.1em" }}>
+                VID {String(i + 1).padStart(2, "0")}
               </span>
             </div>
           </button>
         ))}
       </div>
 
-      {/* Lightbox */}
+      {/* ── Lightbox ────────────────────────────────────────────────────── */}
       {selectedIndex !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          style={{ backgroundColor: "rgba(0,0,0,0.88)", backdropFilter: "blur(8px)" }}
+          style={{ backgroundColor: "rgba(0,0,0,0.9)", backdropFilter: "blur(10px)" }}
           onClick={() => setSelectedIndex(null)}
         >
-          {/* Video container */}
-          <div
-            className="relative w-full max-w-4xl"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="relative w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
             <div className="flex items-center justify-between mb-3 px-1">
-              <span
-                className="text-xs font-bold uppercase tracking-[0.15em]"
-                style={{ color: "rgba(255,255,255,0.5)" }}
-              >
-                {title} — Vídeo {videoNumber(selectedIndex)} / {videoNumber(videos.length - 1)}
+              <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "rgba(255,255,255,0.45)" }}>
+                {title} — {label(selectedIndex)}
               </span>
               <button
                 onClick={() => setSelectedIndex(null)}
@@ -94,18 +143,29 @@ export default function VideoGallery({ videos, title }: VideoGalleryProps) {
               </button>
             </div>
 
-            {/* Video player */}
-            <video
-              key={videos[selectedIndex]}
-              src={videos[selectedIndex]}
-              controls
-              autoPlay
-              playsInline
-              className="w-full rounded-2xl"
-              style={{ maxHeight: "75vh", backgroundColor: "#000" }}
-            />
+            {/* Player */}
+            {parsed[selectedIndex].isYoutube ? (
+              <iframe
+                key={parsed[selectedIndex].src}
+                src={parsed[selectedIndex].src}
+                allow="autoplay; fullscreen"
+                allowFullScreen
+                className="w-full rounded-2xl"
+                style={{ aspectRatio: "16/9", border: "none", backgroundColor: "#000" }}
+              />
+            ) : (
+              <video
+                key={parsed[selectedIndex].src}
+                src={parsed[selectedIndex].src}
+                controls
+                autoPlay
+                playsInline
+                className="w-full rounded-2xl"
+                style={{ maxHeight: "75vh", backgroundColor: "#000" }}
+              />
+            )}
 
-            {/* Navigation arrows */}
+            {/* Prev / Next */}
             {videos.length > 1 && (
               <div className="flex items-center justify-between mt-3 px-1">
                 <button
