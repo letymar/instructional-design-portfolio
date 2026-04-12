@@ -314,38 +314,8 @@ export const projects: Project[] = [
     reverse: true,
   },
   {
-    slug: "campo-ferias-tokmexer",
-    number: "07",
-    title: "Campo de Férias Tokmexer",
-    category: "L&D · Projeto de Cliente",
-    tags: ["Learning & Development", "Design de Proposta", "IA na Educação", "Projeto Corporativo"],
-    shortDescription:
-      "Campo de férias tecnológico e de IA — proposta completa e materiais de aprendizagem concebidos e entregues para cliente com requisitos de impacto mensuráveis.",
-    heroGradient: "linear-gradient(135deg, #081018 0%, #0D1828 60%, #081018 100%)",
-    gallery: [],
-    caseStudy: {
-      contexto:
-        "O Campo de Férias foi desenvolvido como projeto de L&D (Learning & Development) para um cliente corporativo, com o objetivo de criar uma experiência de aprendizagem tecnológica para jovens durante o período de férias. O projeto incluiu a elaboração de uma proposta pedagógica completa e a produção de todos os materiais necessários para a implementação.",
-      objetivo:
-        "Conceber uma experiência de aprendizagem tecnológica imersiva de múltiplos dias para jovens, integrando atividades de inteligência artificial, robótica e criatividade digital. Entregar uma proposta com objetivos de aprendizagem mensuráveis e materiais prontos a implementar.",
-      meuPapel:
-        "Fui responsável pelo design instrucional completo — desde a análise de necessidades do cliente até à produção final de todos os materiais. Elaborei a proposta pedagógica, defini os objetivos de aprendizagem, estruturei o programa dia a dia e produzi todos os materiais de suporte para facilitadores e participantes.",
-      abordagem:
-        "O programa foi desenhado como uma experiência de imersão tecnológica progressiva: cada dia introduz novas tecnologias e conceitos, construindo sobre os do dia anterior. A metodologia combina exploração guiada, desafios em equipa e projetos individuais. As atividades de IA foram adaptadas para serem acessíveis a jovens sem experiência técnica prévia.",
-      ferramentas: ["Ferramentas de IA (Gemini, ChatGPT)", "mBot", "Scratch", "Makey Makey", "Cartões de prompt de IA"],
-      resultados:
-        "Proposta completa entregue e aprovada pelo cliente. Materiais prontos a implementar, incluindo guiões de facilitação, cartões de prompt de IA e plano detalhado de cada sessão. Projeto referenciável como exemplo de L&D tecnológico para jovens em contexto corporativo.",
-      materiais:
-        "Proposta pedagógica completa, plano de sessões dia a dia, cartões de prompt de IA, materiais de facilitação.",
-    },
-    docs: [
-      { label: "Proposta do Campo de Férias", url: "/docs/campo-ferias-proposta.pdf" },
-    ],
-    reverse: false,
-  },
-  {
     slug: "literacia-digital-senior",
-    number: "08",
+    number: "07",
     title: "Literacia Digital Sénior",
     category: "Aprendizagem de Adultos",
     tags: ["Design Inclusivo", "Literacia Digital", "Acessibilidade", "Aprendizagem ao Longo da Vida"],
@@ -385,7 +355,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ingaming",
-    number: "09",
+    number: "08",
     title: "InGaming Vai às Escolas",
     category: "EdTech · Publicação",
     tags: ["Game-Based Learning", "Design Editorial", "Estratégia de Conteúdo", "Recursos para Professores"],
@@ -448,7 +418,7 @@ export const projects: Project[] = [
   },
   {
     slug: "apps-for-good",
-    number: "10",
+    number: "09",
     title: "Apps for Good",
     category: "Coding · Impacto Social",
     tags: ["Apps for Good", "Design Thinking", "Impacto Social", "Premiação Nacional"],
@@ -485,7 +455,7 @@ export const projects: Project[] = [
   },
   {
     slug: "laboratorio-educacao-digital",
-    number: "11",
+    number: "10",
     title: "Laboratório de Educação Digital",
     category: "Currículo · DGE",
     tags: ["Cenários de Aprendizagem", "STEM", "Micro:bit", "Direção-Geral de Educação"],

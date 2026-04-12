@@ -29,17 +29,44 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Language>('pt');
 
   useEffect(() => {
-    // Restore from localStorage first
+    // 1. Restore from localStorage (user's explicit choice)
     const saved = localStorage.getItem('portfolio_lang') as Language | null;
     if (saved === 'pt' || saved === 'en') {
       setLangState(saved);
       return;
     }
-    // Auto-detect from browser
-    const browserLang = navigator.language.toLowerCase();
-    if (browserLang.startsWith('en')) {
-      setLangState('en');
+
+    // 2. Check all browser/OS languages in order of preference
+    // navigator.languages covers: browser UI language, OS language, and user-configured preferences
+    const browserLangs = navigator.languages?.length
+      ? navigator.languages
+      : [navigator.language];
+
+    const hasPt = browserLangs.some(l => l.toLowerCase().startsWith('pt'));
+    const hasEn = browserLangs.some(l => l.toLowerCase().startsWith('en'));
+
+    if (hasPt) {
+      setLangState('pt');
+      return;
     }
+    if (hasEn) {
+      setLangState('en');
+      return;
+    }
+
+    // 3. Geographic fallback via IP (async, best-effort)
+    fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(3000) })
+      .then(r => r.json())
+      .then(data => {
+        const country: string = (data.country_code ?? '').toUpperCase();
+        const ptCountries = ['PT', 'BR', 'AO', 'MZ', 'CV', 'GW', 'ST', 'TL'];
+        if (ptCountries.includes(country)) setLangState('pt');
+        else setLangState('en');
+      })
+      .catch(() => {
+        // Default to PT (portfolio owner is Portuguese)
+        setLangState('pt');
+      });
   }, []);
 
   const setLang = (l: Language) => {

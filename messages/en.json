@@ -150,5 +150,165 @@
     "talkProject": "Talk about this project",
     "curriculumBadge": "National Curriculum",
     "curriculumNote": "Developed based on the Portuguese national curriculum"
+  },
+  "cv": {
+    "badge": "Curriculum Vitae",
+    "subtitle": "Learning Designer · Instructional Designer · EdTech & AI Educator · Programming & Robotics Teacher",
+    "printBtn": "Print PDF",
+    "portfolioBtn": "View Portfolio",
+    "projectsBtn": "View Projects",
+    "contactBtn": "Contact me",
+    "sections": {
+      "about": "About",
+      "experience": "Professional Experience",
+      "skills": "Skills",
+      "education": "Education",
+      "certifications": "Certifications",
+      "languages": "Languages",
+      "approach": "Personal Approach",
+      "contributions": "Key Contributions",
+      "summary": "Professional Summary"
+    },
+    "languages": [
+      { "lang": "Portuguese", "level": "Native" },
+      { "lang": "English", "level": "Professional" }
+    ],
+    "about": [
+      "I am a <strong>Learning Experience Designer</strong> and educator with over a decade of experience in education, technology, and digital innovation.",
+      "My work focuses on designing meaningful, hands-on learning experiences that combine <strong>technology, creativity, and real-world problem solving</strong>.",
+      "Currently, I work at <strong>CDI Portugal</strong>, where I design and coordinate educational programs in <strong>programming, robotics, artificial intelligence, and digital literacy</strong>, supporting children, youth, educators, and communities.",
+      "I am passionate about transforming complex technological concepts into <strong>engaging, accessible, and impactful learning experiences</strong>, especially through STEAM education, gamification, and project-based learning."
+    ],
+    "summary": [
+      "10+ years of experience in Education and Learning Design",
+      "Specialist in Instructional Design and Learning Experience Design",
+      "Strong experience in Educational Technology, Robotics, and AI Education",
+      "Designer of STEAM-based educational experiences",
+      "Experience in UX Research and Educational Innovation",
+      "Coordinator of digital learning communities and educational projects",
+      "Creator of hands-on learning projects using Scratch, Arduino, AI tools, and robotics",
+      "Experienced in community-driven digital inclusion initiatives"
+    ],
+    "experience": [
+      {
+        "company": "CDI Portugal",
+        "role": "Learning Designer & Community Manager",
+        "location": "Porto, Portugal",
+        "period": "July 2024 — Present",
+        "description": "Design and coordinate innovative learning experiences in programming, robotics, and educational technology.",
+        "responsibilities": [
+          "Design hands-on STEAM learning experiences",
+          "Create educational programs in robotics, AI, and digital literacy",
+          "Coordinate activities at Centro de Cidadania Digital (CCD) Valongo and Centro de Inovação Carlos Fiolhais",
+          "Support educators in integrating technology into classrooms",
+          "Plan workshops, coding clubs, and technology-based projects",
+          "Develop project-based learning experiences",
+          "Build and manage learning communities"
+        ],
+        "contributions": [
+          "Development of robotics and programming learning pathways",
+          "Implementation of digital literacy initiatives for schools and communities",
+          "Design of educational experiences using Arduino, Scratch, AI tools, and robotics kits",
+          "Creation of STEAM workshops and innovation-based learning experiences"
+        ]
+      },
+      {
+        "company": "CDI Portugal",
+        "role": "Programming and Robotics Teacher",
+        "location": "Porto, Portugal",
+        "period": "September 2023 — July 2024",
+        "description": "Taught programming and robotics using visual and hands-on tools for children.",
+        "responsibilities": [
+          "Teaching Scratch and visual programming",
+          "Introducing robotics using mBlock and beginner robotics kits",
+          "Developing computational thinking through games and challenges",
+          "Supporting students in solving real-world problems through code",
+          "Promoting creativity and logical reasoning"
+        ]
+      },
+      {
+        "company": "CoderDojo",
+        "role": "Programming Instructor",
+        "location": "Valongo, Portugal",
+        "period": "January 2024 — Present",
+        "description": "Teach coding and computational thinking to children using project-based learning approaches."
+      },
+      {
+        "company": "Happy Code Portugal",
+        "role": "Programming Teacher",
+        "location": "Porto, Portugal",
+        "period": "March 2024 — June 2024",
+        "description": "Delivered programming lessons using Scratch, Minecraft, and Lego Education tools."
+      },
+      {
+        "company": "MEWEEE",
+        "role": "UX Researcher",
+        "location": "United Kingdom (Remote)",
+        "period": "August 2022 — June 2024",
+        "description": "Conducted user research to improve digital experiences and understand user needs.",
+        "responsibilities": [
+          "Conduct usability testing sessions",
+          "Perform stakeholder interviews",
+          "Collect qualitative and quantitative research data",
+          "Support UX strategy decisions"
+        ]
+      },
+      {
+        "company": "Athena Educacional LTDA",
+        "role": "School Manager",
+        "location": "Brazil",
+        "period": "February 2019 — January 2022",
+        "description": "Managed school operations and coordinated educational teams.",
+        "responsibilities": [
+          "Lead pedagogical teams",
+          "Improve teaching strategies",
+          "Coordinate school planning",
+          "Implement educational innovation initiatives"
+        ]
+      },
+      {
+        "company": "Athena Centro Educacional",
+        "role": "Instructional Designer",
+        "location": "Brazil",
+        "period": "January 2017 — December 2019",
+        "description": "Designed educational materials and learning strategies aligned with institutional goals.",
+        "responsibilities": [
+          "Develop learning materials",
+          "Create digital educational resources",
+          "Design teaching strategies",
+          "Evaluate curriculum effectiveness"
+        ]
+      },
+      {
+        "company": "Institute of Education Tavares Bueno",
+        "role": "Teacher",
+        "location": "Brazil",
+        "period": "February 2014 — August 2015",
+        "description": "Taught early education and supported student learning development."
+      }
+    ],
+    "skillGroups": [
+      { "title": "Learning Design" },
+      { "title": "Technology & Robotics" },
+      { "title": "UX & Digital Design" },
+      { "title": "Community & Education" }
+    ],
+    "education": [
+      { "degree": "Postgraduate — UX & UI Design", "institution": "University of State Minas Gerais", "period": "2021 — 2022" },
+      { "degree": "Postgraduate — School Administration and Supervision", "institution": "", "period": "2019 — 2020" },
+      { "degree": "Bachelor's Degree — Pedagogy", "institution": "University Iguaçu", "period": "2015 — 2018" },
+      { "degree": "Teacher Training — Education", "institution": "Colégio Estadual Presidente Rodrigues Alves", "period": "2010 — 2013" },
+      { "degree": "UX Design", "institution": "Interaction Design Foundation", "period": "2023" }
+    ],
+    "certifications": [
+      "Agile Methods for UX Design",
+      "Accessibility: How to Design for All",
+      "Mobile UX Design: The Beginner's Guide",
+      "From Educators to Entrepreneurial Facilitators",
+      "Curso Completo de Design de Interface"
+    ],
+    "personalValues": ["Practical", "Creative", "Accessible", "Meaningful", "Connected to real-world challenges"],
+    "approachIntro": "I believe learning should be:",
+    "approachQuote": "\"Every learning experience I design aims to empower learners to create, explore, and solve problems through technology.\""
   }
 }

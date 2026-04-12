@@ -150,5 +150,165 @@
     "talkProject": "Falar sobre este projeto",
     "curriculumBadge": "Currículo Nacional",
     "curriculumNote": "Desenvolvido com base no currículo nacional português"
+  },
+  "cv": {
+    "badge": "Curriculum Vitae",
+    "subtitle": "Learning Designer · Instructional Designer · EdTech & IA · Professora de Programação e Robótica",
+    "printBtn": "Imprimir PDF",
+    "portfolioBtn": "Ver Portfólio",
+    "projectsBtn": "Ver Projetos",
+    "contactBtn": "Falar comigo",
+    "sections": {
+      "about": "Sobre",
+      "experience": "Experiência Profissional",
+      "skills": "Competências",
+      "education": "Formação Académica",
+      "certifications": "Certificações",
+      "languages": "Idiomas",
+      "approach": "Abordagem Pessoal",
+      "contributions": "Contribuições Principais",
+      "summary": "Resumo Profissional"
+    },
+    "languages": [
+      { "lang": "Português", "level": "Nativo" },
+      { "lang": "English", "level": "Profissional" }
+    ],
+    "about": [
+      "Sou uma <strong>Learning Experience Designer</strong> e educadora com mais de uma década de experiência em educação, tecnologia e inovação digital.",
+      "O meu trabalho centra-se no design de experiências de aprendizagem significativas e práticas que combinam <strong>tecnologia, criatividade e resolução de problemas do mundo real</strong>.",
+      "Atualmente trabalho no <strong>CDI Portugal</strong>, onde desenho e coordeno programas educativos em <strong>programação, robótica, inteligência artificial e literacia digital</strong>, apoiando crianças, jovens, educadores e comunidades.",
+      "Tenho paixão por transformar conceitos tecnológicos complexos em <strong>experiências de aprendizagem envolventes, acessíveis e com impacto real</strong>, especialmente através da educação STEAM, gamificação e aprendizagem baseada em projetos."
+    ],
+    "summary": [
+      "10+ anos de experiência em Educação e Design de Aprendizagem",
+      "Especialista em Instructional Design e Learning Experience Design",
+      "Forte experiência em Tecnologia Educativa, Robótica e Educação com IA",
+      "Criadora de experiências educativas baseadas em STEAM",
+      "Experiência em UX Research e Inovação Educacional",
+      "Coordenadora de comunidades de aprendizagem digital e projetos educativos",
+      "Criadora de projetos hands-on com Scratch, Arduino, ferramentas de IA e robótica",
+      "Experiência em iniciativas de inclusão digital comunitária"
+    ],
+    "experience": [
+      {
+        "company": "CDI Portugal",
+        "role": "Learning Designer & Community Manager",
+        "location": "Porto, Portugal",
+        "period": "Julho 2024 — Presente",
+        "description": "Desenho e coordeno experiências de aprendizagem inovadoras em programação, robótica e tecnologia educativa.",
+        "responsibilities": [
+          "Design de experiências de aprendizagem STEAM hands-on",
+          "Criação de programas educativos em robótica, IA e literacia digital",
+          "Coordenação de atividades no Centro de Cidadania Digital (CCD) Valongo e Centro de Inovação Carlos Fiolhais",
+          "Apoio a educadores na integração da tecnologia em sala de aula",
+          "Planeamento de workshops, clubes de programação e projetos tecnológicos",
+          "Desenvolvimento de experiências de aprendizagem baseadas em projetos",
+          "Criação e gestão de comunidades de aprendizagem"
+        ],
+        "contributions": [
+          "Desenvolvimento de percursos de aprendizagem em robótica e programação",
+          "Implementação de iniciativas de literacia digital para escolas e comunidades",
+          "Design de experiências com Arduino, Scratch, ferramentas de IA e kits de robótica",
+          "Criação de workshops STEAM e experiências de aprendizagem baseadas em inovação"
+        ]
+      },
+      {
+        "company": "CDI Portugal",
+        "role": "Professora de Programação e Robótica",
+        "location": "Porto, Portugal",
+        "period": "Setembro 2023 — Julho 2024",
+        "description": "Lecionei programação e robótica com ferramentas visuais e práticas para crianças.",
+        "responsibilities": [
+          "Ensino de Scratch e programação visual",
+          "Introdução à robótica com mBlock e kits para iniciantes",
+          "Desenvolvimento do pensamento computacional através de jogos e desafios",
+          "Apoio aos alunos na resolução de problemas reais através do código",
+          "Promoção da criatividade e do raciocínio lógico"
+        ]
+      },
+      {
+        "company": "CoderDojo",
+        "role": "Instrutora de Programação",
+        "location": "Valongo, Portugal",
+        "period": "Janeiro 2024 — Presente",
+        "description": "Ensino programação e pensamento computacional a crianças com abordagens de aprendizagem baseada em projetos."
+      },
+      {
+        "company": "Happy Code Portugal",
+        "role": "Professora de Programação",
+        "location": "Porto, Portugal",
+        "period": "Março 2024 — Junho 2024",
+        "description": "Lecionei aulas de programação com Scratch, Minecraft e ferramentas Lego Education."
+      },
+      {
+        "company": "MEWEEE",
+        "role": "Investigadora UX",
+        "location": "Reino Unido (Remoto)",
+        "period": "Agosto 2022 — Junho 2024",
+        "description": "Realizei investigação de utilizador para melhorar experiências digitais e compreender as necessidades dos utilizadores.",
+        "responsibilities": [
+          "Condução de sessões de teste de usabilidade",
+          "Realização de entrevistas com stakeholders",
+          "Recolha de dados qualitativos e quantitativos",
+          "Apoio às decisões de estratégia UX"
+        ]
+      },
+      {
+        "company": "Athena Educacional LTDA",
+        "role": "Diretora Escolar",
+        "location": "Brasil",
+        "period": "Fevereiro 2019 — Janeiro 2022",
+        "description": "Geri as operações da escola e coordenei equipas educativas.",
+        "responsibilities": [
+          "Liderança de equipas pedagógicas",
+          "Melhoria de estratégias de ensino",
+          "Coordenação do planeamento escolar",
+          "Implementação de iniciativas de inovação educativa"
+        ]
+      },
+      {
+        "company": "Athena Centro Educacional",
+        "role": "Instructional Designer",
+        "location": "Brasil",
+        "period": "Janeiro 2017 — Dezembro 2019",
+        "description": "Concebi materiais educativos e estratégias de aprendizagem alinhadas com os objetivos institucionais.",
+        "responsibilities": [
+          "Desenvolvimento de materiais de aprendizagem",
+          "Criação de recursos educativos digitais",
+          "Design de estratégias de ensino",
+          "Avaliação da eficácia do currículo"
+        ]
+      },
+      {
+        "company": "Instituto de Educação Tavares Bueno",
+        "role": "Professora",
+        "location": "Brasil",
+        "period": "Fevereiro 2014 — Agosto 2015",
+        "description": "Lecionei educação precoce e apoiei o desenvolvimento da aprendizagem dos alunos."
+      }
+    ],
+    "skillGroups": [
+      { "title": "Design de Aprendizagem" },
+      { "title": "Tecnologia & Robótica" },
+      { "title": "UX & Design Digital" },
+      { "title": "Comunidade & Educação" }
+    ],
+    "education": [
+      { "degree": "Pós-Graduação — Design UX & UI", "institution": "Universidade do Estado de Minas Gerais", "period": "2021 — 2022" },
+      { "degree": "Pós-Graduação — Administração e Supervisão Escolar", "institution": "", "period": "2019 — 2020" },
+      { "degree": "Licenciatura — Pedagogia", "institution": "Universidade Iguaçu", "period": "2015 — 2018" },
+      { "degree": "Formação de Professores — Educação", "institution": "Colégio Estadual Presidente Rodrigues Alves", "period": "2010 — 2013" },
+      { "degree": "Design UX", "institution": "Interaction Design Foundation", "period": "2023" }
+    ],
+    "certifications": [
+      "Métodos Ágeis para Design UX",
+      "Acessibilidade: Como Desenhar para Todos",
+      "Design UX Mobile: O Guia do Iniciante",
+      "De Educadores a Facilitadores Empreendedores",
+      "Curso Completo de Design de Interface"
+    ],
+    "personalValues": ["Prática", "Criativa", "Acessível", "Significativa", "Conectada ao mundo real"],
+    "approachIntro": "Acredito que a aprendizagem deve ser:",
+    "approachQuote": "\"Cada experiência de aprendizagem que desenho visa capacitar os aprendentes a criar, explorar e resolver problemas através da tecnologia.\""
   }
 }
