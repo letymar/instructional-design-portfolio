@@ -14,13 +14,12 @@ interface ProjectBlockProps {
   colorIndex?: number;
 }
 
-// Cycling pastel card header backgrounds
-const cardColors = [
-  { bg: "#D6C9FC", text: "#5B4B8A" },  // lavender
-  { bg: "#CFF8E8", text: "#2D6A4F" },  // mint
-  { bg: "#C9E7FC", text: "#1E5A7A" },  // sky
-  { bg: "#F9C8D7", text: "#8B4557" },  // blush
-  { bg: "#FFF6C9", text: "#8B7355" },  // butter
+const cardAccents = [
+  { line: "#7B68EE", bg: "#D6C9FC", text: "#5B4B8A", shadow: "rgba(123,104,238,0.18)" },
+  { line: "#34D399", bg: "#CFF8E8", text: "#065F46", shadow: "rgba(52,211,153,0.18)" },
+  { line: "#38BDF8", bg: "#C9E7FC", text: "#0C4A6E", shadow: "rgba(56,189,248,0.18)" },
+  { line: "#F472B6", bg: "#F9C8D7", text: "#831843", shadow: "rgba(244,114,182,0.18)" },
+  { line: "#FBBF24", bg: "#FFF6C9", text: "#78350F", shadow: "rgba(251,191,36,0.18)" },
 ];
 
 export default function ProjectBlock({
@@ -34,40 +33,48 @@ export default function ProjectBlock({
   slug,
   colorIndex = 0,
 }: ProjectBlockProps) {
-  const cardColor = cardColors[colorIndex % cardColors.length];
+  const accent = cardAccents[colorIndex % cardAccents.length];
 
   return (
     <article
-      className="card flex flex-col overflow-hidden"
+      className="card group flex flex-col overflow-hidden relative"
       style={{ backgroundColor: "#FFFFFF" }}
     >
-      {/* Image / Gradient top */}
+      {/* Color accent top line */}
       <div
-        className="relative overflow-hidden"
-        style={{ aspectRatio: "16/9" }}
-      >
+        className="absolute top-0 left-0 right-0 h-1 z-10 transition-all duration-300 group-hover:h-1.5"
+        style={{ backgroundColor: accent.line }}
+      />
+
+      {/* Image area */}
+      <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
         {image ? (
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover transition-all duration-700 group-hover:scale-[1.08]"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.04]"
             style={{
-              background:
-                gradient ??
-                `linear-gradient(135deg, ${cardColor.bg} 0%, #FFFFFF 100%)`,
+              background: gradient ?? `linear-gradient(135deg, ${accent.bg} 0%, #FFFFFF 100%)`,
             }}
           />
         )}
-        {/* Number overlay */}
+        {/* Hover overlay */}
         <div
-          className="absolute top-4 left-4 w-10 h-10 rounded-2xl flex items-center justify-center text-sm font-bold"
-          style={{ backgroundColor: "rgba(255,255,255,0.92)", color: "#334155" }}
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+          style={{ backgroundColor: "rgba(30,41,59,0.35)" }}
+        >
+          <span className="btn-primary text-xs py-2.5 px-5">Abrir projeto →</span>
+        </div>
+        {/* Project number */}
+        <div
+          className="absolute top-3 left-3 w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold z-10"
+          style={{ backgroundColor: "rgba(255,255,255,0.95)", color: "#1E293B", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}
         >
           {number}
         </div>
@@ -75,20 +82,17 @@ export default function ProjectBlock({
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-6">
-        {/* Category badge */}
+        {/* Category */}
         <span
-          className="inline-flex self-start text-xs font-semibold px-3 py-1.5 rounded-full mb-3"
-          style={{ backgroundColor: cardColor.bg, color: cardColor.text }}
+          className="section-label-pill self-start mb-3"
+          style={{ backgroundColor: accent.bg, color: accent.text }}
         >
           {category}
         </span>
 
         <h3
-          className="font-bold text-lg leading-snug mb-2"
-          style={{
-            fontFamily: "var(--font-poppins, Poppins, sans-serif)",
-            color: "#334155",
-          }}
+          className="font-bold text-lg leading-snug mb-2 transition-colors duration-200 group-hover:text-[#5B4B8A]"
+          style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", color: "#1E293B" }}
         >
           {title}
         </h3>
@@ -103,7 +107,7 @@ export default function ProjectBlock({
             <span
               key={tag}
               className="text-xs px-2.5 py-1 rounded-full font-medium"
-              style={{ backgroundColor: "#F1F5F9", color: "#64748B" }}
+              style={{ backgroundColor: "#F1F5F9", color: "#475569", border: "1px solid #E2E8F0" }}
             >
               {tag}
             </span>
@@ -113,15 +117,10 @@ export default function ProjectBlock({
         {/* CTA */}
         <Link
           href={`/work/${slug}`}
-          className="inline-flex items-center gap-2 text-sm font-semibold rounded-full px-5 py-2.5 transition-all duration-200 self-start hover:opacity-90"
-          style={{
-            background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
-            color: "#ffffff",
-            boxShadow: "0 4px 15px rgba(167,199,231,0.4)",
-          }}
+          className="btn-primary self-start text-sm py-3 px-5"
         >
           Ver Caso de Estudo
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </Link>

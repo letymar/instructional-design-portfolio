@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ProjectBlock from "./components/ProjectBlock";
 import RevealWrapper from "./components/RevealWrapper";
 import BioModal from "./components/BioModal";
+import AnimatedCounter from "./components/AnimatedCounter";
 import { projects as allProjects } from "@/lib/projects";
 
 /* ─── Pilares ─────────────────────────────────────────────────────────────── */
@@ -36,9 +37,9 @@ const skills = [
 /* ─── Stats ───────────────────────────────────────────────────────────────── */
 
 const stats = [
-  { value: "10", label: "Projetos realizados", color: "#D6C9FC" },
-  { value: "10+", label: "Anos de experiência", color: "#CFF8E8" },
-  { value: "100%", label: "Criados do zero", color: "#C9E7FC" },
+  { target: 11, suffix: "", label: "Projetos realizados", color: "#D6C9FC", accent: "#5B4B8A" },
+  { target: 10, suffix: "+", label: "Anos de experiência", color: "#CFF8E8", accent: "#065F46" },
+  { target: 100, suffix: "%", label: "Criados do zero", color: "#C9E7FC", accent: "#1E5A7A" },
 ];
 
 /* ─── Componente principal ───────────────────────────────────────────────── */
@@ -272,12 +273,7 @@ export default function HomePage() {
 
                 <button
                   onClick={() => setBioOpen(true)}
-                  className="mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 hover:opacity-90"
-                  style={{
-                    background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
-                    color: "#ffffff",
-                    boxShadow: "0 8px 25px rgba(167, 199, 231, 0.4)",
-                  }}
+                  className="mt-8 btn-primary text-sm py-3 px-6"
                 >
                   Ler bio completa
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -299,13 +295,10 @@ export default function HomePage() {
                         className="font-bold text-4xl mb-1"
                         style={{
                           fontFamily: "var(--font-poppins, Poppins, sans-serif)",
-                          background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
-                          WebkitBackgroundClip: "text",
-                          WebkitTextFillColor: "transparent",
-                          backgroundClip: "text",
+                          color: s.accent,
                         }}
                       >
-                        {s.value}
+                        <AnimatedCounter target={s.target} suffix={s.suffix} />
                       </p>
                       <p className="text-xs font-medium" style={{ color: "#64748B" }}>{s.label}</p>
                     </div>

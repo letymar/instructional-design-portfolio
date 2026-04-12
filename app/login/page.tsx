@@ -97,7 +97,7 @@ export default function LoginPage() {
               border: "2px solid #E2E8F0",
               color: "#334155",
             }}
-            onFocus={(e) => { e.currentTarget.style.borderColor = "#A7C7E7"; e.currentTarget.style.boxShadow = "0 0 0 4px rgba(167,199,231,0.15)"; }}
+            onFocus={(e) => { e.currentTarget.style.borderColor = "#7B68EE"; e.currentTarget.style.boxShadow = "0 0 0 4px rgba(123,104,238,0.12)"; }}
             onBlur={(e) => { e.currentTarget.style.borderColor = "#E2E8F0"; e.currentTarget.style.boxShadow = "none"; }}
           />
 
@@ -113,12 +113,12 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-2xl py-4 text-sm font-semibold tracking-wide transition-all duration-200 hover:opacity-90"
+            className="w-full rounded-2xl py-4 text-sm font-semibold tracking-wide transition-all duration-200"
             style={{
-              background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
+              backgroundColor: loading ? "#8B7CF6" : "#5B4B8A",
               color: "#ffffff",
-              boxShadow: "0 8px 25px rgba(167, 199, 231, 0.4)",
-              opacity: loading ? 0.7 : 1,
+              boxShadow: "0 8px 25px rgba(91, 75, 138, 0.4)",
+              opacity: loading ? 0.8 : 1,
               cursor: loading ? "wait" : "pointer",
             }}
           >

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Inter, Nunito } from "next/font/google";
+import CustomCursor from "./components/CustomCursor";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -37,6 +38,10 @@ export default function RootLayout({
       className={`${poppins.variable} ${inter.variable} ${nunito.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-[#F8FAFC]">
+        {/* Grain texture overlay */}
+        <div className="grain-overlay" aria-hidden="true" />
+        {/* Custom cursor */}
+        <CustomCursor />
         {children}
       </body>
     </html>

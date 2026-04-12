@@ -48,12 +48,7 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="mailto:letymarinho21@gmail.com"
-                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 hover:opacity-90"
-                style={{
-                  background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
-                  color: "#ffffff",
-                  boxShadow: "0 8px 25px rgba(167, 199, 231, 0.4)",
-                }}
+                className="btn-primary text-sm py-3 px-6"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -65,12 +60,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/leticia-marinho-aa2358185/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200"
-                style={{
-                  backgroundColor: "#FFFFFF",
-                  border: "2px solid #E2E8F0",
-                  color: "#334155",
-                }}
+                className="btn-secondary text-sm py-3 px-6"
               >
                 LinkedIn →
               </a>
