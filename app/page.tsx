@@ -171,7 +171,7 @@ export default function HomePage() {
               style={{ backgroundColor: "#D6C9FC" }}
             >
               <img
-                src="/leticia.jpg"
+                src="/leticia.jpeg"
                 alt="Letícia Marinho"
                 className="w-full h-full object-cover"
                 onError={(e) => {

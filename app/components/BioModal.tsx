@@ -69,7 +69,7 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
           <div className="flex items-center gap-5 mb-8">
             <div className="relative flex-shrink-0">
               <Image
-                src="/leticia.jpg"
+                src="/leticia.jpeg"
                 alt="Letícia Marinho"
                 width={96}
                 height={96}
