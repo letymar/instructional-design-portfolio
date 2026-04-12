@@ -1,6 +1,7 @@
 'use client';
 
 import { useLanguage } from "../contexts/LanguageContext";
+import ContactForm from "./ContactForm";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -11,8 +12,8 @@ export default function Footer() {
       style={{ backgroundColor: "#F1F5F9", borderTop: "1px solid #E2E8F0" }}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left */}
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Left — intro */}
           <div>
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
@@ -50,48 +51,38 @@ export default function Footer() {
               {t.footer.description}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href={`mailto:${t.footer.email}`}
-                className="btn-primary text-sm py-3 px-6"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-                {t.footer.email}
-              </a>
-              <a
-                href="https://www.linkedin.com/in/leticia-marinho-aa2358185/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary text-sm py-3 px-6"
-              >
-                {t.footer.linkedin}
-              </a>
-            </div>
-          </div>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/leticia-marinho-aa2358185/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary text-sm py-3 px-6 inline-flex items-center gap-2"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              {t.footer.linkedin}
+            </a>
 
-          {/* Right — decorative card */}
-          <div className="hidden md:flex justify-end">
-            <div className="card p-8 w-72" style={{ backgroundColor: "#FFFFFF" }}>
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
-                style={{ backgroundColor: "#CFF8E8" }}
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            {/* Tagline card */}
+            <div className="card mt-8 p-6 inline-flex items-center gap-4" style={{ backgroundColor: "#FFFFFF" }}>
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#CFF8E8" }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                 </svg>
               </div>
-              <p className="font-bold text-lg mb-1" style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", color: "#334155" }}>
-                10+
-              </p>
-              <p className="text-sm" style={{ color: "#64748B" }}>
-                {t.footer.tagline}
-              </p>
+              <div>
+                <p className="font-bold text-sm" style={{ color: "#334155" }}>10+</p>
+                <p className="text-xs" style={{ color: "#64748B" }}>{t.footer.tagline}</p>
+              </div>
             </div>
           </div>
+
+          {/* Right — contact form */}
+          <ContactForm />
         </div>
 
         {/* Bottom bar */}

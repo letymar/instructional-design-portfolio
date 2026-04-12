@@ -161,6 +161,22 @@
     "copyright": "© 2026 Letícia Marinho",
     "role": "Learning Designer · Lisboa"
   },
+  "contact": {
+    "labelName": "Nome",
+    "labelEmail": "E-mail",
+    "labelMessage": "Mensagem",
+    "placeholderName": "O teu nome",
+    "placeholderEmail": "o.teu@email.com",
+    "placeholderMessage": "Conta-me sobre o teu projeto ou ideia...",
+    "submit": "Enviar mensagem",
+    "sending": "A enviar...",
+    "successTitle": "Mensagem enviada!",
+    "successMessage": "Mensagem enviada com sucesso. Entrarei em contacto em breve.",
+    "sendAnother": "Enviar outra mensagem",
+    "errorRequired": "Este campo é obrigatório.",
+    "errorEmail": "Insere um endereço de e-mail válido.",
+    "errorSend": "Ocorreu um erro ao enviar a mensagem. Tenta novamente."
+  },
   "login": {
     "badge": "Portfólio Privado",
     "title": "Letícia Marinho",
@@ -276,26 +292,42 @@
         "role": "Instrutora de Programação",
         "location": "Valongo, Portugal",
         "period": "Janeiro 2024 — Presente",
-        "description": "Ensino programação e pensamento computacional a crianças com abordagens de aprendizagem baseada em projetos."
+        "description": "Ensino programação e pensamento computacional a crianças no contexto de um clube de código voluntário, com foco em aprendizagem ativa e criação de projetos reais.",
+        "responsibilities": [
+          "Planeamento e facilitação de sessões semanais de programação com Scratch, HTML/CSS e Python",
+          "Desenvolvimento do pensamento computacional através de desafios e projetos práticos",
+          "Diferenciação pedagógica para grupos com diferentes níveis de experiência",
+          "Promoção da autonomia e da resolução criativa de problemas",
+          "Criação de ambiente colaborativo e inclusivo de aprendizagem"
+        ]
       },
       {
         "company": "Happy Code Portugal",
         "role": "Professora de Programação",
         "location": "Porto, Portugal",
         "period": "Março 2024 — Junho 2024",
-        "description": "Lecionei aulas de programação com Scratch, Minecraft e ferramentas Lego Education."
+        "description": "Lecionei programação e criatividade digital a crianças e jovens com ferramentas gamificadas, num contexto de aprendizagem extracurricular.",
+        "responsibilities": [
+          "Ensino de programação com Scratch, Minecraft Education e Lego Education",
+          "Design e implementação de planos de aula com componente lúdica e prática",
+          "Avaliação formativa do progresso individual de cada aluno",
+          "Adaptação de conteúdos às faixas etárias e níveis de competência dos grupos",
+          "Promoção da lógica computacional através de desafios e projetos criativos"
+        ]
       },
       {
         "company": "MEWEEE",
         "role": "Investigadora UX",
         "location": "Reino Unido (Remoto)",
         "period": "Agosto 2022 — Junho 2024",
-        "description": "Realizei investigação de utilizador para melhorar experiências digitais e compreender as necessidades dos utilizadores.",
+        "description": "Integrei a equipa de UX Research de uma startup britânica de tecnologia, desenvolvendo competências de investigação centrada no utilizador em contexto internacional e totalmente remoto.",
         "responsibilities": [
-          "Condução de sessões de teste de usabilidade",
-          "Realização de entrevistas com stakeholders",
-          "Recolha de dados qualitativos e quantitativos",
-          "Apoio às decisões de estratégia UX"
+          "Planeamento e condução de sessões de teste de usabilidade com utilizadores reais",
+          "Realização de entrevistas semiestruturadas com stakeholders e utilizadores finais",
+          "Análise qualitativa e quantitativa de dados de comportamento e feedback",
+          "Criação de relatórios de investigação com insights acionáveis para equipas de produto",
+          "Apoio à tomada de decisão de design e estratégia UX com base em evidências",
+          "Colaboração em ambiente ágil com designers, gestores de produto e developers"
         ]
       },
       {
@@ -303,12 +335,20 @@
         "role": "Diretora Escolar",
         "location": "Brasil",
         "period": "Fevereiro 2019 — Janeiro 2022",
-        "description": "Geri as operações da escola e coordenei equipas educativas.",
+        "description": "Liderança pedagógica e gestão operacional de instituição de ensino privada no Brasil, com responsabilidade sobre equipas, currículo e qualidade educativa.",
         "responsibilities": [
-          "Liderança de equipas pedagógicas",
-          "Melhoria de estratégias de ensino",
-          "Coordenação do planeamento escolar",
-          "Implementação de iniciativas de inovação educativa"
+          "Liderança e coordenação de equipas pedagógicas multidisciplinares",
+          "Planeamento estratégico e implementação do projeto educativo institucional",
+          "Supervisão da qualidade pedagógica e acompanhamento do desempenho dos alunos",
+          "Formação e desenvolvimento profissional contínuo dos docentes",
+          "Gestão de relações com famílias, parceiros e entidades reguladoras",
+          "Implementação de metodologias ativas e inovação pedagógica"
+        ],
+        "contributions": [
+          "Implementação de práticas de aprendizagem ativa e metodologias inovadoras",
+          "Melhoria dos indicadores de satisfação de famílias e desempenho académico",
+          "Criação de programas de desenvolvimento profissional para docentes",
+          "Estruturação de processos pedagógicos e administrativos mais eficientes"
         ]
       },
       {
@@ -316,12 +356,19 @@
         "role": "Instructional Designer",
         "location": "Brasil",
         "period": "Janeiro 2017 — Dezembro 2019",
-        "description": "Concebi materiais educativos e estratégias de aprendizagem alinhadas com os objetivos institucionais.",
+        "description": "Design e desenvolvimento de materiais educativos e experiências de aprendizagem para instituição de ensino, com foco em clareza pedagógica, alinhamento curricular e impacto real na aprendizagem.",
         "responsibilities": [
-          "Desenvolvimento de materiais de aprendizagem",
-          "Criação de recursos educativos digitais",
-          "Design de estratégias de ensino",
-          "Avaliação da eficácia do currículo"
+          "Análise de necessidades educativas e definição de objetivos de aprendizagem mensuráveis",
+          "Design e produção de materiais didáticos para múltiplos níveis de ensino",
+          "Criação de recursos digitais e interativos para apoio em sala de aula",
+          "Alinhamento dos conteúdos com o currículo nacional e metas de aprendizagem",
+          "Avaliação da eficácia dos materiais com base em feedback de professores e alunos",
+          "Aplicação de metodologias de design instrucional (ADDIE, Design Thinking pedagógico)"
+        ],
+        "contributions": [
+          "Desenvolvimento de banco de recursos pedagógicos reutilizáveis",
+          "Melhoria da coerência e progressão curricular transversal ao ensino básico",
+          "Introdução de recursos digitais no processo de ensino e aprendizagem"
         ]
       },
       {
@@ -329,7 +376,14 @@
         "role": "Professora",
         "location": "Brasil",
         "period": "Fevereiro 2014 — Agosto 2015",
-        "description": "Lecionei educação precoce e apoiei o desenvolvimento da aprendizagem dos alunos."
+        "description": "Docência em educação básica, com foco no desenvolvimento integral das crianças e na promoção de um ambiente de aprendizagem estimulante, seguro e inclusivo.",
+        "responsibilities": [
+          "Planeamento e lecionação de aulas para turmas de educação básica",
+          "Desenvolvimento de atividades pedagógicas adaptadas ao desenvolvimento infantil",
+          "Avaliação formativa e acompanhamento individualizado do progresso dos alunos",
+          "Comunicação regular com famílias sobre o desenvolvimento das crianças",
+          "Colaboração em reuniões pedagógicas e planeamento curricular coletivo"
+        ]
       }
     ],
     "skillGroups": [

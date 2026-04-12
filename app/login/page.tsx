@@ -20,7 +20,7 @@ function LoginForm() {
     e.preventDefault();
     if (value === PASSWORD) {
       setLoading(true);
-      localStorage.setItem("portfolio_unlocked", "1");
+      sessionStorage.setItem("portfolio_unlocked", "1");
       router.replace(redirectTo);
     } else {
       setError(true);

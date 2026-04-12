@@ -51,7 +51,7 @@ export default function CVPage() {
   const cv = t.cv;
 
   useEffect(() => {
-    if (!localStorage.getItem("portfolio_unlocked")) {
+    if (!sessionStorage.getItem("portfolio_unlocked")) {
       router.replace("/login");
     } else {
       setAuthChecked(true);

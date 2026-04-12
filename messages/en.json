@@ -161,6 +161,22 @@
     "copyright": "© 2026 Letícia Marinho",
     "role": "Learning Designer · Lisbon"
   },
+  "contact": {
+    "labelName": "Name",
+    "labelEmail": "Email",
+    "labelMessage": "Message",
+    "placeholderName": "Your name",
+    "placeholderEmail": "your@email.com",
+    "placeholderMessage": "Tell me about your project or idea...",
+    "submit": "Send message",
+    "sending": "Sending...",
+    "successTitle": "Message sent!",
+    "successMessage": "Message sent successfully. I will get back to you shortly.",
+    "sendAnother": "Send another message",
+    "errorRequired": "This field is required.",
+    "errorEmail": "Please enter a valid email address.",
+    "errorSend": "An error occurred while sending the message. Please try again."
+  },
   "login": {
     "badge": "Private Portfolio",
     "title": "Letícia Marinho",
@@ -276,26 +292,42 @@
         "role": "Programming Instructor",
         "location": "Valongo, Portugal",
         "period": "January 2024 — Present",
-        "description": "Teach coding and computational thinking to children using project-based learning approaches."
+        "description": "Teaching coding and computational thinking to children in a volunteer coding club, focused on active learning and hands-on project creation.",
+        "responsibilities": [
+          "Planning and facilitating weekly coding sessions using Scratch, HTML/CSS, and Python",
+          "Developing computational thinking through practical challenges and real projects",
+          "Differentiating instruction for groups with varying levels of experience",
+          "Fostering autonomy and creative problem-solving in young learners",
+          "Creating a collaborative and inclusive learning environment"
+        ]
       },
       {
         "company": "Happy Code Portugal",
         "role": "Programming Teacher",
         "location": "Porto, Portugal",
         "period": "March 2024 — June 2024",
-        "description": "Delivered programming lessons using Scratch, Minecraft, and Lego Education tools."
+        "description": "Delivered programming and digital creativity sessions to children and young people using gamified tools in an extracurricular learning context.",
+        "responsibilities": [
+          "Teaching programming using Scratch, Minecraft Education, and Lego Education",
+          "Designing and implementing lesson plans with a hands-on, playful component",
+          "Formative assessment of each student's individual progress",
+          "Adapting content to different age groups and skill levels",
+          "Promoting computational logic through creative challenges and projects"
+        ]
       },
       {
         "company": "MEWEEE",
         "role": "UX Researcher",
         "location": "United Kingdom (Remote)",
         "period": "August 2022 — June 2024",
-        "description": "Conducted user research to improve digital experiences and understand user needs.",
+        "description": "Joined the UX Research team of a British tech startup, developing user-centred research skills in an international, fully remote environment.",
         "responsibilities": [
-          "Conduct usability testing sessions",
-          "Perform stakeholder interviews",
-          "Collect qualitative and quantitative research data",
-          "Support UX strategy decisions"
+          "Planning and conducting usability testing sessions with real users",
+          "Running semi-structured interviews with stakeholders and end users",
+          "Qualitative and quantitative analysis of user behaviour and feedback data",
+          "Creating research reports with actionable insights for product teams",
+          "Supporting data-driven design and UX strategy decisions",
+          "Collaborating in an agile environment with designers, product managers, and developers"
         ]
       },
       {
@@ -303,12 +335,20 @@
         "role": "School Manager",
         "location": "Brazil",
         "period": "February 2019 — January 2022",
-        "description": "Managed school operations and coordinated educational teams.",
+        "description": "Pedagogical leadership and operational management of a private educational institution in Brazil, with responsibility over teams, curriculum, and educational quality.",
         "responsibilities": [
-          "Lead pedagogical teams",
-          "Improve teaching strategies",
-          "Coordinate school planning",
-          "Implement educational innovation initiatives"
+          "Leading and coordinating multidisciplinary pedagogical teams",
+          "Strategic planning and implementation of the institutional educational project",
+          "Supervising pedagogical quality and monitoring student performance",
+          "Ongoing professional training and development of teaching staff",
+          "Managing relationships with families, partners, and regulatory bodies",
+          "Implementing active learning methodologies and pedagogical innovation"
+        ],
+        "contributions": [
+          "Implementation of active learning practices and innovative methodologies",
+          "Improvement of family satisfaction and academic performance indicators",
+          "Creation of professional development programmes for teaching staff",
+          "Streamlining of pedagogical and administrative processes"
         ]
       },
       {
@@ -316,12 +356,19 @@
         "role": "Instructional Designer",
         "location": "Brazil",
         "period": "January 2017 — December 2019",
-        "description": "Designed educational materials and learning strategies aligned with institutional goals.",
+        "description": "Design and development of educational materials and learning experiences for a school institution, focusing on pedagogical clarity, curriculum alignment, and real learning impact.",
         "responsibilities": [
-          "Develop learning materials",
-          "Create digital educational resources",
-          "Design teaching strategies",
-          "Evaluate curriculum effectiveness"
+          "Analysis of educational needs and definition of measurable learning objectives",
+          "Design and production of instructional materials for multiple year groups",
+          "Creation of digital and interactive resources to support classroom teaching",
+          "Alignment of content with the national curriculum and learning targets",
+          "Evaluation of material effectiveness based on teacher and student feedback",
+          "Application of instructional design methodologies (ADDIE, pedagogical Design Thinking)"
+        ],
+        "contributions": [
+          "Development of a reusable pedagogical resource library",
+          "Improved curriculum coherence and progression across primary education levels",
+          "Introduction of digital resources into the teaching and learning process"
         ]
       },
       {
@@ -329,7 +376,14 @@
         "role": "Teacher",
         "location": "Brazil",
         "period": "February 2014 — August 2015",
-        "description": "Taught early education and supported student learning development."
+        "description": "Early education teacher focused on the holistic development of children and creating a stimulating, safe, and inclusive learning environment.",
+        "responsibilities": [
+          "Planning and delivering lessons for early education classes",
+          "Developing pedagogical activities adapted to children's developmental stage",
+          "Formative assessment and individual monitoring of student progress",
+          "Regular communication with families about children's development",
+          "Participation in pedagogical meetings and collaborative curriculum planning"
+        ]
       }
     ],
     "skillGroups": [

@@ -50,7 +50,7 @@ export default function WorkPageContent({ project }: Props) {
   const { title, category, number, tags, caseStudy, gallery, docs, heroImage, heroGradient, videos } = project;
 
   useEffect(() => {
-    const unlocked = localStorage.getItem("portfolio_unlocked");
+    const unlocked = sessionStorage.getItem("portfolio_unlocked");
     if (!unlocked) {
       router.replace(`/login?from=/work/${project.slug}`);
     }
