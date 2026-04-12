@@ -25,6 +25,7 @@ export default function Nav() {
         <div className="hidden md:flex items-center gap-2 text-sm">
           <Link href="/#trabalho" className="nav-link">Projetos</Link>
           <Link href="/#abordagem" className="nav-link">Abordagem</Link>
+          <Link href="/cv" className="nav-link">CV</Link>
           <Link href="/#contacto" className="nav-link">Contacto</Link>
         </div>
 

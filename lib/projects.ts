@@ -23,6 +23,7 @@ export interface Project {
   heroImage?: string;
   heroGradient?: string;
   gallery: string[];
+  videos?: string[];
   caseStudy: CaseStudy;
   docs: ProjectDoc[];
   reverse?: boolean;
@@ -57,6 +58,22 @@ export const projects: Project[] = [
       "/projects/aecs-f2.jpg",
       "/projects/aecs-f3.jpg",
       "/projects/aecs-f4.jpg",
+      "/projects/aecs-formacao-1.jpg",
+      "/projects/aecs-formacao-2.jpg",
+      "/projects/aecs-formacao-3.jpg",
+      "/projects/aecs-formacao-4.jpg",
+      "/projects/aecs-formacao-5.jpg",
+      "/projects/aecs-formacao-6.jpg",
+      "/projects/aecs-formacao-7.jpg",
+      "/projects/aecs-formacao-8.jpg",
+    ],
+    videos: [
+      "/projects/aecs-video-1.mp4",
+      "/projects/aecs-video-2.mp4",
+      "/projects/aecs-video-3.mp4",
+      "/projects/aecs-video-4.mp4",
+      "/projects/aecs-video-5.mp4",
+      "/projects/aecs-video-6.mp4",
     ],
     caseStudy: {
       contexto:
@@ -147,13 +164,8 @@ export const projects: Project[] = [
     tags: ["Maker Education", "Computação Física", "Design de Atividades", "STEM"],
     shortDescription:
       "Série de atividades maker realizadas no CICF e CCDV — Rabbot de Páscoa, mBot com IA climática, robô de equilíbrio, pulseira binária e Makey Makey musical.",
-    heroImage: "/projects/atividades-maker-1.jpg",
-    gallery: [
-      "/projects/atividades-maker-1.jpg",
-      "/projects/atividades-maker-2.jpg",
-      "/projects/atividades-maker-3.jpg",
-      "/projects/atividades-maker-4.jpg",
-    ],
+    heroGradient: "linear-gradient(135deg, #FEF3C7 0%, #FDE68A 50%, #F59E0B 100%)",
+    gallery: [],
     caseStudy: {
       contexto:
         "As Atividades Tecnológicas são uma série de experiências maker concebidas para os Centros de Cultura Digital — CICF (Centro de Inovação e Criatividade de Famalicão) e CCDV (Centro de Cultura Digital de Valongo). Cada atividade é autónoma e adaptada a diferentes públicos e contextos, desde workshops pontuais a ciclos de sessões temáticas.",
@@ -230,9 +242,12 @@ export const projects: Project[] = [
       "/projects/coderdojo-1.jpg",
       "/projects/coderdojo-2.jpg",
       "/projects/coderdojo-3.jpg",
-      "/projects/coderdojo-4.jpg",
-      "/projects/coderdojo-5.jpg",
-      "/projects/coderdojo-6.jpg",
+    ],
+    videos: [
+      "/projects/coderdojo-video-1.mp4",
+      "/projects/coderdojo-video-2.mp4",
+      "/projects/coderdojo-video-3.mp4",
+      "/projects/coderdojo-video-4.mp4",
     ],
     caseStudy: {
       contexto:
@@ -331,7 +346,39 @@ export const projects: Project[] = [
     shortDescription:
       "Programa nacional de educação pelo jogo com ebooks para professores e pais — estratégia instrucional e design de conteúdo para rollout em escolas de todo o país.",
     heroImage: "/projects/ingaming-1.jpg",
-    gallery: ["/projects/ingaming-1.jpg"],
+    gallery: [
+      "/projects/ingaming-1.jpg",
+      "/projects/ingaming-2.jpg",
+      "/projects/ingaming-3.jpg",
+      "/projects/ingaming-4.jpg",
+      "/projects/ingaming-5.jpg",
+      "/projects/ingaming-6.jpg",
+      "/projects/ingaming-7.jpg",
+      "/projects/ingaming-8.jpg",
+      "/projects/ingaming-9.jpg",
+      "/projects/ingaming-10.jpg",
+      "/projects/ingaming-11.jpg",
+      "/projects/ingaming-12.jpg",
+      "/projects/ingaming-13.jpg",
+      "/projects/ingaming-14.jpg",
+      "/projects/ingaming-15.jpg",
+      "/projects/ingaming-16.jpg",
+      "/projects/ingaming-17.jpg",
+      "/projects/ingaming-18.jpg",
+      "/projects/ingaming-19.jpg",
+      "/projects/ingaming-20.jpg",
+      "/projects/ingaming-21.jpg",
+      "/projects/ingaming-22.jpg",
+      "/projects/ingaming-23.jpg",
+      "/projects/ingaming-24.jpg",
+      "/projects/ingaming-25.jpg",
+      "/projects/ingaming-26.jpg",
+      "/projects/ingaming-27.jpg",
+      "/projects/ingaming-28.jpg",
+      "/projects/ingaming-29.jpg",
+      "/projects/ingaming-30.jpg",
+      "/projects/ingaming-31.jpg",
+    ],
     caseStudy: {
       contexto:
         "O InGaming Vai às Escolas é um programa nacional que visa integrar o jogo — digital e analógico — como ferramenta pedagógica nas escolas portuguesas. O projeto exigiu a criação de recursos específicos para dois públicos distintos: professores (que precisavam de fundamentação pedagógica e estratégias práticas) e encarregados de educação (que precisavam de compreender o valor educativo do jogo).",
@@ -405,6 +452,14 @@ export const projects: Project[] = [
       "/projects/led-6.jpg",
       "/projects/led-7.jpg",
       "/projects/led-8.jpg",
+    ],
+    videos: [
+      "/projects/led-video-1.mp4",
+      "/projects/led-video-2.mp4",
+      "/projects/led-video-3.mp4",
+      "/projects/led-video-4.mp4",
+      "/projects/led-video-5.mp4",
+      "/projects/led-video-6.mp4",
     ],
     caseStudy: {
       contexto:

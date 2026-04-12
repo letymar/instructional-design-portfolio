@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getProjectBySlug, getAllSlugs } from "@/lib/projects";
 import type { CaseStudy } from "@/lib/projects";
 import ImageGallery from "@/app/components/ImageGallery";
+import VideoGallery from "@/app/components/VideoGallery";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -35,7 +36,7 @@ export default async function ProjectPage({ params }: Props) {
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
-  const { title, category, number, tags, caseStudy, gallery, docs, heroImage, heroGradient } = project;
+  const { title, category, number, tags, caseStudy, gallery, docs, heroImage, heroGradient, videos } = project;
 
   return (
     <div style={{ backgroundColor: "#F8FAFC", minHeight: "100vh" }}>
@@ -230,6 +231,27 @@ export default async function ProjectPage({ params }: Props) {
               </span>
             </div>
             <ImageGallery images={gallery} title={title} />
+          </div>
+          <div className="max-w-7xl mx-auto px-6 lg:px-16">
+            <div className="h-px" style={{ backgroundColor: "rgba(91,75,138,0.06)" }} />
+          </div>
+        </section>
+      )}
+
+      {/* ── VIDEOS ────────────────────────────────────────────────────────────── */}
+      {videos && videos.length > 0 && (
+        <section style={{ backgroundColor: "#F8FAFC" }}>
+          <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16 md:py-20">
+            <div className="flex items-center gap-3 mb-10">
+              <div className="h-0.5 w-8 rounded-full" style={{ backgroundColor: "#7B68EE" }} />
+              <p className="font-bold text-sm uppercase tracking-[0.15em]" style={{ color: "#5B4B8A" }}>
+                Vídeos do Projeto
+              </p>
+              <span className="text-xs font-medium px-2.5 py-1 rounded-full" style={{ backgroundColor: "#D6C9FC", color: "#5B4B8A" }}>
+                {videos.length} vídeos
+              </span>
+            </div>
+            <VideoGallery videos={videos} title={title} />
           </div>
           <div className="max-w-7xl mx-auto px-6 lg:px-16">
             <div className="h-px" style={{ backgroundColor: "rgba(91,75,138,0.06)" }} />

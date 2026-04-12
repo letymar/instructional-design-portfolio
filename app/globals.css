@@ -205,3 +205,13 @@ h1, h2, h3, h4, h5, h6 {
   0%, 100% { background-position: 0% 50%; }
   50%       { background-position: 100% 50%; }
 }
+
+/* ─── Print styles (CV page) ───────────────────────────────────────────────── */
+@media print {
+  body { cursor: auto !important; background: #fff !important; }
+  .grain-overlay, nav { display: none !important; }
+  .print\:hidden { display: none !important; }
+  .card { box-shadow: none !important; border: 1px solid #E2E8F0 !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  main { padding-top: 0 !important; }
+}

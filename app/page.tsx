@@ -114,7 +114,7 @@ export default function HomePage() {
               style={{
                 fontFamily: "var(--font-poppins, Poppins, sans-serif)",
                 fontSize: "clamp(3.5rem, 11vw, 9rem)",
-                background: "linear-gradient(135deg, #A7C7E7 30%, #D8C4F1 70%)",
+                background: "linear-gradient(135deg, #5B4B8A 0%, #7B68EE 50%, #9B88FC 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -246,7 +246,7 @@ export default function HomePage() {
                   Apaixonada por transformar{" "}
                   <span
                     style={{
-                      background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
+                      background: "linear-gradient(135deg, #5B4B8A 0%, #9B88FC 100%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",
@@ -349,7 +349,7 @@ export default function HomePage() {
                   {allProjects.length} projetos reais de{" "}
                   <span
                     style={{
-                      background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
+                      background: "linear-gradient(135deg, #5B4B8A 0%, #9B88FC 100%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",

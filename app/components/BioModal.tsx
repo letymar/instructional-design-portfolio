@@ -160,11 +160,8 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
           <div className="flex gap-3 mt-8 pt-6" style={{ borderTop: "1px solid #E2E8F0" }}>
             <a
               href="mailto:letymarinho21@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:opacity-90"
-              style={{
-                background: "linear-gradient(135deg, #A7C7E7 0%, #D8C4F1 100%)",
-                color: "#ffffff",
-              }}
+              className="btn-primary text-sm py-2.5 px-5"
+              style={{ cursor: "pointer" }}
             >
               Enviar email
             </a>
@@ -172,12 +169,8 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
               href="https://www.linkedin.com/in/leticia-marinho-aa2358185/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
-              style={{
-                backgroundColor: "#F1F5F9",
-                border: "1px solid #E2E8F0",
-                color: "#334155",
-              }}
+              className="btn-secondary text-sm py-2.5 px-5"
+              style={{ cursor: "pointer" }}
             >
               LinkedIn →
             </a>
