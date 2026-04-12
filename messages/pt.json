@@ -54,6 +54,51 @@
       { "symbol": "⚡", "title": "Feedback Imediato", "description": "O erro não é falhar — é aprender. O feedback rápido e construtivo transforma cada tentativa numa oportunidade de crescimento." },
       { "symbol": "🏆", "title": "Conquistas", "description": "Marcos visíveis e celebração do progresso. Tornar o crescimento tangível é altamente motivador para qualquer aprendente." },
       { "symbol": "📖", "title": "Narrativa", "description": "Uma boa história dá contexto e significado. Transformo exercícios em desafios e salas de aula em mundos a explorar." }
+    ],
+    "theoryBadge": "Fundamentação Teórica",
+    "theoryTitle": "Os livros que fundamentam a minha prática",
+    "theorySubtitle": "A minha abordagem ao game design educativo é sustentada por investigação académica e prática profissional reconhecida.",
+    "books": [
+      {
+        "color": "#5B4B8A",
+        "textColor": "#FFFFFF",
+        "author": "Karl M. Kapp",
+        "title": "The Gamification of Learning and Instruction",
+        "year": "2012",
+        "idea": "O pensamento e as mecânicas dos jogos podem ser aplicados diretamente ao design instrucional para criar experiências intrinsecamente motivadoras.",
+        "application": "Uso missões, sistemas de pontos, progressão por níveis e reforço positivo para transformar conteúdo seco em experiências onde o aprendente quer continuar. A chave está em criar desafio calibrado — nem demasiado fácil, nem demasiado difícil.",
+        "tags": ["Motivação", "Mecânicas", "Engagement"]
+      },
+      {
+        "color": "#0C4A6E",
+        "textColor": "#FFFFFF",
+        "author": "Karl M. Kapp",
+        "title": "The Gamification of Learning and Instruction Fieldbook",
+        "year": "2013",
+        "idea": "Guia prático de implementação: como transformar objetivos de aprendizagem em estruturas de jogo funcionais dentro de contextos educativos reais.",
+        "application": "Este livro dá-me o framework operacional: como mapear competências a missões, como construir narrativas pedagógicas e como usar feedback loops para manter o aprendente no estado de fluxo durante toda a experiência.",
+        "tags": ["Design Instrucional", "Framework", "Prática"]
+      },
+      {
+        "color": "#78350F",
+        "textColor": "#FFFFFF",
+        "author": "Jesse Schell",
+        "title": "The Art of Game Design: A Book of Lenses",
+        "year": "2008",
+        "idea": "113 lentes — perspetivas únicas — para analisar e melhorar qualquer experiência de jogo, colocando sempre o jogador no centro do design.",
+        "application": "Aplico as lentes de Schell ao design de aprendizagem: a Lente da Experiência (o que sente o aprendente?), a Lente do Desafio (está calibrado?) e a Lente da Curiosidade (o que o faz querer saber mais?). O design centrado no aluno começa por estas perguntas.",
+        "tags": ["Design Centrado no Utilizador", "Experiência", "Curiosidade"]
+      },
+      {
+        "color": "#065F46",
+        "textColor": "#FFFFFF",
+        "author": "Steven L. Kent",
+        "title": "The Ultimate History of Video Games",
+        "year": "2001",
+        "idea": "Como os videojogos evoluíram de curiosidade de nicho para fenómeno cultural global — e o que isso nos diz sobre o que torna uma experiência irresistivelmente envolvente.",
+        "application": "Compreender a história dos jogos ajuda-me a identificar os princípios psicológicos universais de engagement: progressão visível, autonomia, identidade e comunidade. São estes os mesmos princípios que aplico para criar experiências de aprendizagem que os alunos não querem abandonar.",
+        "tags": ["Psicologia", "Engagement", "Motivação Intrínseca"]
+      }
     ]
   },
   "motivations": {

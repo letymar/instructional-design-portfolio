@@ -1,46 +1,43 @@
 'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface RevealWrapperProps {
   children: React.ReactNode;
   delay?: number;
   className?: string;
+  direction?: "up" | "left" | "right" | "none";
 }
 
-export default function RevealWrapper({ children, delay = 0, className = "" }: RevealWrapperProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [revealed, setRevealed] = useState(false);
+export default function RevealWrapper({
+  children,
+  delay = 0,
+  className = "",
+  direction = "up",
+}: RevealWrapperProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.08 });
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.08 }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  const initial = {
+    opacity: 0,
+    y: direction === "up" ? 28 : 0,
+    x: direction === "left" ? -28 : direction === "right" ? 28 : 0,
+  };
 
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={className}
-      style={{
-        opacity: revealed ? 1 : 0,
-        transform: revealed ? "translateY(0px)" : "translateY(32px)",
-        transition: `opacity 0.65s ease ${delay}ms, transform 0.65s ease ${delay}ms`,
+      initial={initial}
+      animate={isInView ? { opacity: 1, y: 0, x: 0 } : initial}
+      transition={{
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+        delay: delay / 1000,
       }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

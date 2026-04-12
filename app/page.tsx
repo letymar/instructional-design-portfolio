@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import RevealWrapper from "./components/RevealWrapper";
@@ -188,9 +190,11 @@ export default function HomePage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {t.methodology.methods.map((m, i) => (
                 <RevealWrapper key={m.title} delay={i * 80}>
-                  <div
-                    className="card p-6 h-full flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1"
+                  <motion.div
+                    className="card p-6 h-full flex flex-col gap-4"
                     style={{ backgroundColor: "#FFFFFF", borderTop: `3px solid ${METHOD_COLORS[i].border}` }}
+                    whileHover={{ y: -6, boxShadow: "0 16px 40px rgba(91,75,138,0.12)" }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
                   >
                     <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
                       style={{ backgroundColor: METHOD_COLORS[i].bg }}>
@@ -205,7 +209,7 @@ export default function HomePage() {
                         {m.description}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 </RevealWrapper>
               ))}
             </div>
@@ -215,8 +219,10 @@ export default function HomePage() {
         {/* ── GAME DESIGN NA EDUCAÇÃO ───────────────────────────────────────── */}
         <section id="game-design" className="py-24 md:py-32 px-6 lg:px-12" style={{ backgroundColor: "#FFFFFF" }}>
           <div className="mx-auto max-w-7xl">
-            <RevealWrapper>
-              <div className="text-center mb-16">
+
+            {/* Header + image */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+              <RevealWrapper>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: "#FFF6C9" }}>
                   <span className="text-sm font-semibold" style={{ color: "#78350F" }}>{t.gameDesign.badge}</span>
                 </div>
@@ -224,18 +230,43 @@ export default function HomePage() {
                   style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#334155" }}>
                   {t.gameDesign.title}
                 </h2>
-                <p className="text-base max-w-xl mx-auto" style={{ color: "#64748B" }}>
+                <p className="text-base max-w-xl" style={{ color: "#64748B" }}>
                   {t.gameDesign.subtitle}
                 </p>
-              </div>
-            </RevealWrapper>
+              </RevealWrapper>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+              <RevealWrapper delay={150} direction="right">
+                <motion.div
+                  className="relative rounded-3xl overflow-hidden"
+                  style={{ aspectRatio: "4/3", boxShadow: "0 24px 60px rgba(91,75,138,0.18)" }}
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <Image
+                    src="/gamification.jpg"
+                    alt="Gamification in Education"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(91,75,138,0.45) 0%, transparent 60%)" }} />
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "rgba(255,255,255,0.7)" }}>Game Design</p>
+                    <p className="text-sm font-semibold" style={{ color: "#FFFFFF" }}>Aprendizagem ativa através do design de jogos</p>
+                  </div>
+                </motion.div>
+              </RevealWrapper>
+            </div>
+
+            {/* 5 elements */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-24">
               {t.gameDesign.elements.map((el, i) => (
                 <RevealWrapper key={el.title} delay={i * 70}>
-                  <div
-                    className="card p-6 text-center h-full transition-all duration-300 hover:-translate-y-1"
+                  <motion.div
+                    className="card p-6 text-center h-full"
                     style={{ backgroundColor: "#FFFFFF" }}
+                    whileHover={{ y: -6, boxShadow: "0 16px 40px rgba(91,75,138,0.14)" }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
                   >
                     <div className="text-3xl mb-4">{el.symbol}</div>
                     <h4 className="font-semibold text-sm mb-2"
@@ -245,10 +276,82 @@ export default function HomePage() {
                     <p className="text-xs leading-relaxed" style={{ color: "#64748B" }}>
                       {el.description}
                     </p>
-                  </div>
+                  </motion.div>
                 </RevealWrapper>
               ))}
             </div>
+
+            {/* ── Fundamentação Teórica ─────────────────────────────────────── */}
+            <RevealWrapper>
+              <div className="text-center mb-14">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: "#D6C9FC" }}>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B4B8A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                  <span className="text-sm font-semibold" style={{ color: "#5B4B8A" }}>{t.gameDesign.theoryBadge}</span>
+                </div>
+                <h3 className="font-bold mb-3"
+                  style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#334155" }}>
+                  {t.gameDesign.theoryTitle}
+                </h3>
+                <p className="text-sm max-w-lg mx-auto" style={{ color: "#64748B" }}>
+                  {t.gameDesign.theorySubtitle}
+                </p>
+              </div>
+            </RevealWrapper>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {t.gameDesign.books.map((book, i) => (
+                <RevealWrapper key={book.title} delay={i * 90}>
+                  <motion.div
+                    className="rounded-2xl overflow-hidden h-full flex flex-col"
+                    style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}
+                    whileHover={{ y: -8, boxShadow: "0 20px 50px rgba(0,0,0,0.16)" }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    {/* Book spine header */}
+                    <div className="relative px-5 py-6 flex flex-col gap-1" style={{ backgroundColor: book.color, minHeight: "130px" }}>
+                      {/* Decorative spine lines */}
+                      <div className="absolute top-0 left-0 bottom-0 w-3 opacity-20" style={{ backgroundColor: "rgba(0,0,0,0.3)" }} />
+                      <div className="absolute top-0 left-3 bottom-0 w-px opacity-20" style={{ backgroundColor: "rgba(255,255,255,0.5)" }} />
+                      <p className="text-xs font-bold uppercase tracking-widest opacity-70 pl-3" style={{ color: book.textColor }}>
+                        {book.author} · {book.year}
+                      </p>
+                      <h4 className="font-bold leading-snug pl-3" style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: book.textColor }}>
+                        {book.title}
+                      </h4>
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-1.5 mt-2 pl-3">
+                        {book.tags.map(tag => (
+                          <span key={tag} className="text-xs px-2 py-0.5 rounded-full font-medium"
+                            style={{ backgroundColor: "rgba(255,255,255,0.2)", color: book.textColor, border: "1px solid rgba(255,255,255,0.3)" }}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex flex-col flex-1 p-5 gap-4" style={{ backgroundColor: "#FFFFFF" }}>
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: book.color }}>Ideia Principal</p>
+                        <p className="text-sm font-semibold leading-snug" style={{ color: "#1E293B" }}>
+                          {book.idea}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: book.color }}>Aplicação Prática</p>
+                        <p className="text-xs leading-relaxed" style={{ color: "#64748B" }}>
+                          {book.application}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </RevealWrapper>
+              ))}
+            </div>
+
           </div>
         </section>
 
@@ -277,9 +380,11 @@ export default function HomePage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {t.motivations.cards.map((card, i) => (
                 <RevealWrapper key={card.title} delay={i * 80}>
-                  <div
-                    className="rounded-2xl p-6 h-full transition-all duration-300 hover:-translate-y-1"
+                  <motion.div
+                    className="rounded-2xl p-6 h-full"
                     style={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", backdropFilter: "blur(8px)" }}
+                    whileHover={{ y: -6, backgroundColor: "rgba(255,255,255,0.15)" }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
                   >
                     <div className="text-3xl mb-4">{card.icon}</div>
                     <h4 className="font-semibold mb-2"
@@ -289,7 +394,7 @@ export default function HomePage() {
                     <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
                       {card.description}
                     </p>
-                  </div>
+                  </motion.div>
                 </RevealWrapper>
               ))}
             </div>

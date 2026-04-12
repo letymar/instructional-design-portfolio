@@ -54,6 +54,51 @@
       { "symbol": "⚡", "title": "Immediate Feedback", "description": "Mistakes aren't failures — they're learning. Fast, constructive feedback transforms every attempt into a growth opportunity." },
       { "symbol": "🏆", "title": "Achievements", "description": "Visible milestones and celebration of progress. Making growth tangible is highly motivating for any learner." },
       { "symbol": "📖", "title": "Narrative", "description": "A good story gives context and meaning. I transform exercises into challenges and classrooms into worlds to explore." }
+    ],
+    "theoryBadge": "Theoretical Foundations",
+    "theoryTitle": "The books that ground my practice",
+    "theorySubtitle": "My approach to educational game design is supported by recognised academic research and professional practice.",
+    "books": [
+      {
+        "color": "#5B4B8A",
+        "textColor": "#FFFFFF",
+        "author": "Karl M. Kapp",
+        "title": "The Gamification of Learning and Instruction",
+        "year": "2012",
+        "idea": "Game-based thinking and mechanics can be applied directly to instructional design to create intrinsically motivating learning experiences.",
+        "application": "I use missions, point systems, level progression and positive reinforcement to transform dry content into experiences where learners want to keep going. The key is calibrated challenge — not too easy, not too hard.",
+        "tags": ["Motivation", "Mechanics", "Engagement"]
+      },
+      {
+        "color": "#0C4A6E",
+        "textColor": "#FFFFFF",
+        "author": "Karl M. Kapp",
+        "title": "The Gamification of Learning and Instruction Fieldbook",
+        "year": "2013",
+        "idea": "A practical implementation guide: how to transform learning objectives into functional game structures within real educational contexts.",
+        "application": "This book gives me the operational framework: how to map competencies to missions, how to build pedagogical narratives and how to use feedback loops to keep learners in a state of flow throughout the entire experience.",
+        "tags": ["Instructional Design", "Framework", "Practice"]
+      },
+      {
+        "color": "#78350F",
+        "textColor": "#FFFFFF",
+        "author": "Jesse Schell",
+        "title": "The Art of Game Design: A Book of Lenses",
+        "year": "2008",
+        "idea": "113 lenses — unique perspectives — for analysing and improving any game experience, always placing the player at the centre of design.",
+        "application": "I apply Schell's lenses to learning design: the Lens of Experience (what does the learner feel?), the Lens of Challenge (is it calibrated?), and the Lens of Curiosity (what makes them want to know more?). Learner-centred design starts with these questions.",
+        "tags": ["User-Centred Design", "Experience", "Curiosity"]
+      },
+      {
+        "color": "#065F46",
+        "textColor": "#FFFFFF",
+        "author": "Steven L. Kent",
+        "title": "The Ultimate History of Video Games",
+        "year": "2001",
+        "idea": "How video games evolved from a niche curiosity to a global cultural phenomenon — and what that tells us about what makes an experience irresistibly engaging.",
+        "application": "Understanding the history of games helps me identify universal psychological principles of engagement: visible progression, autonomy, identity and community. These are the same principles I apply to create learning experiences that learners simply don't want to leave.",
+        "tags": ["Psychology", "Engagement", "Intrinsic Motivation"]
+      }
     ]
   },
   "motivations": {
