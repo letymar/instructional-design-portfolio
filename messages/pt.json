@@ -5,6 +5,7 @@
   },
   "nav": {
     "projects": "Projetos",
+    "portfolio": "Portfólio",
     "approach": "Abordagem",
     "cv": "CV",
     "contact": "Contactar"
@@ -31,6 +32,50 @@
     "students": "Alunos impactados",
     "projects": "Projetos implementados",
     "quote": "\"A educação deve ser prática, significativa e conectada com o mundo real.\""
+  },
+  "methodology": {
+    "badge": "Metodologia",
+    "title": "Como eu trabalho",
+    "subtitle": "Cada experiência de aprendizagem que desenho segue princípios pedagógicos sólidos, adaptados ao contexto e ao público.",
+    "methods": [
+      { "icon": "⚡", "title": "Aprendizagem Ativa", "description": "Coloco o aprendente no centro da experiência. Em vez de transmitir conhecimento, crio situações onde ele é construído através da ação, da exploração e da reflexão." },
+      { "icon": "🧩", "title": "Pensamento Computacional", "description": "Ensino a decompor problemas em partes mais pequenas, identificar padrões e criar soluções sistemáticas — uma competência que vai muito além da programação." },
+      { "icon": "🔬", "title": "Metodologias STEAM", "description": "Integro Ciência, Tecnologia, Engenharia, Arte e Matemática em projetos interdisciplinares que conectam saberes e desenvolvem o pensamento criativo." },
+      { "icon": "🏗️", "title": "Projetos Práticos (PBL)", "description": "Cada projeto tem um produto real, uma audiência real e uma apresentação real. Aprender ganha sentido quando o resultado é concreto e partilhável." }
+    ]
+  },
+  "gameDesign": {
+    "badge": "Game Design na Educação",
+    "title": "Elementos de jogo na aprendizagem",
+    "subtitle": "Incorporo mecânicas de design de jogos para criar experiências mais envolventes, motivadoras e eficazes.",
+    "elements": [
+      { "symbol": "🎯", "title": "Missões", "description": "Objetivos claros e desafiantes que mantêm o aprendente focado. Cada missão é calibrada para ser estimulante sem ser frustrante." },
+      { "symbol": "📈", "title": "Níveis & Progressão", "description": "Scaffolding progressivo que garante que ninguém fica para trás nem se aborrece. Cada nível constrói sobre o anterior." },
+      { "symbol": "⚡", "title": "Feedback Imediato", "description": "O erro não é falhar — é aprender. O feedback rápido e construtivo transforma cada tentativa numa oportunidade de crescimento." },
+      { "symbol": "🏆", "title": "Conquistas", "description": "Marcos visíveis e celebração do progresso. Tornar o crescimento tangível é altamente motivador para qualquer aprendente." },
+      { "symbol": "📖", "title": "Narrativa", "description": "Uma boa história dá contexto e significado. Transformo exercícios em desafios e salas de aula em mundos a explorar." }
+    ]
+  },
+  "motivations": {
+    "badge": "Motivações",
+    "title": "Porquê faço isto",
+    "quote": "\"Acredito que ensinar tecnologia é ensinar a pensar. E ensinar a pensar é o ato mais transformador que um educador pode fazer.\"",
+    "cards": [
+      { "icon": "🚀", "title": "De consumidor a criador", "description": "Cada vez que um jovem programa o seu primeiro projeto, algo muda: passa de consumidor passivo a criador ativo do mundo digital." },
+      { "icon": "🔊", "title": "Tecnologia como amplificador", "description": "A tecnologia bem desenhada não substitui o professor — multiplica o seu impacto. É a diferença entre alcançar 30 ou 3000 aprendentes." },
+      { "icon": "🌍", "title": "Cidadania digital", "description": "O meu objetivo não é formar programadores — é formar cidadãos digitais confiantes, críticos e responsáveis no mundo em que vivemos." },
+      { "icon": "💡", "title": "Impacto real", "description": "Quando uma sénior envia o primeiro vídeo ao neto ou uma criança programa o seu primeiro robot — o impacto é real, visível e transformador." }
+    ]
+  },
+  "portfolio_page": {
+    "badge": "Portfólio",
+    "title": "projetos reais de",
+    "titleHighlight": "design instrucional",
+    "description": "Cada projeto é um caso de estudo com contexto, abordagem, ferramentas e resultados reais.",
+    "cta": "Ver Caso de Estudo",
+    "lockedTitle": "Portfólio protegido",
+    "lockedDesc": "Precisas de uma palavra-passe para ver os projetos.",
+    "lockedBtn": "Entrar →"
   },
   "work": {
     "badge": "Trabalho Selecionado",

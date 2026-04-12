@@ -19,19 +19,18 @@ export default function Nav() {
         <Link
           href="/"
           className="font-bold text-lg tracking-tight"
-          style={{
-            fontFamily: "var(--font-poppins, Poppins, sans-serif)",
-            color: "#1E293B",
-          }}
+          style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", color: "#1E293B" }}
         >
           Letícia Marinho
         </Link>
 
         <div className="hidden md:flex items-center gap-2 text-sm">
-          <Link href="/#trabalho" className="nav-link">{t.nav.projects}</Link>
+          <Link href="/portfolio" className="nav-link flex items-center gap-1.5">
+            {t.nav.portfolio}
+            <span style={{ fontSize: "11px" }}>🔒</span>
+          </Link>
           <Link href="/#abordagem" className="nav-link">{t.nav.approach}</Link>
           <Link href="/cv" className="nav-link">{t.nav.cv}</Link>
-          <Link href="/#contacto" className="nav-link">{t.nav.contact}</Link>
 
           {/* Language toggle */}
           <div
@@ -63,10 +62,7 @@ export default function Nav() {
           </div>
         </div>
 
-        <a
-          href="mailto:letymarinho21@gmail.com"
-          className="btn-primary text-sm"
-        >
+        <a href="mailto:letymarinho21@gmail.com" className="btn-primary text-sm">
           {t.nav.contact}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M12 5l7 7-7 7" />

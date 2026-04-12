@@ -5,6 +5,7 @@
   },
   "nav": {
     "projects": "Projects",
+    "portfolio": "Portfolio",
     "approach": "Approach",
     "cv": "CV",
     "contact": "Contact"
@@ -31,6 +32,50 @@
     "students": "Students impacted",
     "projects": "Projects implemented",
     "quote": "\"Education should be practical, meaningful and connected to the real world.\""
+  },
+  "methodology": {
+    "badge": "Methodology",
+    "title": "How I work",
+    "subtitle": "Every learning experience I design follows solid pedagogical principles, adapted to the context and audience.",
+    "methods": [
+      { "icon": "⚡", "title": "Active Learning", "description": "I place the learner at the centre of the experience. Instead of transmitting knowledge, I create situations where it is built through action, exploration and reflection." },
+      { "icon": "🧩", "title": "Computational Thinking", "description": "I teach learners to decompose problems, identify patterns and create systematic solutions — a skill that goes far beyond programming." },
+      { "icon": "🔬", "title": "STEAM Methodologies", "description": "I integrate Science, Technology, Engineering, Art and Maths in interdisciplinary projects that connect knowledge and develop creative thinking." },
+      { "icon": "🏗️", "title": "Practical Projects (PBL)", "description": "Every project has a real product, a real audience and a real presentation. Learning becomes meaningful when the outcome is concrete and shareable." }
+    ]
+  },
+  "gameDesign": {
+    "badge": "Game Design in Education",
+    "title": "Game elements in learning",
+    "subtitle": "I incorporate game design mechanics to create more engaging, motivating and effective learning experiences.",
+    "elements": [
+      { "symbol": "🎯", "title": "Missions", "description": "Clear, challenging objectives that keep learners focused. Each mission is calibrated to be stimulating without being frustrating." },
+      { "symbol": "📈", "title": "Levels & Progression", "description": "Progressive scaffolding that ensures no one falls behind or gets bored. Each level builds on the previous one." },
+      { "symbol": "⚡", "title": "Immediate Feedback", "description": "Mistakes aren't failures — they're learning. Fast, constructive feedback transforms every attempt into a growth opportunity." },
+      { "symbol": "🏆", "title": "Achievements", "description": "Visible milestones and celebration of progress. Making growth tangible is highly motivating for any learner." },
+      { "symbol": "📖", "title": "Narrative", "description": "A good story gives context and meaning. I transform exercises into challenges and classrooms into worlds to explore." }
+    ]
+  },
+  "motivations": {
+    "badge": "Motivations",
+    "title": "Why I do this",
+    "quote": "\"I believe teaching technology is teaching how to think. And teaching how to think is the most transformative act an educator can perform.\"",
+    "cards": [
+      { "icon": "🚀", "title": "From consumer to creator", "description": "Every time a young person builds their first project, something shifts: they move from passive technology consumer to active creator of the digital world." },
+      { "icon": "🔊", "title": "Technology as amplifier", "description": "Well-designed technology doesn't replace the teacher — it multiplies their impact. It's the difference between reaching 30 or 3,000 learners." },
+      { "icon": "🌍", "title": "Digital citizenship", "description": "My goal isn't to train programmers — it's to build confident, critical and responsible digital citizens in the world we live in." },
+      { "icon": "💡", "title": "Real impact", "description": "When a senior sends their first video to their grandchild or a child programs their first robot — the impact is real, visible and transformative." }
+    ]
+  },
+  "portfolio_page": {
+    "badge": "Portfolio",
+    "title": "real instructional",
+    "titleHighlight": "design projects",
+    "description": "Each project is a case study with real context, approach, tools and outcomes.",
+    "cta": "View Case Study",
+    "lockedTitle": "Protected portfolio",
+    "lockedDesc": "You need a password to view the projects.",
+    "lockedBtn": "Enter →"
   },
   "work": {
     "badge": "Selected Work",
