@@ -387,6 +387,49 @@ export const projects: Project[] = [
     docs: [],
     reverse: true,
   },
+  {
+    slug: "laboratorio-educacao-digital",
+    number: "11",
+    title: "Laboratório de Educação Digital",
+    category: "Currículo · DGE",
+    tags: ["Cenários de Aprendizagem", "STEM", "Micro:bit", "Direção-Geral de Educação"],
+    shortDescription:
+      "Cenários de aprendizagem STEM para o 2.º e 3.º ciclo, desenvolvidos em parceria com a Direção-Geral de Educação — robótica, micro:bit e sustentabilidade integrados no currículo formal.",
+    heroImage: "/projects/led-1.jpg",
+    gallery: [
+      "/projects/led-1.jpg",
+      "/projects/led-2.jpg",
+      "/projects/led-3.jpg",
+      "/projects/led-4.jpg",
+      "/projects/led-5.jpg",
+      "/projects/led-6.jpg",
+      "/projects/led-7.jpg",
+      "/projects/led-8.jpg",
+    ],
+    caseStudy: {
+      contexto:
+        "O Laboratório de Educação Digital (LED) é um projeto desenvolvido pelo CDI Portugal em parceria com a Direção-Geral de Educação (DGE), com o objetivo de criar recursos pedagógicos de qualidade para integração do STEM no currículo formal do 2.º e 3.º ciclo do Ensino Básico. Os cenários de aprendizagem foram concebidos para serem utilizados por professores em sala de aula, articulando programação, robótica e computação física com as metas curriculares existentes.",
+      objetivo:
+        "Criar cenários de aprendizagem STEM prontos a implementar, que integrem robótica educativa e computação física (Micro:bit) nas áreas curriculares do 2.º e 3.º ciclo. Desenvolver materiais de qualidade homologável que permitam a qualquer professor, independentemente da experiência tecnológica, implementar atividades de pensamento computacional na sua turma.",
+      meuPapel:
+        "Fui responsável pelo design instrucional e produção dos cenários de aprendizagem — desde a análise das metas curriculares até à produção dos materiais finais. Concebi a estrutura pedagógica de cada cenário, defini os objetivos de aprendizagem alinhados ao currículo, desenvolvi os guiões para professores e alunos, e coordenei a validação dos materiais com docentes em contexto real.",
+      abordagem:
+        "Cada cenário foi desenhado segundo o modelo de Aprendizagem Baseada em Projetos (PBL) com articulação curricular explícita: cada atividade mapeia competências do Perfil dos Alunos à Saída da Escolaridade Obrigatória e identifica as disciplinas e metas curriculares a que se articula. Os cenários integram uma narrativa motivadora, desafios progressivos e materiais de apoio diferenciados para professor e aluno.",
+      ferramentas: ["Micro:bit", "MakeCode", "Robótica educativa", "Materiais de circuitos", "Documentação curricular DGE"],
+      resultados:
+        "5 documentos pedagógicos produzidos e validados: 4 cenários de aprendizagem STEM e 1 guião técnico de programação e montagem de circuitos. Materiais desenvolvidos com qualidade de referência nacional, em parceria formal com a Direção-Geral de Educação. Prontos para disseminação e formação de professores a nível nacional.",
+      materiais:
+        "Guião de Programação e Montagem de Circuito (CDI Portugal), Cenário STEM — Eco Caixote do Lixo (9.º/10.º ano), Cenário Robótica — Robô controlado por gestos (9.º ano), Cenário Casas Sustentáveis com Micro:bit (8.º ano), Guião de apoio — Casas Sustentáveis.",
+    },
+    docs: [
+      { label: "Guião: Programação e Montagem de Circuito", url: "/docs/led-guiao-circuito.pdf" },
+      { label: "Cenário STEM: Eco Caixote do Lixo", url: "/docs/led-cenario-eco-caixote.pdf" },
+      { label: "Cenário: Robô Controlado por Gestos", url: "/docs/led-cenario-robo-gestos.pdf" },
+      { label: "Cenário: Casas Sustentáveis (Micro:bit)", url: "/docs/led-cenario-casas-sustentaveis.pdf" },
+      { label: "Guião de Apoio: Casas Sustentáveis", url: "/docs/led-guiao-casas-sustentaveis.pdf" },
+    ],
+    reverse: false,
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
