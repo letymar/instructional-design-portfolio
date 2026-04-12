@@ -45,6 +45,18 @@ export const projects: Project[] = [
       "/projects/aecs-coding-1.jpg",
       "/projects/aecs-young-1.jpg",
       "/projects/aecs-young-2.jpg",
+      "/projects/aecs-p1.jpg",
+      "/projects/aecs-p2.jpg",
+      "/projects/aecs-p3.jpg",
+      "/projects/aecs-p4.jpg",
+      "/projects/aecs-p5.jpg",
+      "/projects/aecs-p6.jpg",
+      "/projects/aecs-p7.jpg",
+      "/projects/aecs-p8.jpg",
+      "/projects/aecs-f1.jpg",
+      "/projects/aecs-f2.jpg",
+      "/projects/aecs-f3.jpg",
+      "/projects/aecs-f4.jpg",
     ],
     caseStudy: {
       contexto:
@@ -161,6 +173,8 @@ export const projects: Project[] = [
       { label: "Atividade: Balancing Robots", url: "/docs/maker-balancing-robots.pdf" },
       { label: "Atividade: Pulseira Binária", url: "/docs/maker-pulseira-binaria.pdf" },
       { label: "Atividade: Makey Makey", url: "/docs/maker-makey-makey.pdf" },
+      { label: "Atividade: Robo Copo", url: "/docs/maker-robocopo.pdf" },
+      { label: "Atividade: Salve o Fred", url: "/docs/maker-salve-fred.pdf" },
     ],
     reverse: true,
   },
@@ -172,8 +186,19 @@ export const projects: Project[] = [
     tags: ["Literacia Mediática", "Produção de Áudio", "Expressão Criativa", "Workshop Design"],
     shortDescription:
       "Workshop de rádio usando Mixxx e RodeCaster Pro — os jovens aprendem a conceber, produzir e emitir o seu próprio programa ao vivo, do conceito ao ar.",
+    heroImage: "/projects/radio-ccd-1.jpg",
     heroGradient: "linear-gradient(135deg, #0D0818 0%, #1A0A28 60%, #0A0818 100%)",
-    gallery: [],
+    gallery: [
+      "/projects/radio-ccd-1.jpg",
+      "/projects/radio-ccd-2.jpg",
+      "/projects/radio-ccd-3.jpg",
+      "/projects/radio-ccd-4.jpg",
+      "/projects/radio-ccd-5.jpg",
+      "/projects/radio-ccd-6.jpg",
+      "/projects/radio-ccd-7.jpg",
+      "/projects/radio-ccd-8.jpg",
+      "/projects/radio-ccd-9.jpg",
+    ],
     caseStudy: {
       contexto:
         "O Workshop de Rádio CCD nasceu da vontade de explorar a comunicação audio como forma de literacia mediática e expressão criativa para jovens. Utilizando equipamento profissional — RodeCaster Pro e o software Mixxx — os participantes percorrem todo o processo de produção radiofónica, desde a concepção do programa até à emissão em direto.",
@@ -205,6 +230,9 @@ export const projects: Project[] = [
       "/projects/coderdojo-1.jpg",
       "/projects/coderdojo-2.jpg",
       "/projects/coderdojo-3.jpg",
+      "/projects/coderdojo-4.jpg",
+      "/projects/coderdojo-5.jpg",
+      "/projects/coderdojo-6.jpg",
     ],
     caseStudy: {
       contexto:
@@ -268,6 +296,13 @@ export const projects: Project[] = [
       "/projects/seniores-2.jpg",
       "/projects/seniores-3.jpg",
       "/projects/seniores-4.jpg",
+      "/projects/seniores-wa1.jpg",
+      "/projects/seniores-wa2.jpg",
+      "/projects/seniores-wa3.jpg",
+      "/projects/seniores-wa4.jpg",
+      "/projects/seniores-wa5.jpg",
+      "/projects/seniores-wa6.jpg",
+      "/projects/seniores-wa7.jpg",
     ],
     caseStudy: {
       contexto:
