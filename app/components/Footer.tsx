@@ -17,12 +17,12 @@ export default function Footer() {
           <div>
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
-              style={{ backgroundColor: "#D6C9FC" }}
+              style={{ backgroundColor: "#EEF2FF" }}
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B4B8A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
-              <span className="text-sm font-medium" style={{ color: "#5B4B8A" }}>{t.footer.badge}</span>
+              <span className="text-sm font-medium" style={{ color: "#4F46E5" }}>{t.footer.badge}</span>
             </div>
 
             <h2
@@ -30,13 +30,13 @@ export default function Footer() {
               style={{
                 fontFamily: "var(--font-poppins, Poppins, sans-serif)",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                color: "#334155",
+                color: "#111827",
               }}
             >
               {t.footer.title}{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #5B4B8A 0%, #9B88FC 100%)",
+                  background: "linear-gradient(135deg, #1E3A8A 0%, #6366F1 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -47,7 +47,7 @@ export default function Footer() {
               ?
             </h2>
 
-            <p className="text-base mb-8 max-w-md" style={{ color: "#64748B" }}>
+            <p className="text-base mb-8 max-w-md" style={{ color: "#6B7280" }}>
               {t.footer.description}
             </p>
 
@@ -75,8 +75,8 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p className="font-bold text-sm" style={{ color: "#334155" }}>10+</p>
-                <p className="text-xs" style={{ color: "#64748B" }}>{t.footer.tagline}</p>
+                <p className="font-bold text-sm" style={{ color: "#111827" }}>10+</p>
+                <p className="text-xs" style={{ color: "#6B7280" }}>{t.footer.tagline}</p>
               </div>
             </div>
           </div>

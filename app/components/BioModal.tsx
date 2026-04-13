@@ -58,7 +58,7 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
           <button
             onClick={onClose}
             className="absolute top-5 right-5 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-150"
-            style={{ backgroundColor: "#F1F5F9", color: "#64748B" }}
+            style={{ backgroundColor: "#F1F5F9", color: "#6B7280" }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
@@ -93,19 +93,19 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
                 className="font-bold text-2xl"
                 style={{
                   fontFamily: "var(--font-poppins, Poppins, sans-serif)",
-                  color: "#334155",
+                  color: "#111827",
                 }}
               >
                 Letícia Marinho
               </h2>
-              <p className="text-sm" style={{ color: "#64748B" }}>
+              <p className="text-sm" style={{ color: "#6B7280" }}>
                 Learning Experience Designer · CDI Portugal
               </p>
             </div>
           </div>
 
           {/* Bio */}
-          <div className="space-y-4 text-sm leading-relaxed mb-8" style={{ color: "#64748B" }}>
+          <div className="space-y-4 text-sm leading-relaxed mb-8" style={{ color: "#6B7280" }}>
             <p>
               Sou professora e Learning Experience Designer com mais de uma
               década de experiência na área da educação, com foco na criação
@@ -113,7 +113,7 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
               tecnologia, criatividade e impacto social.
             </p>
             <p>
-              Atualmente, trabalho no <strong style={{ color: "#334155" }}>CDI Portugal</strong>, onde
+              Atualmente, trabalho no <strong style={{ color: "#111827" }}>CDI Portugal</strong>, onde
               desenvolvo e coordeno projetos educativos nas áreas de
               programação, robótica e literacia digital, atuando no
               Centro de Cidadania Digital de Valongo e no Centro de
@@ -127,7 +127,7 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
             </p>
             <p
               className="italic font-medium"
-              style={{ color: "#5B4B8A" }}
+              style={{ color: "#1E3A8A" }}
             >
               &ldquo;Acredito que a educação deve ser prática, significativa e
               conectada com o mundo real — e é isso que procuro construir
@@ -148,7 +148,7 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
                 <span
                   key={item}
                   className="text-sm px-4 py-2 rounded-full font-medium"
-                  style={{ backgroundColor: "#D6C9FC", color: "#5B4B8A" }}
+                  style={{ backgroundColor: "#EEF2FF", color: "#4F46E5" }}
                 >
                   {item}
                 </span>

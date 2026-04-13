@@ -26,37 +26,37 @@ export default function PortfolioPage() {
   }, [router]);
 
   if (!authChecked) {
-    return <div className="min-h-screen" style={{ backgroundColor: "#F8FAFC" }} />;
+    return <div className="min-h-screen" style={{ backgroundColor: "#FAFAFA" }} />;
   }
 
   return (
     <>
       <Nav />
-      <main className="pt-[65px]" style={{ backgroundColor: "#F8FAFC" }}>
+      <main className="pt-[65px]" style={{ backgroundColor: "#FAFAFA" }}>
 
         {/* ── HEADER ─────────────────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-6 lg:px-12" style={{ backgroundColor: "#FFFFFF" }}>
           <div className="mx-auto max-w-7xl">
             <RevealWrapper>
               <div className="text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "#D6C9FC" }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B4B8A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "#EEF2FF" }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                   </svg>
-                  <span className="text-sm font-semibold" style={{ color: "#5B4B8A" }}>{p.badge}</span>
+                  <span className="text-sm font-semibold" style={{ color: "#4F46E5" }}>{p.badge}</span>
                 </div>
 
                 <h1
                   className="font-bold mb-4"
-                  style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#334155" }}
+                  style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#111827" }}
                 >
                   {allProjects.length} {p.title}{" "}
-                  <span style={{ background: "linear-gradient(135deg, #5B4B8A 0%, #9B88FC 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                  <span style={{ background: "linear-gradient(135deg, #4F46E5 0%, #818CF8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                     {p.titleHighlight}
                   </span>
                 </h1>
 
-                <p className="text-base max-w-xl mx-auto" style={{ color: "#64748B" }}>
+                <p className="text-base max-w-xl mx-auto" style={{ color: "#6B7280" }}>
                   {p.description}
                 </p>
 
@@ -77,7 +77,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* ── PROJECT GRID ───────────────────────────────────────────────── */}
-        <section className="py-16 px-6 lg:px-12" style={{ backgroundColor: "#F8FAFC" }}>
+        <section className="py-16 px-6 lg:px-12" style={{ backgroundColor: "#FAFAFA" }}>
           <div className="mx-auto max-w-7xl">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {allProjects.map((project, i) => (
@@ -101,7 +101,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* ── BACK TO HOME ───────────────────────────────────────────────── */}
-        <div style={{ backgroundColor: "#F8FAFC", borderTop: "1px solid rgba(91,75,138,0.06)" }}>
+        <div style={{ backgroundColor: "#FAFAFA", borderTop: "1px solid rgba(30,58,138,0.06)" }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10 flex justify-center">
             <Link href="/" className="btn-secondary text-sm py-3 px-6">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

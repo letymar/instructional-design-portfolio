@@ -10,16 +10,16 @@ export default function Nav() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl"
       style={{
-        backgroundColor: "rgba(248, 250, 252, 0.94)",
-        borderBottom: "1px solid rgba(91,75,138,0.08)",
-        boxShadow: "0 2px 20px rgba(91, 75, 138, 0.06)",
+        backgroundColor: "rgba(250, 250, 250, 0.94)",
+        borderBottom: "1px solid rgba(30,58,138,0.08)",
+        boxShadow: "0 2px 20px rgba(30, 58, 138, 0.05)",
       }}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-12 py-4">
         <Link
           href="/"
           className="font-bold text-lg tracking-tight"
-          style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", color: "#1E293B" }}
+          style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", color: "#111827" }}
         >
           Letícia Marinho
         </Link>
@@ -35,14 +35,14 @@ export default function Nav() {
           {/* Language toggle */}
           <div
             className="flex items-center gap-0.5 ml-2 rounded-full p-0.5"
-            style={{ backgroundColor: "rgba(91,75,138,0.08)" }}
+            style={{ backgroundColor: "rgba(30,58,138,0.07)" }}
           >
             <button
               onClick={() => setLang('pt')}
               className="text-xs font-bold px-2.5 py-1 rounded-full transition-all duration-200"
               style={{
-                backgroundColor: lang === 'pt' ? '#5B4B8A' : 'transparent',
-                color: lang === 'pt' ? '#ffffff' : '#5B4B8A',
+                backgroundColor: lang === 'pt' ? '#1E3A8A' : 'transparent',
+                color: lang === 'pt' ? '#ffffff' : '#1E3A8A',
                 cursor: 'pointer',
               }}
             >
@@ -52,8 +52,8 @@ export default function Nav() {
               onClick={() => setLang('en')}
               className="text-xs font-bold px-2.5 py-1 rounded-full transition-all duration-200"
               style={{
-                backgroundColor: lang === 'en' ? '#5B4B8A' : 'transparent',
-                color: lang === 'en' ? '#ffffff' : '#5B4B8A',
+                backgroundColor: lang === 'en' ? '#1E3A8A' : 'transparent',
+                color: lang === 'en' ? '#ffffff' : '#1E3A8A',
                 cursor: 'pointer',
               }}
             >

@@ -48,12 +48,12 @@ export default function ContactForm() {
 
   const inputBase: React.CSSProperties = {
     width: "100%",
-    backgroundColor: "#F8FAFC",
+    backgroundColor: "#FAFAFA",
     border: "2px solid #E2E8F0",
     borderRadius: "14px",
     padding: "12px 16px",
     fontSize: "14px",
-    color: "#334155",
+    color: "#111827",
     outline: "none",
     transition: "border-color 0.2s, box-shadow 0.2s",
   };
@@ -80,17 +80,17 @@ export default function ContactForm() {
     return (
       <div
         className="rounded-3xl p-8 flex flex-col items-center text-center gap-4"
-        style={{ backgroundColor: "#FFFFFF", boxShadow: "0 8px 32px rgba(91,75,138,0.10)" }}
+        style={{ backgroundColor: "#FFFFFF", boxShadow: "0 8px 32px rgba(99,102,241,0.10)" }}
       >
         <div className="w-16 h-16 rounded-2xl flex items-center justify-center" style={{ backgroundColor: "#CFF8E8" }}>
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#065F46" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>
-        <h3 className="font-bold text-lg" style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", color: "#334155" }}>
+        <h3 className="font-bold text-lg" style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", color: "#111827" }}>
           {c.successTitle}
         </h3>
-        <p style={{ color: "#64748B", fontSize: "14px" }}>{c.successMessage}</p>
+        <p style={{ color: "#6B7280", fontSize: "14px" }}>{c.successMessage}</p>
         <button
           onClick={() => setStatus("idle")}
           className="btn-secondary text-sm px-5 py-2.5 mt-2"
@@ -104,7 +104,7 @@ export default function ContactForm() {
   return (
     <div
       className="rounded-3xl p-8"
-      style={{ backgroundColor: "#FFFFFF", boxShadow: "0 8px 32px rgba(91,75,138,0.10)" }}
+      style={{ backgroundColor: "#FFFFFF", boxShadow: "0 8px 32px rgba(99,102,241,0.10)" }}
     >
       <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
         <Field id="user_name" label={c.labelName} error={errors.name}>
@@ -114,7 +114,7 @@ export default function ContactForm() {
             type="text"
             placeholder={c.placeholderName}
             style={inputBase}
-            onFocus={e => { e.currentTarget.style.borderColor = "#7B68EE"; e.currentTarget.style.boxShadow = "0 0 0 4px rgba(123,104,238,0.10)"; }}
+            onFocus={e => { e.currentTarget.style.borderColor = "#6366F1"; e.currentTarget.style.boxShadow = "0 0 0 4px rgba(99,102,241,0.10)"; }}
             onBlur={e => { e.currentTarget.style.borderColor = errors.name ? "#EF4444" : "#E2E8F0"; e.currentTarget.style.boxShadow = "none"; }}
           />
         </Field>
@@ -126,7 +126,7 @@ export default function ContactForm() {
             type="email"
             placeholder={c.placeholderEmail}
             style={inputBase}
-            onFocus={e => { e.currentTarget.style.borderColor = "#7B68EE"; e.currentTarget.style.boxShadow = "0 0 0 4px rgba(123,104,238,0.10)"; }}
+            onFocus={e => { e.currentTarget.style.borderColor = "#6366F1"; e.currentTarget.style.boxShadow = "0 0 0 4px rgba(99,102,241,0.10)"; }}
             onBlur={e => { e.currentTarget.style.borderColor = errors.email ? "#EF4444" : "#E2E8F0"; e.currentTarget.style.boxShadow = "none"; }}
           />
         </Field>
@@ -138,7 +138,7 @@ export default function ContactForm() {
             rows={4}
             placeholder={c.placeholderMessage}
             style={{ ...inputBase, resize: "vertical", minHeight: "110px" }}
-            onFocus={e => { e.currentTarget.style.borderColor = "#7B68EE"; e.currentTarget.style.boxShadow = "0 0 0 4px rgba(123,104,238,0.10)"; }}
+            onFocus={e => { e.currentTarget.style.borderColor = "#6366F1"; e.currentTarget.style.boxShadow = "0 0 0 4px rgba(99,102,241,0.10)"; }}
             onBlur={e => { e.currentTarget.style.borderColor = errors.message ? "#EF4444" : "#E2E8F0"; e.currentTarget.style.boxShadow = "none"; }}
           />
         </Field>
@@ -152,9 +152,9 @@ export default function ContactForm() {
           disabled={status === "sending"}
           className="w-full rounded-2xl py-4 text-sm font-semibold tracking-wide transition-all duration-200"
           style={{
-            backgroundColor: status === "sending" ? "#8B7CF6" : "#5B4B8A",
+            backgroundColor: status === "sending" ? "#818CF8" : "#1E3A8A",
             color: "#ffffff",
-            boxShadow: "0 8px 25px rgba(91,75,138,0.35)",
+            boxShadow: "0 8px 25px rgba(30,58,138,0.35)",
             opacity: status === "sending" ? 0.85 : 1,
             cursor: status === "sending" ? "wait" : "pointer",
           }}

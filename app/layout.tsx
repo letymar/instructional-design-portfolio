@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Poppins, Inter, Nunito } from "next/font/google";
+import { Poppins, Roboto } from "next/font/google";
 import CustomCursor from "./components/CustomCursor";
+import ClientRoot from "./components/ClientRoot";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import "./globals.css";
 
@@ -11,16 +12,10 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const roboto = Roboto({
+  variable: "--font-body",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -36,15 +31,15 @@ export default function RootLayout({
   return (
     <html
       lang="pt"
-      className={`${poppins.variable} ${inter.variable} ${nunito.variable} h-full`}
+      className={`${poppins.variable} ${roboto.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col bg-[#F8FAFC]">
-        {/* Grain texture overlay */}
+      <body className="min-h-full flex flex-col" style={{ backgroundColor: "#FAFAFA" }}>
         <div className="grain-overlay" aria-hidden="true" />
-        {/* Custom cursor */}
         <CustomCursor />
         <LanguageProvider>
-          {children}
+          <ClientRoot>
+            {children}
+          </ClientRoot>
         </LanguageProvider>
       </body>
     </html>

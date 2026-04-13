@@ -15,7 +15,7 @@ interface ProjectBlockProps {
 }
 
 const cardAccents = [
-  { line: "#7B68EE", bg: "#D6C9FC", text: "#5B4B8A", shadow: "rgba(123,104,238,0.18)" },
+  { line: "#6366F1", bg: "#EEF2FF", text: "#1E3A8A", shadow: "rgba(99,102,241,0.18)" },
   { line: "#34D399", bg: "#CFF8E8", text: "#065F46", shadow: "rgba(52,211,153,0.18)" },
   { line: "#38BDF8", bg: "#C9E7FC", text: "#0C4A6E", shadow: "rgba(56,189,248,0.18)" },
   { line: "#F472B6", bg: "#F9C8D7", text: "#831843", shadow: "rgba(244,114,182,0.18)" },
@@ -84,13 +84,13 @@ export default function ProjectBlock({
         </span>
 
         <h3
-          className="font-bold text-lg leading-snug mb-2 transition-colors duration-200 group-hover:text-[#5B4B8A]"
+          className="font-bold text-lg leading-snug mb-2 transition-colors duration-200 group-hover:text-[#4F46E5]"
           style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", color: "#1E293B" }}
         >
           {title}
         </h3>
 
-        <p className="text-sm leading-relaxed mb-4 flex-1" style={{ color: "#64748B" }}>
+        <p className="text-sm leading-relaxed mb-4 flex-1" style={{ color: "#6B7280" }}>
           {description}
         </p>
 

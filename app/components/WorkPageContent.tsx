@@ -23,11 +23,11 @@ const SECTION_BG: Record<string, string> = {
 };
 
 const SECTION_ACCENT: Record<string, string> = {
-  contexto: "#7B68EE",
-  objetivo: "#5B4B8A",
+  contexto: "#6366F1",
+  objetivo: "#1E3A8A",
   meuPapel: "#34D399",
   abordagem: "#0D9488",
-  resultados: "#7B68EE",
+  resultados: "#6366F1",
   materiais: "#F472B6",
 };
 
@@ -61,25 +61,25 @@ export default function WorkPageContent({ project }: Props) {
   }, []);
 
   if (!authChecked) {
-    return <div className="min-h-screen" style={{ backgroundColor: "#F8FAFC" }} />;
+    return <div className="min-h-screen" style={{ backgroundColor: "#FAFAFA" }} />;
   }
 
   return (
-    <div style={{ backgroundColor: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#FAFAFA", minHeight: "100vh" }}>
 
       {/* ── STICKY TOP NAV ──────────────────────────────────────────────────── */}
       <div
         className="sticky top-0 z-40 backdrop-blur-xl"
-        style={{ backgroundColor: "rgba(248,250,252,0.95)", borderBottom: "1px solid rgba(91,75,138,0.08)", boxShadow: "0 2px 16px rgba(91,75,138,0.06)" }}
+        style={{ backgroundColor: "rgba(248,250,252,0.95)", borderBottom: "1px solid rgba(30,58,138,0.08)", boxShadow: "0 2px 16px rgba(30,58,138,0.06)" }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between">
-          <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-[#5B4B8A]" style={{ color: "#64748B" }}>
+          <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-[#1E3A8A]" style={{ color: "#6B7280" }}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M19 12H5M5 12l7-7M5 12l7 7" />
             </svg>
             {t.work_page.back}
           </Link>
-          <span className="section-label-pill" style={{ backgroundColor: "#D6C9FC", color: "#5B4B8A" }}>
+          <span className="section-label-pill" style={{ backgroundColor: "#EEF2FF", color: "#1E3A8A" }}>
             {t.work_page.project} {number}
           </span>
         </div>
@@ -90,7 +90,7 @@ export default function WorkPageContent({ project }: Props) {
         {heroImage ? (
           <Image src={heroImage} alt={title} fill className="object-cover" sizes="100vw" priority />
         ) : (
-          <div className="absolute inset-0" style={{ background: heroGradient ?? "linear-gradient(135deg, #D6C9FC 0%, #C9E7FC 100%)" }} />
+          <div className="absolute inset-0" style={{ background: heroGradient ?? "linear-gradient(135deg, #EEF2FF 0%, #C9E7FC 100%)" }} />
         )}
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.65) 100%)" }} />
         <div className="absolute bottom-0 left-0 right-0 px-6 lg:px-16 pb-12">
@@ -123,7 +123,7 @@ export default function WorkPageContent({ project }: Props) {
         const label = sectionDef?.label ?? key;
         const tagline = sectionDef?.tagline ?? "";
         const bg = SECTION_BG[key] ?? "#FFFFFF";
-        const accent = SECTION_ACCENT[key] ?? "#7B68EE";
+        const accent = SECTION_ACCENT[key] ?? "#6366F1";
         const num = SECTION_NUMS[key] ?? "00";
 
         return (
@@ -169,7 +169,7 @@ export default function WorkPageContent({ project }: Props) {
               </div>
             </div>
             <div className="max-w-7xl mx-auto px-6 lg:px-16">
-              <div className="h-px" style={{ backgroundColor: "rgba(91,75,138,0.06)" }} />
+              <div className="h-px" style={{ backgroundColor: "rgba(30,58,138,0.06)" }} />
             </div>
           </section>
         );
@@ -196,7 +196,7 @@ export default function WorkPageContent({ project }: Props) {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
-          <div className="h-px" style={{ backgroundColor: "rgba(91,75,138,0.06)" }} />
+          <div className="h-px" style={{ backgroundColor: "rgba(30,58,138,0.06)" }} />
         </div>
       </section>
 
@@ -214,26 +214,26 @@ export default function WorkPageContent({ project }: Props) {
             <ImageGallery images={gallery} title={title} />
           </div>
           <div className="max-w-7xl mx-auto px-6 lg:px-16">
-            <div className="h-px" style={{ backgroundColor: "rgba(91,75,138,0.06)" }} />
+            <div className="h-px" style={{ backgroundColor: "rgba(30,58,138,0.06)" }} />
           </div>
         </section>
       )}
 
       {/* ── VIDEOS ──────────────────────────────────────────────────────────── */}
       {videos && videos.length > 0 && (
-        <section style={{ backgroundColor: "#F8FAFC" }}>
+        <section style={{ backgroundColor: "#FAFAFA" }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16 md:py-20">
             <div className="flex items-center gap-3 mb-10">
-              <div className="h-0.5 w-8 rounded-full" style={{ backgroundColor: "#7B68EE" }} />
-              <p className="font-bold text-sm uppercase tracking-[0.15em]" style={{ color: "#5B4B8A" }}>{t.work_page.videos}</p>
-              <span className="text-xs font-medium px-2.5 py-1 rounded-full" style={{ backgroundColor: "#D6C9FC", color: "#5B4B8A" }}>
+              <div className="h-0.5 w-8 rounded-full" style={{ backgroundColor: "#6366F1" }} />
+              <p className="font-bold text-sm uppercase tracking-[0.15em]" style={{ color: "#1E3A8A" }}>{t.work_page.videos}</p>
+              <span className="text-xs font-medium px-2.5 py-1 rounded-full" style={{ backgroundColor: "#EEF2FF", color: "#1E3A8A" }}>
                 {videos.length} {t.work_page.videosUnit}
               </span>
             </div>
             <VideoGallery videos={videos} title={title} />
           </div>
           <div className="max-w-7xl mx-auto px-6 lg:px-16">
-            <div className="h-px" style={{ backgroundColor: "rgba(91,75,138,0.06)" }} />
+            <div className="h-px" style={{ backgroundColor: "rgba(30,58,138,0.06)" }} />
           </div>
         </section>
       )}
@@ -243,8 +243,8 @@ export default function WorkPageContent({ project }: Props) {
         <section style={{ backgroundColor: "#F5F3FF" }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16 md:py-20">
             <div className="flex items-center gap-3 mb-10">
-              <div className="h-0.5 w-8 rounded-full" style={{ backgroundColor: "#7B68EE" }} />
-              <p className="font-bold text-sm uppercase tracking-[0.15em]" style={{ color: "#5B4B8A" }}>{t.work_page.downloads}</p>
+              <div className="h-0.5 w-8 rounded-full" style={{ backgroundColor: "#6366F1" }} />
+              <p className="font-bold text-sm uppercase tracking-[0.15em]" style={{ color: "#1E3A8A" }}>{t.work_page.downloads}</p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -257,8 +257,8 @@ export default function WorkPageContent({ project }: Props) {
                   className="card group flex items-start gap-4 p-5 no-underline"
                   style={{ backgroundColor: "#FFFFFF" }}
                 >
-                  <div className="w-11 h-11 rounded-xl flex-shrink-0 flex items-center justify-center transition-transform duration-200 group-hover:scale-110" style={{ backgroundColor: "#D6C9FC" }}>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B4B8A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <div className="w-11 h-11 rounded-xl flex-shrink-0 flex items-center justify-center transition-transform duration-200 group-hover:scale-110" style={{ backgroundColor: "#EEF2FF" }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                       <polyline points="14 2 14 8 20 8" />
                       <line x1="12" y1="18" x2="12" y2="12" />
@@ -267,7 +267,7 @@ export default function WorkPageContent({ project }: Props) {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-sm mb-1 leading-snug" style={{ color: "#1E293B" }}>{doc.label}</p>
-                    <p className="text-xs font-medium" style={{ color: "#7B68EE" }}>{t.work_page.openPdf}</p>
+                    <p className="text-xs font-medium" style={{ color: "#6366F1" }}>{t.work_page.openPdf}</p>
                   </div>
                 </a>
               ))}
@@ -277,7 +277,7 @@ export default function WorkPageContent({ project }: Props) {
       )}
 
       {/* ── BOTTOM NAV ──────────────────────────────────────────────────────── */}
-      <div style={{ backgroundColor: "#F8FAFC", borderTop: "1px solid rgba(91,75,138,0.06)" }}>
+      <div style={{ backgroundColor: "#FAFAFA", borderTop: "1px solid rgba(30,58,138,0.06)" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-16 py-10 flex items-center justify-between">
           <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm font-semibold btn-secondary px-5 py-3">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

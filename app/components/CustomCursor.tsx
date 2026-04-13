@@ -44,15 +44,15 @@ export default function CustomCursor() {
       dot.style.transform += " scale(0)";
       ring.style.width = "48px";
       ring.style.height = "48px";
-      ring.style.backgroundColor = "rgba(91,75,138,0.12)";
-      ring.style.borderColor = "#5B4B8A";
+      ring.style.backgroundColor = "rgba(99,102,241,0.12)";
+      ring.style.borderColor = "#6366F1";
     };
 
     const onLeaveInteractive = () => {
       ring.style.width = "32px";
       ring.style.height = "32px";
       ring.style.backgroundColor = "transparent";
-      ring.style.borderColor = "rgba(91,75,138,0.5)";
+      ring.style.borderColor = "rgba(99,102,241,0.5)";
     };
 
     document.addEventListener("mousemove", onMove);
@@ -86,7 +86,7 @@ export default function CustomCursor() {
           width: "8px",
           height: "8px",
           borderRadius: "50%",
-          backgroundColor: "#5B4B8A",
+          backgroundColor: "#6366F1",
           pointerEvents: "none",
           zIndex: 99999,
           opacity: 0,
@@ -105,7 +105,7 @@ export default function CustomCursor() {
           width: "32px",
           height: "32px",
           borderRadius: "50%",
-          border: "1.5px solid rgba(91,75,138,0.5)",
+          border: "1.5px solid rgba(99,102,241,0.5)",
           pointerEvents: "none",
           zIndex: 99998,
           opacity: 0,

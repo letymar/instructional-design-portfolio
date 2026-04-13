@@ -11,7 +11,7 @@ import { useLanguage } from "@/app/contexts/LanguageContext";
 const SKILL_GROUPS_DATA = [
   {
     colorKey: 0,
-    color: "#D6C9FC", accent: "#5B4B8A",
+    color: "#EEF2FF", accent: "#1E3A8A",
     skills: ["Instructional Design", "Learning Experience Design (LXD)", "Curriculum Development", "STEAM Education", "Gamification", "Project-Based Learning", "Educational Innovation"],
   },
   {
@@ -32,12 +32,12 @@ const SKILL_GROUPS_DATA = [
 ];
 
 const JOB_COLORS = [
-  { color: "#D6C9FC", accent: "#5B4B8A" },
+  { color: "#EEF2FF", accent: "#1E3A8A" },
   { color: "#CFF8E8", accent: "#065F46" },
   { color: "#C9E7FC", accent: "#0C4A6E" },
   { color: "#FFF6C9", accent: "#78350F" },
   { color: "#F9C8D7", accent: "#831843" },
-  { color: "#D6C9FC", accent: "#5B4B8A" },
+  { color: "#EEF2FF", accent: "#1E3A8A" },
   { color: "#CFF8E8", accent: "#065F46" },
   { color: "#C9E7FC", accent: "#0C4A6E" },
 ];
@@ -58,12 +58,12 @@ export default function CVPage() {
     }
   }, [router]);
 
-  if (!authChecked) return <div className="min-h-screen" style={{ backgroundColor: "#F8FAFC" }} />;
+  if (!authChecked) return <div className="min-h-screen" style={{ backgroundColor: "#FAFAFA" }} />;
 
   return (
     <>
       <Nav />
-      <main className="pt-[65px]" style={{ backgroundColor: "#F8FAFC" }}>
+      <main className="pt-[65px]" style={{ backgroundColor: "#FAFAFA" }}>
 
         {/* ── HERO ───────────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden px-6 lg:px-16 py-20 md:py-28" style={{ backgroundColor: "#FFFFFF" }}>
@@ -74,18 +74,18 @@ export default function CVPage() {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "#D6C9FC" }}>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5B4B8A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "#EEF2FF" }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
                   </svg>
-                  <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "#5B4B8A" }}>{cv.badge}</span>
+                  <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "#1E3A8A" }}>{cv.badge}</span>
                 </div>
 
                 <h1 className="font-bold leading-tight mb-3" style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#1E293B" }}>
                   Letícia Marinho
                 </h1>
 
-                <p className="font-semibold mb-6 leading-relaxed" style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.1rem)", color: "#5B4B8A", maxWidth: "55ch" }}>
+                <p className="font-semibold mb-6 leading-relaxed" style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.1rem)", color: "#1E3A8A", maxWidth: "55ch" }}>
                   {cv.subtitle}
                 </p>
 
@@ -132,24 +132,24 @@ export default function CVPage() {
           </div>
         </section>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-16"><div className="h-px" style={{ backgroundColor: "rgba(91,75,138,0.08)" }} /></div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-16"><div className="h-px" style={{ backgroundColor: "rgba(30,58,138,0.08)" }} /></div>
 
         {/* ── ABOUT ──────────────────────────────────────────────────────── */}
         <section className="px-6 lg:px-16 py-16" style={{ backgroundColor: "#FFFFFF" }}>
           <div className="max-w-7xl mx-auto">
-            <SectionLabel color="#D6C9FC" accent="#5B4B8A" label={cv.sections.about} />
+            <SectionLabel color="#EEF2FF" accent="#1E3A8A" label={cv.sections.about} />
             <div className="grid lg:grid-cols-[1fr_1fr] gap-10 mt-8">
               <div className="space-y-4 text-base leading-loose" style={{ color: "#475569", maxWidth: "65ch" }}>
                 {cv.about.map((p, i) => (
                   <p key={i} dangerouslySetInnerHTML={{ __html: p.replace(/<strong>/g, '<strong style="color:#1E293B">') }} />
                 ))}
               </div>
-              <div className="rounded-2xl p-6" style={{ backgroundColor: "#F8FAFC", border: "1px solid rgba(91,75,138,0.08)" }}>
-                <p className="text-xs font-bold uppercase tracking-[0.15em] mb-4" style={{ color: "#5B4B8A" }}>{cv.sections.summary}</p>
+              <div className="rounded-2xl p-6" style={{ backgroundColor: "#FAFAFA", border: "1px solid rgba(30,58,138,0.08)" }}>
+                <p className="text-xs font-bold uppercase tracking-[0.15em] mb-4" style={{ color: "#1E3A8A" }}>{cv.sections.summary}</p>
                 <ul className="space-y-2">
                   {cv.summary.map((s, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm" style={{ color: "#475569" }}>
-                      <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: "#5B4B8A" }} />
+                      <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: "#1E3A8A" }} />
                       {s}
                     </li>
                   ))}
@@ -162,7 +162,7 @@ export default function CVPage() {
         <Divider />
 
         {/* ── EXPERIENCE ─────────────────────────────────────────────────── */}
-        <section className="px-6 lg:px-16 py-16" style={{ backgroundColor: "#F8FAFC" }}>
+        <section className="px-6 lg:px-16 py-16" style={{ backgroundColor: "#FAFAFA" }}>
           <div className="max-w-7xl mx-auto">
             <SectionLabel color="#CFF8E8" accent="#065F46" label={cv.sections.experience} />
             <div className="mt-8 space-y-6">
@@ -182,12 +182,12 @@ export default function CVPage() {
                           <span className="text-sm" style={{ color: "#94A3B8" }}>📍 {job.location}</span>
                         </div>
                       </div>
-                      <span className="text-xs font-semibold px-3 py-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: "#F1F5F9", color: "#64748B", border: "1px solid #E2E8F0" }}>
+                      <span className="text-xs font-semibold px-3 py-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: "#F1F5F9", color: "#6B7280", border: "1px solid #E2E8F0" }}>
                         {job.period}
                       </span>
                     </div>
 
-                    <p className="text-sm leading-relaxed mb-4" style={{ color: "#64748B" }}>{job.description}</p>
+                    <p className="text-sm leading-relaxed mb-4" style={{ color: "#6B7280" }}>{job.description}</p>
 
                     {"responsibilities" in job && job.responsibilities && job.responsibilities.length > 0 && (
                       <div className="grid sm:grid-cols-2 gap-1.5">
@@ -230,7 +230,7 @@ export default function CVPage() {
             <SectionLabel color="#C9E7FC" accent="#0C4A6E" label={cv.sections.skills} />
             <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {SKILL_GROUPS_DATA.map((group, i) => (
-                <div key={i} className="rounded-2xl p-5" style={{ backgroundColor: "#F8FAFC", border: "1px solid rgba(91,75,138,0.06)" }}>
+                <div key={i} className="rounded-2xl p-5" style={{ backgroundColor: "#FAFAFA", border: "1px solid rgba(30,58,138,0.06)" }}>
                   <div className="text-xs font-bold uppercase tracking-[0.12em] mb-4 pb-3" style={{ color: group.accent, borderBottom: `2px solid ${group.color}` }}>
                     {cv.skillGroups[i]?.title ?? ""}
                   </div>
@@ -250,19 +250,19 @@ export default function CVPage() {
         <Divider />
 
         {/* ── EDUCATION + CERTIFICATIONS ─────────────────────────────────── */}
-        <section className="px-6 lg:px-16 py-16" style={{ backgroundColor: "#F8FAFC" }}>
+        <section className="px-6 lg:px-16 py-16" style={{ backgroundColor: "#FAFAFA" }}>
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
             <div>
               <SectionLabel color="#FFF6C9" accent="#78350F" label={cv.sections.education} />
               <div className="mt-8 space-y-4">
                 {cv.education.map((e, i) => (
-                  <div key={i} className="flex items-start gap-4 p-4 rounded-2xl" style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(91,75,138,0.06)" }}>
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-2xl" style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(30,58,138,0.06)" }}>
                     <div className="w-9 h-9 rounded-xl flex-shrink-0 flex items-center justify-center text-sm font-bold" style={{ backgroundColor: "#FFF6C9", color: "#78350F" }}>
                       {e.period.slice(-4)}
                     </div>
                     <div>
                       <p className="text-sm font-semibold leading-snug" style={{ color: "#1E293B" }}>{e.degree}</p>
-                      {e.institution && <p className="text-xs mt-0.5" style={{ color: "#64748B" }}>{e.institution}</p>}
+                      {e.institution && <p className="text-xs mt-0.5" style={{ color: "#6B7280" }}>{e.institution}</p>}
                       <p className="text-xs mt-0.5 font-medium" style={{ color: "#94A3B8" }}>{e.period}</p>
                     </div>
                   </div>
@@ -275,7 +275,7 @@ export default function CVPage() {
                 <SectionLabel color="#F9C8D7" accent="#831843" label={cv.sections.certifications} />
                 <div className="mt-6 space-y-2">
                   {cv.certifications.map((c, i) => (
-                    <div key={i} className="flex items-center gap-3 text-sm p-3 rounded-xl" style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(91,75,138,0.06)", color: "#475569" }}>
+                    <div key={i} className="flex items-center gap-3 text-sm p-3 rounded-xl" style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(30,58,138,0.06)", color: "#475569" }}>
                       <span className="text-base">📜</span> {c}
                     </div>
                   ))}
@@ -283,12 +283,12 @@ export default function CVPage() {
               </div>
 
               <div>
-                <SectionLabel color="#D6C9FC" accent="#5B4B8A" label={cv.sections.languages} />
+                <SectionLabel color="#EEF2FF" accent="#1E3A8A" label={cv.sections.languages} />
                 <div className="mt-6 flex gap-3">
                   {cv.languages.map((lang) => (
                     <div key={lang.lang} className="card p-4 flex-1 text-center" style={{ backgroundColor: "#FFFFFF" }}>
-                      <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#5B4B8A" }}>{lang.lang}</p>
-                      <p className="text-sm font-medium" style={{ color: "#64748B" }}>{lang.level}</p>
+                      <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#1E3A8A" }}>{lang.lang}</p>
+                      <p className="text-sm font-medium" style={{ color: "#6B7280" }}>{lang.level}</p>
                     </div>
                   ))}
                 </div>
@@ -302,17 +302,17 @@ export default function CVPage() {
         {/* ── PERSONAL APPROACH ──────────────────────────────────────────── */}
         <section className="px-6 lg:px-16 py-16" style={{ backgroundColor: "#FFFFFF" }}>
           <div className="max-w-7xl mx-auto">
-            <SectionLabel color="#D6C9FC" accent="#5B4B8A" label={cv.sections.approach} />
+            <SectionLabel color="#EEF2FF" accent="#1E3A8A" label={cv.sections.approach} />
             <div className="mt-8 max-w-2xl">
-              <p className="text-base mb-6 leading-relaxed" style={{ color: "#64748B" }}>{cv.approachIntro}</p>
+              <p className="text-base mb-6 leading-relaxed" style={{ color: "#6B7280" }}>{cv.approachIntro}</p>
               <div className="flex flex-wrap gap-3">
                 {cv.personalValues.map((v) => (
-                  <span key={v} className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-3 rounded-2xl" style={{ backgroundColor: "#F1F5F9", color: "#1E293B", border: "2px solid #D6C9FC" }}>
-                    <span style={{ color: "#5B4B8A" }}>✔</span> {v}
+                  <span key={v} className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-3 rounded-2xl" style={{ backgroundColor: "#F1F5F9", color: "#1E293B", border: "2px solid #EEF2FF" }}>
+                    <span style={{ color: "#1E3A8A" }}>✔</span> {v}
                   </span>
                 ))}
               </div>
-              <p className="mt-8 text-base italic leading-relaxed" style={{ color: "#5B4B8A", fontFamily: "var(--font-poppins, Poppins, sans-serif)" }}>
+              <p className="mt-8 text-base italic leading-relaxed" style={{ color: "#1E3A8A", fontFamily: "var(--font-poppins, Poppins, sans-serif)" }}>
                 {cv.approachQuote}
               </p>
             </div>
@@ -320,7 +320,7 @@ export default function CVPage() {
         </section>
 
         {/* ── BOTTOM NAV ─────────────────────────────────────────────────── */}
-        <div className="print:hidden" style={{ backgroundColor: "#F8FAFC", borderTop: "1px solid rgba(91,75,138,0.06)" }}>
+        <div className="print:hidden" style={{ backgroundColor: "#FAFAFA", borderTop: "1px solid rgba(30,58,138,0.06)" }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-16 py-10 flex items-center justify-between">
             <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm font-semibold btn-secondary px-5 py-3">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -354,7 +354,7 @@ function SectionLabel({ label, color, accent }: { label: string; color: string; 
 function Divider() {
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-16">
-      <div className="h-px" style={{ backgroundColor: "rgba(91,75,138,0.06)" }} />
+      <div className="h-px" style={{ backgroundColor: "rgba(30,58,138,0.06)" }} />
     </div>
   );
 }

@@ -105,7 +105,7 @@ export default function VideoGallery({ videos, title }: VideoGalleryProps) {
             >
               <div
                 className="w-12 h-12 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-                style={{ backgroundColor: "rgba(91,75,138,0.92)", boxShadow: "0 4px 20px rgba(91,75,138,0.5)" }}
+                style={{ backgroundColor: "rgba(30,58,138,0.95)", boxShadow: "0 4px 20px rgba(99,102,241,0.5)" }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                   <path d="M8 5v14l11-7z" />
