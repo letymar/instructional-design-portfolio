@@ -9,7 +9,8 @@ const PASSWORD = "leticia2026";
 function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const redirectTo = searchParams.get("from") ?? "/portfolio";
+  const rawFrom = searchParams.get("from");
+  const redirectTo = rawFrom ? decodeURIComponent(rawFrom) : "/portfolio";
   const [value, setValue] = useState("");
   const [showPw, setShowPw] = useState(false);
   const [error, setError] = useState(false);
