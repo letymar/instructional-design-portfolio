@@ -11,6 +11,16 @@ import AnimatedCounter from "./components/AnimatedCounter";
 import { useLanguage } from "./contexts/LanguageContext";
 import { projects as allProjects } from "@/lib/projects";
 
+/* ── Framer Motion variants ─────────────────────────────────────────────── */
+const fadeUp = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  },
+};
+
 const PILLAR_COLORS = [
   { bg: "#EEF2FF", text: "#4F46E5" },
   { bg: "#CFF8E8", text: "#065F46" },
@@ -44,72 +54,126 @@ export default function HomePage() {
 
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section
-          className="relative min-h-[calc(100vh-65px)] flex flex-col items-center justify-center text-center overflow-hidden px-6 py-20"
+          className="relative min-h-[calc(100vh-65px)] flex flex-col items-center justify-center overflow-hidden"
           style={{ backgroundColor: "#FAFAFA" }}
         >
-          {/* Dot grid + aurora */}
+          {/* Dot grid */}
           <div className="hero-grid" />
           <div className="hero-aurora" />
 
           {/* Soft blobs */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div style={{ position: "absolute", width: "700px", height: "700px", borderRadius: "50%", background: "radial-gradient(circle, rgba(30,58,138,0.06) 0%, transparent 65%)", top: "-150px", left: "-200px", animation: "float 12s ease-in-out infinite" }} />
-            <div style={{ position: "absolute", width: "500px", height: "500px", borderRadius: "50%", background: "radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 65%)", bottom: "-80px", right: "-120px", animation: "float 14s ease-in-out infinite", animationDelay: "4s" }} />
+            <div style={{ position: "absolute", width: "700px", height: "700px", borderRadius: "50%", background: "radial-gradient(circle, rgba(30,58,138,0.05) 0%, transparent 65%)", top: "-200px", left: "-200px", animation: "float 14s ease-in-out infinite" }} />
+            <div style={{ position: "absolute", width: "500px", height: "500px", borderRadius: "50%", background: "radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 65%)", bottom: "-100px", right: "-100px", animation: "float 16s ease-in-out infinite", animationDelay: "5s" }} />
           </div>
 
-          {/* Badge */}
-          <div className="relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full mb-10"
-            style={{ backgroundColor: "rgba(30,58,138,0.07)", border: "1px solid rgba(30,58,138,0.12)", animation: "fade-in-up 0.6s ease forwards" }}>
-            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "#4ADE80", animation: "pulse-soft 2s ease-in-out infinite" }} />
-            <span className="text-xs font-semibold tracking-wider" style={{ color: "#1E3A8A" }}>{t.hero.badge}</span>
-          </div>
-
-          {/* Headline */}
-          <div className="relative z-10" style={{ animation: "fade-in-up 0.7s ease 0.1s both forwards" }}>
-            <h1 className="font-bold leading-none mb-2 tracking-tight"
-              style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(3rem, 10vw, 8.5rem)", background: "linear-gradient(135deg, #1E3A8A 0%, #6366F1 55%, #818CF8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-              {t.hero.line1}
-            </h1>
-            <h1 className="font-bold leading-none tracking-tight"
-              style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(3rem, 10vw, 8.5rem)", color: "#111827" }}>
-              {t.hero.line2}
-            </h1>
-          </div>
-
-          <p className="relative z-10 text-lg md:text-xl mt-6 mb-10 max-w-md"
-            style={{ color: "#6B7280", animation: "fade-in-up 0.7s ease 0.25s both forwards" }}>
-            {t.hero.subtitle}
-          </p>
-
-          {/* Bio card button */}
-          <button
-            onClick={() => setBioOpen(true)}
-            className="relative z-10 flex items-center gap-3 px-5 py-3 rounded-2xl transition-all duration-300 group"
-            style={{ backgroundColor: "#FFFFFF", boxShadow: "0 8px 30px rgba(17,24,39,0.10)", border: "1px solid #E5E7EB", animation: "fade-in-up 0.7s ease 0.4s both forwards", cursor: "pointer" }}
-            onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 12px 40px rgba(99,102,241,0.18)"; e.currentTarget.style.borderColor = "#C7D2FE"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "0 8px 30px rgba(17,24,39,0.10)"; e.currentTarget.style.borderColor = "#E5E7EB"; e.currentTarget.style.transform = "translateY(0)"; }}
+          {/* ── All hero content in a single centered column ── */}
+          <motion.div
+            className="relative z-10 flex flex-col items-center text-center w-full max-w-3xl mx-auto px-6 py-24"
+            initial="hidden"
+            animate="visible"
+            variants={{ visible: { transition: { staggerChildren: 0.14 } } }}
           >
-            <div className="w-9 h-9 rounded-xl overflow-hidden flex-shrink-0" style={{ backgroundColor: "#DBEAFE" }}>
-              <img src="/leticia.jpeg" alt="Letícia Marinho" className="w-full h-full object-cover"
-                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }} />
-            </div>
-            <div className="text-left">
-              <p className="text-xs font-bold uppercase tracking-wider" style={{ color: "#6366F1" }}>{t.hero.scientist}</p>
-              <p className="text-sm font-semibold" style={{ color: "#111827" }}>{t.hero.name}</p>
-            </div>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 transition-transform duration-200 group-hover:translate-x-0.5">
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
+            {/* Status badge */}
+            <motion.div variants={fadeUp} className="mb-10">
+              <div
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full"
+                style={{ backgroundColor: "rgba(30,58,138,0.07)", border: "1px solid rgba(30,58,138,0.12)" }}
+              >
+                <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: "#4ADE80", animation: "pulse-soft 2s ease-in-out infinite" }} />
+                <span className="text-xs font-semibold tracking-widest" style={{ color: "#1E3A8A" }}>{t.hero.badge}</span>
+              </div>
+            </motion.div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
-            style={{ color: "#9CA3AF", animation: "bounce-subtle 2.5s ease-in-out infinite" }}>
-            <span className="text-xs uppercase tracking-[0.18em]" style={{ fontSize: "9px" }}>{t.hero.scroll}</span>
-            <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
-              <path d="M1 1L7 7L13 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
+            {/* Headline — single element, two lines via display:block spans */}
+            <motion.div variants={fadeUp} className="mb-8 w-full">
+              <h1
+                className="font-bold tracking-tight"
+                style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(3.2rem, 11vw, 9rem)", lineHeight: 0.9 }}
+              >
+                <span style={{ background: "linear-gradient(135deg, #1E3A8A 0%, #6366F1 55%, #818CF8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", display: "block" }}>
+                  {t.hero.line1}
+                </span>
+                <span style={{ color: "#111827", display: "block" }}>
+                  {t.hero.line2}
+                </span>
+              </h1>
+            </motion.div>
+
+            {/* Subtitle */}
+            <motion.p
+              variants={fadeUp}
+              className="text-lg md:text-xl max-w-lg mb-12 leading-relaxed"
+              style={{ color: "#6B7280" }}
+            >
+              {t.hero.subtitle}
+            </motion.p>
+
+            {/* Bio card — motion.button with whileHover */}
+            <motion.button
+              variants={fadeUp}
+              onClick={() => setBioOpen(true)}
+              className="group inline-flex items-center gap-4 px-6 py-4 rounded-2xl"
+              style={{
+                backgroundColor: "#FFFFFF",
+                boxShadow: "0 4px 20px rgba(17,24,39,0.08)",
+                border: "1px solid #E5E7EB",
+                cursor: "pointer",
+              }}
+              whileHover={{
+                y: -4,
+                boxShadow: "0 14px 40px rgba(99,102,241,0.16)",
+                borderColor: "#C7D2FE",
+              }}
+              whileTap={{ y: 0, boxShadow: "0 2px 10px rgba(17,24,39,0.08)" }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+            >
+              <div className="w-10 h-10 rounded-xl overflow-hidden flex-shrink-0" style={{ backgroundColor: "#DBEAFE" }}>
+                <img
+                  src="/leticia.jpeg"
+                  alt="Letícia Marinho"
+                  className="w-full h-full object-cover"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
+                />
+              </div>
+              <div className="text-left">
+                <p className="text-xs font-bold uppercase tracking-widest mb-0.5" style={{ color: "#6366F1" }}>
+                  {t.hero.scientist}
+                </p>
+                <p className="text-sm font-semibold" style={{ color: "#111827" }}>
+                  {t.hero.name}
+                </p>
+              </div>
+              <svg
+                width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                className="ml-1 transition-transform duration-200 group-hover:translate-x-1"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </motion.button>
+          </motion.div>
+
+          {/* Scroll indicator — anchored to bottom, independent from stagger */}
+          <motion.div
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.0, duration: 0.6 }}
+            style={{ color: "#9CA3AF" }}
+          >
+            <span style={{ fontSize: "9px", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase" }}>
+              {t.hero.scroll}
+            </span>
+            <motion.div
+              animate={{ y: [0, 6, 0] }}
+              transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                <path d="M1 1L7 7L13 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </motion.div>
+          </motion.div>
         </section>
 
         {/* ── SOBRE ─────────────────────────────────────────────────────────── */}

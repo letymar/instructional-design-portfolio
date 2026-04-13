@@ -165,14 +165,17 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(circle, rgba(99, 102, 241, 0.12) 1px, transparent 1px);
-  background-size: 44px 44px;
-  animation: grid-drift 20s ease-in-out infinite alternate;
+    radial-gradient(circle, rgba(99, 102, 241, 0.22) 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
+  /* Fade out at edges so it doesn't compete with content */
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 100%);
+  animation: grid-drift 24s ease-in-out infinite alternate;
 }
 
 @keyframes grid-drift {
   0%   { background-position: 0 0; }
-  100% { background-position: 22px 22px; }
+  100% { background-position: 20px 20px; }
 }
 
 /* ─── Hero aurora breathing gradient ──────────────────────────────────────── */
