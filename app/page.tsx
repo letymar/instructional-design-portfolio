@@ -56,8 +56,8 @@ export default function HomePage() {
 
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section
-          className="relative min-h-[calc(100vh-65px)] flex flex-col items-center justify-center overflow-hidden"
-          style={{ backgroundColor: "#FAFAFA" }}
+          className="relative min-h-[calc(100vh-65px)] flex flex-col items-center justify-center"
+          style={{ backgroundColor: "#FAFAFA", overflow: "clip" }}
         >
           {/* Dot grid */}
           <div className="hero-grid" />
@@ -71,7 +71,7 @@ export default function HomePage() {
 
           {/* ── All hero content in a single centered column ── */}
           <motion.div
-            className="relative z-10 flex flex-col items-center text-center w-full max-w-3xl mx-auto px-6 py-24"
+            className="relative z-10 flex flex-col items-center text-center w-full max-w-5xl mx-auto px-6 py-24"
             style={{ y: heroY }}
             initial="hidden"
             animate="visible"
@@ -92,7 +92,7 @@ export default function HomePage() {
             <motion.div variants={fadeUp} className="mb-8 w-full">
               <h1
                 className="font-bold tracking-tight"
-                style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(3.2rem, 11vw, 9rem)", lineHeight: 0.9 }}
+                style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(2.8rem, 9vw, 8rem)", lineHeight: 0.93, letterSpacing: "-0.02em" }}
               >
                 <span style={{ background: "linear-gradient(135deg, #1E3A8A 0%, #6366F1 55%, #818CF8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", display: "block" }}>
                   {t.hero.line1}
@@ -180,16 +180,15 @@ export default function HomePage() {
         </section>
 
         {/* ── SOBRE ─────────────────────────────────────────────────────────── */}
-        <section className="relative py-24 md:py-32 px-6 lg:px-12 overflow-hidden">
-          <motion.div
-            className="absolute inset-0"
-            style={{ backgroundColor: "#FFFFFF" }}
-            initial={{ clipPath: "inset(100% 0 0 0)" }}
-            whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-            viewport={{ once: true, amount: 0.08 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          />
-          <div className="relative z-10 mx-auto max-w-7xl">
+        <motion.section
+          className="py-24 md:py-32 px-6 lg:px-12"
+          style={{ backgroundColor: "#FFFFFF", borderRadius: "32px 32px 0 0", position: "relative", zIndex: 2, marginTop: "-32px" }}
+          initial={{ y: 60 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true, amount: 0.04 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+        >
+          <div className="mx-auto max-w-7xl">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <RevealWrapper>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "#CFF8E8" }}>
@@ -250,19 +249,19 @@ export default function HomePage() {
               </RevealWrapper>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* ── COMO EU TRABALHO ─────────────────────────────────────────────── */}
-        <section id="metodologia" className="relative py-24 md:py-32 px-6 lg:px-12 overflow-hidden">
-          <motion.div
-            className="absolute inset-0"
-            style={{ backgroundColor: "#FAFAFA" }}
-            initial={{ clipPath: "inset(100% 0 0 0)" }}
-            whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-            viewport={{ once: true, amount: 0.08 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          />
-          <div className="relative z-10 mx-auto max-w-7xl">
+        <motion.section
+          id="metodologia"
+          className="py-24 md:py-32 px-6 lg:px-12"
+          style={{ backgroundColor: "#F5F3FF", borderRadius: "32px 32px 0 0", position: "relative", zIndex: 3, marginTop: "-32px" }}
+          initial={{ y: 60 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true, amount: 0.04 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+        >
+          <div className="mx-auto max-w-7xl">
             <RevealWrapper>
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: "#EEF2FF" }}>
@@ -305,19 +304,19 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* ── GAME DESIGN NA EDUCAÇÃO ───────────────────────────────────────── */}
-        <section id="game-design" className="relative py-24 md:py-32 px-6 lg:px-12 overflow-hidden">
-          <motion.div
-            className="absolute inset-0"
-            style={{ backgroundColor: "#FFFFFF" }}
-            initial={{ clipPath: "inset(100% 0 0 0)" }}
-            whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-            viewport={{ once: true, amount: 0.08 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          />
-          <div className="relative z-10 mx-auto max-w-7xl">
+        <motion.section
+          id="game-design"
+          className="py-24 md:py-32 px-6 lg:px-12"
+          style={{ backgroundColor: "#FFFFFF", borderRadius: "32px 32px 0 0", position: "relative", zIndex: 4, marginTop: "-32px" }}
+          initial={{ y: 60 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true, amount: 0.04 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+        >
+          <div className="mx-auto max-w-7xl">
 
             {/* Header — single column */}
             <div className="mb-20 max-w-3xl">
@@ -430,13 +429,13 @@ export default function HomePage() {
             </div>
 
           </div>
-        </section>
+        </motion.section>
 
         {/* ── MOTIVAÇÕES ───────────────────────────────────────────────────── */}
         <motion.section
           id="motivacoes"
           className="relative py-24 md:py-32 px-6 lg:px-12 overflow-hidden"
-          style={{ backgroundColor: "#1E3A8A" }}
+          style={{ backgroundColor: "#1E3A8A", borderRadius: "32px 32px 0 0", position: "relative", zIndex: 5, marginTop: "-32px" }}
           initial={{ opacity: 0.5, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.1 }}
@@ -496,16 +495,16 @@ export default function HomePage() {
         </motion.section>
 
         {/* ── ABORDAGEM — 6-step process ───────────────────────────────────── */}
-        <section id="abordagem" className="relative py-24 md:py-32 px-6 lg:px-12 overflow-hidden">
-          <motion.div
-            className="absolute inset-0"
-            style={{ backgroundColor: "#FFFFFF" }}
-            initial={{ clipPath: "inset(100% 0 0 0)" }}
-            whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-            viewport={{ once: true, amount: 0.06 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          />
-          <div className="relative z-10 mx-auto max-w-7xl">
+        <motion.section
+          id="abordagem"
+          className="py-24 md:py-32 px-6 lg:px-12"
+          style={{ backgroundColor: "#F0F9FF", borderRadius: "32px 32px 0 0", position: "relative", zIndex: 6, marginTop: "-32px" }}
+          initial={{ y: 60 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true, amount: 0.04 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+        >
+          <div className="mx-auto max-w-7xl">
             <RevealWrapper>
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: "#C9E7FC" }}>
@@ -571,19 +570,18 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* ── COMPETÊNCIAS ─────────────────────────────────────────────────── */}
-        <section className="relative py-24 md:py-32 px-6 lg:px-12 overflow-hidden">
-          <motion.div
-            className="absolute inset-0"
-            style={{ backgroundColor: "#FAFAFA" }}
-            initial={{ clipPath: "inset(100% 0 0 0)" }}
-            whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-            viewport={{ once: true, amount: 0.08 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          />
-          <div className="relative z-10 mx-auto max-w-7xl">
+        <motion.section
+          className="py-24 md:py-32 px-6 lg:px-12"
+          style={{ backgroundColor: "#FAFAFA", borderRadius: "32px 32px 0 0", position: "relative", zIndex: 7, marginTop: "-32px" }}
+          initial={{ y: 60 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true, amount: 0.04 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+        >
+          <div className="mx-auto max-w-7xl">
             <RevealWrapper>
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: "#FEF9C3" }}>
@@ -607,7 +605,7 @@ export default function HomePage() {
               </div>
             </RevealWrapper>
           </div>
-        </section>
+        </motion.section>
 
       </main>
       <Footer />
