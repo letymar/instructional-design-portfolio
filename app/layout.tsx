@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Roboto } from "next/font/google";
 import CustomCursor from "./components/CustomCursor";
+import ScrollProgressBar from "./components/ScrollProgressBar";
 import ClientRoot from "./components/ClientRoot";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import "./globals.css";
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col" style={{ backgroundColor: "#FAFAFA" }}>
         <div className="grain-overlay" aria-hidden="true" />
         <CustomCursor />
+        <ScrollProgressBar />
         <LanguageProvider>
           <ClientRoot>
             {children}
