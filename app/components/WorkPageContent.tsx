@@ -1,9 +1,8 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import type { CaseStudy, Project } from "@/lib/projects";
 import ImageGallery from "@/app/components/ImageGallery";
 import VideoGallery from "@/app/components/VideoGallery";
@@ -46,23 +45,7 @@ const SECTION_KEYS: Array<keyof CaseStudy> = [
 
 export default function WorkPageContent({ project }: Props) {
   const { t } = useLanguage();
-  const router = useRouter();
-  const [authChecked, setAuthChecked] = useState(false);
   const { title, category, number, tags, caseStudy, gallery, docs, heroImage, heroGradient, videos } = project;
-
-  useEffect(() => {
-    const unlocked = sessionStorage.getItem("portfolio_unlocked");
-    if (!unlocked) {
-      router.replace(`/login?from=${encodeURIComponent(`/work/${project.slug}`)}`);
-    } else {
-      setAuthChecked(true);
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  if (!authChecked) {
-    return <div className="min-h-screen" style={{ backgroundColor: "#FAFAFA" }} />;
-  }
 
   return (
     <div style={{ backgroundColor: "#FAFAFA", minHeight: "100vh" }}>

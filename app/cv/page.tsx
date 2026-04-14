@@ -51,12 +51,13 @@ export default function CVPage() {
   const cv = t.cv;
 
   useEffect(() => {
-    if (!sessionStorage.getItem("portfolio_unlocked")) {
-      router.replace("/login");
+    if (!localStorage.getItem("portfolio_unlocked")) {
+      router.replace(`/login?from=/cv`);
     } else {
       setAuthChecked(true);
     }
-  }, [router]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (!authChecked) return <div className="min-h-screen" style={{ backgroundColor: "#FAFAFA" }} />;
 

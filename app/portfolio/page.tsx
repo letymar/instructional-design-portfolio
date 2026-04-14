@@ -17,13 +17,14 @@ export default function PortfolioPage() {
   const p = t.portfolio_page;
 
   useEffect(() => {
-    const unlocked = sessionStorage.getItem("portfolio_unlocked");
+    const unlocked = localStorage.getItem("portfolio_unlocked");
     if (!unlocked) {
       router.replace("/login?from=/portfolio");
     } else {
       setAuthChecked(true);
     }
-  }, [router]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (!authChecked) {
     return <div className="min-h-screen" style={{ backgroundColor: "#FAFAFA" }} />;
@@ -63,7 +64,7 @@ export default function PortfolioPage() {
                 {/* Quick logout */}
                 <button
                   onClick={() => {
-                    sessionStorage.removeItem("portfolio_unlocked");
+                    localStorage.removeItem("portfolio_unlocked");
                     router.push("/");
                   }}
                   className="mt-6 text-xs font-medium px-3 py-1.5 rounded-full transition-all duration-200 hover:bg-red-50"

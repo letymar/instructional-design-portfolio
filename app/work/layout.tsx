@@ -9,11 +9,12 @@ export default function WorkLayout({ children }: { children: React.ReactNode }) 
 
   useEffect(() => {
     if (!localStorage.getItem("portfolio_unlocked")) {
-      router.replace("/login");
+      router.replace(`/login?from=${encodeURIComponent(window.location.pathname)}`);
     } else {
       setReady(true);
     }
-  }, [router]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (!ready) {
     return <div className="min-h-screen" style={{ backgroundColor: "#FAFAFA" }} />;
