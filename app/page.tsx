@@ -357,68 +357,6 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* ── Fundamentação Teórica ─────────────────────────────────────── */}
-            <RevealWrapper>
-              <div className="text-center mb-14">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: "#EEF2FF" }}>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                  </svg>
-                  <span className="text-sm font-semibold" style={{ color: "#4F46E5" }}>{t.gameDesign.theoryBadge}</span>
-                </div>
-                <h3 className="font-bold mb-3"
-                  style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#111827" }}>
-                  {t.gameDesign.theoryTitle}
-                </h3>
-                <p className="text-sm max-w-lg mx-auto" style={{ color: "#6B7280" }}>
-                  {t.gameDesign.theorySubtitle}
-                </p>
-              </div>
-            </RevealWrapper>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {t.gameDesign.books.map((book, i) => (
-                <RevealWrapper key={book.title} delay={i * 90}>
-                  <motion.div
-                    className="rounded-2xl overflow-hidden h-full flex flex-col"
-                    style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}
-                    whileHover={{ y: -8, boxShadow: "0 20px 50px rgba(0,0,0,0.16)" }}
-                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  >
-                    {/* Book spine header */}
-                    <div className="relative px-5 py-6 flex flex-col gap-1" style={{ backgroundColor: book.color, minHeight: "130px" }}>
-                      {/* Decorative spine lines */}
-                      <div className="absolute top-0 left-0 bottom-0 w-3 opacity-20" style={{ backgroundColor: "rgba(0,0,0,0.3)" }} />
-                      <div className="absolute top-0 left-3 bottom-0 w-px opacity-20" style={{ backgroundColor: "rgba(255,255,255,0.5)" }} />
-                      <p className="text-xs font-bold uppercase tracking-widest opacity-70 pl-3" style={{ color: book.textColor }}>
-                        {book.author} · {book.year}
-                      </p>
-                      <h4 className="font-bold leading-snug pl-3" style={{ fontFamily: "var(--font-poppins, Poppins, sans-serif)", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: book.textColor }}>
-                        {book.title}
-                      </h4>
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-1.5 mt-2 pl-3">
-                        {book.tags.map(tag => (
-                          <span key={tag} className="text-xs px-2 py-0.5 rounded-full font-medium"
-                            style={{ backgroundColor: "rgba(255,255,255,0.2)", color: book.textColor, border: "1px solid rgba(255,255,255,0.3)" }}>
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-5" style={{ backgroundColor: "#FFFFFF" }}>
-                      <p className="text-sm leading-snug" style={{ color: "#1E293B" }}>
-                        {book.idea}
-                      </p>
-                    </div>
-                  </motion.div>
-                </RevealWrapper>
-              ))}
-            </div>
-
           </div>
         </motion.section>
 
