@@ -124,7 +124,7 @@ export const projects: Project[] = [
     ],
     caseStudy: {
       contexto:
-        "O Clube de Robótica CCD foi criado como atividade extra-curricular no Centro de Cultura Digital (CCD) para jovens dos 13 aos 18 anos. O projeto centrou-se na robótica de sumo competitiva — uma modalidade que combina engenharia, programação e estratégia. O clube funcionou durante um ano letivo completo, com 17 sessões estruturadas que culminaram numa DemoDay com júri externo.",
+        "O Clube de Robótica CCD foi criado como atividade extra-curricular no Centro de Cidadania Digital (CCD) para jovens dos 13 aos 18 anos. O projeto centrou-se na robótica de sumo competitiva — uma modalidade que combina engenharia, programação e estratégia. O clube funcionou durante um ano letivo completo, com 17 sessões estruturadas que culminaram numa DemoDay com júri externo.",
       objetivo:
         "Desenvolver competências de engenharia, programação, trabalho em equipa e pensamento estratégico através da construção e programação de robots de sumo. Criar uma experiência de aprendizagem autêntica orientada para um objetivo real: a competição final.",
       meuPapel:
@@ -137,7 +137,18 @@ export const projects: Project[] = [
       materiais:
         "Manual Pedagógico completo, slides das 4 sessões principais, fichas de trabalho (hardware e software), regulamento oficial da arena sumo, ficheiros STL do robot oficial CDI, ficheiros DXF da arena.",
     },
-    docs: [],
+    docs: [
+      { label: "Manual Pedagógico do Clube de Robótica", url: "/docs/clube-robotica-manual-pedagogico.pdf" },
+      { label: "Dossier do Clube 2025/26", url: "/docs/clube-robotica-dossier.pdf" },
+      { label: "Sessão 1 — Introdução à Robótica (Slides)", url: "/docs/clube-robotica-sessao1-slides.pdf" },
+      { label: "Sessão 1 — Ficha de Atividade", url: "/docs/clube-robotica-sessao1-ficha.pdf" },
+      { label: "Sessão 2 — O Cérebro do Robô (Slides)", url: "/docs/clube-robotica-sessao2-slides.pdf" },
+      { label: "Sessão 3 — Slides + Ficha de Trabalho", url: "/docs/clube-robotica-sessao3.pdf" },
+      { label: "Sessão 4 — Hardware & Software (Slides)", url: "/docs/clube-robotica-sessao4-slides.pdf" },
+      { label: "Sessão 4 — Ficha A: Hardware", url: "/docs/clube-robotica-sessao4-ficha-a.pdf" },
+      { label: "Sessão 4 — Ficha B: Software", url: "/docs/clube-robotica-sessao4-ficha-b.pdf" },
+      { label: "Regulamento Arena CDI Sumo Educativo", url: "/docs/clube-robotica-regulamento-arena.pdf" },
+    ],
     reverse: true,
   },
   {
@@ -166,7 +177,11 @@ export const projects: Project[] = [
       materiais:
         "Guião completo do facilitador (com timings e notas de facilitação), ficha do participante, apresentação de slides da sessão, biblioteca de prompts de IA.",
     },
-    docs: [],
+    docs: [
+      { label: "Guião do Facilitador (com timings e notas)", url: "/docs/vibecoding-guiao-facilitador.pdf" },
+      { label: "Ficha do Participante", url: "/docs/vibecoding-ficha-participante.pdf" },
+      { label: "Apresentação: VibeCoding — Cria o teu Jogo", url: "/docs/vibecoding-apresentacao.pdf" },
+    ],
     reverse: false,
   },
   {
@@ -210,7 +225,7 @@ export const projects: Project[] = [
     ],
     caseStudy: {
       contexto:
-        "As Atividades Tecnológicas são uma série de experiências maker concebidas para os Centros de Cultura Digital — CICF (Centro de Inovação e Criatividade de Famalicão) e CCDV (Centro de Cultura Digital de Valongo). Cada atividade é autónoma e adaptada a diferentes públicos e contextos, desde workshops pontuais a ciclos de sessões temáticas.",
+        "As Atividades Tecnológicas são uma série de experiências maker concebidas para os Centros de Cidadania Digital — CICF (Centro de Inovação Carlos Fiolhais, Maia) e CCDV (Centro de Cidadania Digital de Valongo). Cada atividade é autónoma e adaptada a diferentes públicos e contextos, desde workshops pontuais a ciclos de sessões temáticas.",
       objetivo:
         "Promover literacia tecnológica, criatividade e pensamento computacional através de experiências hands-on com tecnologia física. Criar atividades que sejam simultaneamente educativas, lúdicas e replicáveis por outros facilitadores.",
       meuPapel:
@@ -224,11 +239,16 @@ export const projects: Project[] = [
         "Fichas de atividade individuais (Balancing Robots, Pulseira de Código Binário, Makey Makey - Festa no Céu), guiões de facilitação, listas de materiais necessários.",
     },
     docs: [
-      { label: "Atividade: Balancing Robots", url: "/docs/maker-balancing-robots.pdf" },
-      { label: "Atividade: Pulseira Binária", url: "/docs/maker-pulseira-binaria.pdf" },
-      { label: "Atividade: Makey Makey", url: "/docs/maker-makey-makey.pdf" },
-      { label: "Atividade: Robo Copo", url: "/docs/maker-robocopo.pdf" },
-      { label: "Atividade: Salve o Fred", url: "/docs/maker-salve-fred.pdf" },
+      { label: "Atividade Maker: Balancing Robots", url: "/docs/maker-balancing-robots.pdf" },
+      { label: "Atividade Maker: Pulseira de Código Binário", url: "/docs/maker-pulseira-binaria.pdf" },
+      { label: "Atividade Maker: Makey Makey — Festa no Céu", url: "/docs/maker-makey-makey.pdf" },
+      { label: "Atividade Maker: Robo Copo", url: "/docs/maker-robocopo.pdf" },
+      { label: "Atividade Maker: Salve o Fred", url: "/docs/maker-salve-fred.pdf" },
+      { label: "Circuito: Termómetro com Arduino", url: "/docs/atividades-circuito-termometro.pdf" },
+      { label: "Circuito: mBot com IA Climática", url: "/docs/atividades-circuito-mbot-ia.pdf" },
+      { label: "Circuito: Painel de LEDs (CICF)", url: "/docs/atividades-circuito-painel-led.pdf" },
+      { label: "Workshop: Rabbot de Páscoa", url: "/docs/atividades-rabbot-pascoa.pdf" },
+      { label: "Workshop: Dançar com o Robô", url: "/docs/atividades-dancar-robo.pdf" },
     ],
     reverse: true,
   },
@@ -268,7 +288,11 @@ export const projects: Project[] = [
       materiais:
         "Tutorial completo do Mixxx, apresentação 'O que é a Rádio?', materiais de Rádio Teatro, guião-modelo para programa de rádio.",
     },
-    docs: [],
+    docs: [
+      { label: "Tutorial: Mixxx — Software de Rádio Livre", url: "/docs/radio-ccd-tutorial-mixxx.pdf" },
+      { label: "Apresentação: O que é a Rádio?", url: "/docs/radio-ccd-o-que-e-a-radio.pdf" },
+      { label: "Workshop: Rádio Teatro", url: "/docs/radio-ccd-radio-teatro.pdf" },
+    ],
     reverse: false,
   },
   {
@@ -310,7 +334,10 @@ export const projects: Project[] = [
       materiais:
         "Recursos de sessão adaptados, fichas de atividade por tecnologia, vídeos documentais de 3 sessões (evidência de progressão).",
     },
-    docs: [],
+    docs: [
+      { label: "Registo em Vídeo — Sessão 5", url: "/docs/coderdojo-registo-sessao5.pdf" },
+      { label: "Registo em Vídeo — Sessão 17", url: "/docs/coderdojo-registo-sessao17.pdf" },
+    ],
     reverse: true,
   },
   {
@@ -350,7 +377,15 @@ export const projects: Project[] = [
       materiais:
         "6 apresentações de sessão (2024 e 2025), guia de fotografia e vídeo para seniores, roteiro para criação de vídeos, materiais de apoio step-by-step.",
     },
-    docs: [],
+    docs: [
+      { label: "Sessão 1 e 2 — Literacia Digital 2024", url: "/docs/literacia-senior-sessao1-2-2024.pdf" },
+      { label: "Sessão 3 e 4 — Literacia Digital 2025", url: "/docs/literacia-senior-sessao3-4-2025.pdf" },
+      { label: "Sessão 5 — Literacia Digital 2025", url: "/docs/literacia-senior-sessao5-2025.pdf" },
+      { label: "Sessão 6 — Literacia Digital 2025", url: "/docs/literacia-senior-sessao6-2025.pdf" },
+      { label: "Guia: Como Gravar Vídeos com o Telemóvel", url: "/docs/literacia-senior-gravar-videos.pdf" },
+      { label: "Guia: Fotografia e Vídeo para Seniores", url: "/docs/literacia-senior-fotografia-video.pdf" },
+      { label: "Roteiro para Criação de Vídeos", url: "/docs/literacia-senior-roteiro-videos.pdf" },
+    ],
     reverse: true,
   },
   {

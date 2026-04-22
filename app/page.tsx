@@ -409,19 +409,10 @@ export default function HomePage() {
                     </div>
 
                     {/* Content */}
-                    <div className="flex flex-col flex-1 p-5 gap-4" style={{ backgroundColor: "#FFFFFF" }}>
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: book.color }}>Ideia Principal</p>
-                        <p className="text-sm font-semibold leading-snug" style={{ color: "#1E293B" }}>
-                          {book.idea}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: book.color }}>Aplicação Prática</p>
-                        <p className="text-xs leading-relaxed" style={{ color: "#6B7280" }}>
-                          {book.application}
-                        </p>
-                      </div>
+                    <div className="p-5" style={{ backgroundColor: "#FFFFFF" }}>
+                      <p className="text-sm leading-snug" style={{ color: "#1E293B" }}>
+                        {book.idea}
+                      </p>
                     </div>
                   </motion.div>
                 </RevealWrapper>

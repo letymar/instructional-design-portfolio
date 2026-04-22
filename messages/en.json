@@ -65,8 +65,7 @@
         "author": "Karl M. Kapp",
         "title": "The Gamification of Learning and Instruction",
         "year": "2012",
-        "idea": "Game-based thinking and mechanics can be applied directly to instructional design to create intrinsically motivating learning experiences.",
-        "application": "I use missions, point systems, level progression and positive reinforcement to transform dry content into experiences where learners want to keep going. The key is calibrated challenge — not too easy, not too hard.",
+        "idea": "Game mechanics applied to instructional design create intrinsically motivating learning experiences.",
         "tags": ["Motivation", "Mechanics", "Engagement"]
       },
       {
@@ -75,8 +74,7 @@
         "author": "Karl M. Kapp",
         "title": "The Gamification of Learning and Instruction Fieldbook",
         "year": "2013",
-        "idea": "A practical implementation guide: how to transform learning objectives into functional game structures within real educational contexts.",
-        "application": "This book gives me the operational framework: how to map competencies to missions, how to build pedagogical narratives and how to use feedback loops to keep learners in a state of flow throughout the entire experience.",
+        "idea": "Operational framework for turning learning objectives into functional game structures.",
         "tags": ["Instructional Design", "Framework", "Practice"]
       },
       {
@@ -85,9 +83,8 @@
         "author": "Jesse Schell",
         "title": "The Art of Game Design: A Book of Lenses",
         "year": "2008",
-        "idea": "113 lenses — unique perspectives — for analysing and improving any game experience, always placing the player at the centre of design.",
-        "application": "I apply Schell's lenses to learning design: the Lens of Experience (what does the learner feel?), the Lens of Challenge (is it calibrated?), and the Lens of Curiosity (what makes them want to know more?). Learner-centred design starts with these questions.",
-        "tags": ["User-Centred Design", "Experience", "Curiosity"]
+        "idea": "113 lenses for analysing any experience — always placing the player/learner at the centre.",
+        "tags": ["Experience", "Curiosity", "Challenge"]
       },
       {
         "color": "#065F46",
@@ -95,8 +92,7 @@
         "author": "Steven L. Kent",
         "title": "The Ultimate History of Video Games",
         "year": "2001",
-        "idea": "How video games evolved from a niche curiosity to a global cultural phenomenon — and what that tells us about what makes an experience irresistibly engaging.",
-        "application": "Understanding the history of games helps me identify universal psychological principles of engagement: visible progression, autonomy, identity and community. These are the same principles I apply to create learning experiences that learners simply don't want to leave.",
+        "idea": "The evolution of video games reveals universal psychological principles of engagement and motivation.",
         "tags": ["Psychology", "Engagement", "Intrinsic Motivation"]
       }
     ]

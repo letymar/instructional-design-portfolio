@@ -65,8 +65,7 @@
         "author": "Karl M. Kapp",
         "title": "The Gamification of Learning and Instruction",
         "year": "2012",
-        "idea": "O pensamento e as mecânicas dos jogos podem ser aplicados diretamente ao design instrucional para criar experiências intrinsecamente motivadoras.",
-        "application": "Uso missões, sistemas de pontos, progressão por níveis e reforço positivo para transformar conteúdo seco em experiências onde o aprendente quer continuar. A chave está em criar desafio calibrado — nem demasiado fácil, nem demasiado difícil.",
+        "idea": "As mecânicas dos jogos aplicadas ao design instrucional criam experiências intrinsecamente motivadoras.",
         "tags": ["Motivação", "Mecânicas", "Engagement"]
       },
       {
@@ -75,8 +74,7 @@
         "author": "Karl M. Kapp",
         "title": "The Gamification of Learning and Instruction Fieldbook",
         "year": "2013",
-        "idea": "Guia prático de implementação: como transformar objetivos de aprendizagem em estruturas de jogo funcionais dentro de contextos educativos reais.",
-        "application": "Este livro dá-me o framework operacional: como mapear competências a missões, como construir narrativas pedagógicas e como usar feedback loops para manter o aprendente no estado de fluxo durante toda a experiência.",
+        "idea": "Framework operacional para transformar objetivos de aprendizagem em estruturas de jogo funcionais.",
         "tags": ["Design Instrucional", "Framework", "Prática"]
       },
       {
@@ -85,9 +83,8 @@
         "author": "Jesse Schell",
         "title": "The Art of Game Design: A Book of Lenses",
         "year": "2008",
-        "idea": "113 lentes — perspetivas únicas — para analisar e melhorar qualquer experiência de jogo, colocando sempre o jogador no centro do design.",
-        "application": "Aplico as lentes de Schell ao design de aprendizagem: a Lente da Experiência (o que sente o aprendente?), a Lente do Desafio (está calibrado?) e a Lente da Curiosidade (o que o faz querer saber mais?). O design centrado no aluno começa por estas perguntas.",
-        "tags": ["Design Centrado no Utilizador", "Experiência", "Curiosidade"]
+        "idea": "113 lentes para analisar qualquer experiência — sempre centradas no jogador/aprendente.",
+        "tags": ["Experiência", "Curiosidade", "Desafio"]
       },
       {
         "color": "#065F46",
@@ -95,8 +92,7 @@
         "author": "Steven L. Kent",
         "title": "The Ultimate History of Video Games",
         "year": "2001",
-        "idea": "Como os videojogos evoluíram de curiosidade de nicho para fenómeno cultural global — e o que isso nos diz sobre o que torna uma experiência irresistivelmente envolvente.",
-        "application": "Compreender a história dos jogos ajuda-me a identificar os princípios psicológicos universais de engagement: progressão visível, autonomia, identidade e comunidade. São estes os mesmos princípios que aplico para criar experiências de aprendizagem que os alunos não querem abandonar.",
+        "idea": "A evolução dos videojogos revela os princípios psicológicos universais de engagement e motivação.",
         "tags": ["Psicologia", "Engagement", "Motivação Intrínseca"]
       }
     ]
